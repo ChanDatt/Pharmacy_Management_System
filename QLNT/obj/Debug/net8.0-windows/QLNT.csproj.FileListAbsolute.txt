@@ -1,0 +1,17 @@
+D:\3_1_LTCSDL\QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.exe
+D:\3_1_LTCSDL\QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.deps.json
+D:\3_1_LTCSDL\QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.runtimeconfig.json
+D:\3_1_LTCSDL\QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.dll
+D:\3_1_LTCSDL\QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.pdb
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.GenerateResource.cache
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.GeneratedMSBuildEditorConfig.editorconfig
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.AssemblyInfoInputs.cache
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.AssemblyInfo.cs
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.CoreCompileInputs.cache
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.dll
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\refint\QLNT.dll
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.pdb
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.genruntimeconfig.cache
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\ref\QLNT.dll
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Properties.Resources.resources
+D:\3_1_LTCSDL\QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Login.resources
