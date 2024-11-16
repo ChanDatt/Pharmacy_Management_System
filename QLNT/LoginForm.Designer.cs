@@ -1,7 +1,7 @@
 ﻿namespace QLNT
 
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             pB_logo = new PictureBox();
             lb_ShortChau = new Label();
             pictureBox2 = new PictureBox();
@@ -39,9 +39,11 @@
             txb_Blind = new TextBox();
             btn_Login = new Button();
             lb_fgpw = new Label();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pB_logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pB_logo
@@ -72,7 +74,7 @@
             pictureBox2.BackColor = Color.WhiteSmoke;
             pictureBox2.ErrorImage = null;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(433, 409);
+            pictureBox2.Location = new Point(459, 420);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(55, 51);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -84,7 +86,7 @@
             pictureBox1.BackColor = Color.WhiteSmoke;
             pictureBox1.ErrorImage = null;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(433, 512);
+            pictureBox1.Location = new Point(459, 505);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(55, 51);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -94,10 +96,10 @@
             // txb_User
             // 
             txb_User.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
-            txb_User.Location = new Point(494, 423);
+            txb_User.Location = new Point(520, 434);
             txb_User.Multiline = true;
             txb_User.Name = "txb_User";
-            txb_User.Size = new Size(385, 37);
+            txb_User.Size = new Size(322, 37);
             txb_User.TabIndex = 2;
             txb_User.Enter += txb_User_Enter;
             txb_User.Leave += txb_User_Leave;
@@ -105,17 +107,17 @@
             // txb_Pass
             // 
             txb_Pass.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
-            txb_Pass.Location = new Point(494, 526);
+            txb_Pass.Location = new Point(520, 519);
             txb_Pass.Multiline = true;
             txb_Pass.Name = "txb_Pass";
-            txb_Pass.Size = new Size(385, 37);
+            txb_Pass.Size = new Size(322, 37);
             txb_Pass.TabIndex = 3;
             txb_Pass.Enter += txb_Pass_Enter;
             txb_Pass.Leave += txb_Pass_Leave;
             // 
             // txb_Blind
             // 
-            txb_Blind.Location = new Point(810, 253);
+            txb_Blind.Location = new Point(737, 203);
             txb_Blind.Name = "txb_Blind";
             txb_Blind.Size = new Size(10, 27);
             txb_Blind.TabIndex = 0;
@@ -123,24 +125,39 @@
             // btn_Login
             // 
             btn_Login.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Login.Location = new Point(709, 629);
+            btn_Login.ForeColor = Color.Black;
+            btn_Login.Location = new Point(541, 614);
             btn_Login.Name = "btn_Login";
-            btn_Login.Size = new Size(167, 43);
+            btn_Login.Size = new Size(219, 48);
             btn_Login.TabIndex = 4;
             btn_Login.Text = "Login";
             btn_Login.UseVisualStyleBackColor = true;
+            btn_Login.Click += btn_Login_Click;
             // 
             // lb_fgpw
             // 
             lb_fgpw.AutoSize = true;
             lb_fgpw.BackColor = Color.Transparent;
             lb_fgpw.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            lb_fgpw.ForeColor = Color.Transparent;
-            lb_fgpw.Location = new Point(716, 566);
+            lb_fgpw.ForeColor = Color.DimGray;
+            lb_fgpw.Location = new Point(687, 559);
             lb_fgpw.Name = "lb_fgpw";
             lb_fgpw.Size = new Size(160, 23);
             lb_fgpw.TabIndex = 5;
             lb_fgpw.Text = "Forgot password?";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.ErrorImage = null;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1028, 52);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(51, 48);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // Login
             // 
@@ -151,6 +168,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1300, 700);
+            Controls.Add(pictureBox3);
+            Controls.Add(pB_logo);
             Controls.Add(lb_fgpw);
             Controls.Add(btn_Login);
             Controls.Add(txb_Pass);
@@ -158,7 +177,6 @@
             Controls.Add(lb_ShortChau);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
-            Controls.Add(pB_logo);
             Controls.Add(txb_Blind);
             DoubleBuffered = true;
             ForeColor = SystemColors.ActiveCaptionText;
@@ -170,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)pB_logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,5 +206,6 @@
         private TextBox txb_Blind;
         private Button btn_Login;
         private Label lb_fgpw;
+        private PictureBox pictureBox3;
     }
 }
