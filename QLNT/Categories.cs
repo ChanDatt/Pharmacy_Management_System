@@ -26,5 +26,17 @@ namespace QLNT
         {
 
         }
+
+        private void btn_AddCategory_Click(object sender, EventArgs e)
+        {
+            Categories_Add addCategory = new Categories_Add();
+            addCategory.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Categories_Update updateCategory = new Categories_Update();
+            updateCategory.ShowDialog();
+        }
     }
 }

@@ -184,6 +184,7 @@
             btn_AddCategory.Size = new Size(170, 57);
             btn_AddCategory.TabIndex = 3;
             btn_AddCategory.Text = "Add";
+            btn_AddCategory.Click += btn_AddCategory_Click;
             // 
             // guna2Button1
             // 
@@ -204,6 +205,7 @@
             guna2Button1.Size = new Size(170, 57);
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "Update";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 

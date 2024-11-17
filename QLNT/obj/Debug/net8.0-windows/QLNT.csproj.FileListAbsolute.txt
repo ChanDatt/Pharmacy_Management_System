@@ -59,3 +59,5 @@ D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.genrunti
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\ref\QLNT.dll
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Dashboard.resources
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories_Add.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories_Update.resources
