@@ -319,6 +319,7 @@ namespace QLNT
             btn_Medicines.Text = "Medicines";
             btn_Medicines.TextAlign = HorizontalAlignment.Left;
             btn_Medicines.TextOffset = new Point(20, 0);
+            btn_Medicines.Click += btn_Medicines_Click;
             // 
             // btn_Dashboard
             // 

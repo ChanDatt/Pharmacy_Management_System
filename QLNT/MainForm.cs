@@ -37,5 +37,9 @@ namespace QLNT
             ShowTab(new Categories());
         }
 
+        private void btn_Medicines_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Medicines());
+        }
     }
 }

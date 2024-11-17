@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dtgv_Categories = new Guna.UI2.WinForms.Guna2DataGridView();
             dtgv_id = new DataGridViewTextBoxColumn();
             dtgv_CatergoryName = new DataGridViewTextBoxColumn();
-            txb_Search = new Guna.UI2.WinForms.Guna2TextBox();
+            txb_SearchCategory = new Guna.UI2.WinForms.Guna2TextBox();
             lb_Search = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btn_AddCategory = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btn_UpdateCategory = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dtgv_Categories).BeginInit();
@@ -55,30 +55,30 @@
             // 
             dtgv_Categories.AllowUserToAddRows = false;
             dtgv_Categories.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dtgv_Categories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dtgv_Categories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dtgv_Categories.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtgv_Categories.BackgroundColor = Color.WhiteSmoke;
             dtgv_Categories.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(89, 104, 105);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgv_Categories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(89, 104, 105);
+            dataGridViewCellStyle5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dtgv_Categories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgv_Categories.ColumnHeadersHeight = 35;
             dtgv_Categories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_Categories.Columns.AddRange(new DataGridViewColumn[] { dtgv_id, dtgv_CatergoryName });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Cyan;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dtgv_Categories.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Cyan;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dtgv_Categories.DefaultCellStyle = dataGridViewCellStyle6;
             dtgv_Categories.GridColor = Color.Silver;
             dtgv_Categories.Location = new Point(51, 280);
             dtgv_Categories.Name = "dtgv_Categories";
@@ -127,31 +127,31 @@
             dtgv_CatergoryName.Name = "dtgv_CatergoryName";
             dtgv_CatergoryName.ReadOnly = true;
             // 
-            // txb_Search
+            // txb_SearchCategory
             // 
-            txb_Search.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txb_Search.BorderColor = Color.DarkGray;
-            txb_Search.BorderRadius = 25;
-            txb_Search.CustomizableEdges = customizableEdges1;
-            txb_Search.DefaultText = "";
-            txb_Search.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txb_Search.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txb_Search.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txb_Search.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txb_Search.FillColor = Color.WhiteSmoke;
-            txb_Search.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Search.Font = new Font("Segoe UI", 9F);
-            txb_Search.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Search.Location = new Point(1033, 187);
-            txb_Search.Margin = new Padding(3, 4, 3, 4);
-            txb_Search.Name = "txb_Search";
-            txb_Search.PasswordChar = '\0';
-            txb_Search.PlaceholderText = "";
-            txb_Search.SelectedText = "";
-            txb_Search.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txb_Search.Size = new Size(346, 57);
-            txb_Search.TabIndex = 1;
-            txb_Search.TextChanged += txb_Search_TextChanged;
+            txb_SearchCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txb_SearchCategory.BorderColor = Color.DarkGray;
+            txb_SearchCategory.BorderRadius = 25;
+            txb_SearchCategory.CustomizableEdges = customizableEdges9;
+            txb_SearchCategory.DefaultText = "";
+            txb_SearchCategory.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txb_SearchCategory.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txb_SearchCategory.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txb_SearchCategory.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txb_SearchCategory.FillColor = Color.WhiteSmoke;
+            txb_SearchCategory.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_SearchCategory.Font = new Font("Segoe UI", 9F);
+            txb_SearchCategory.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_SearchCategory.Location = new Point(1033, 187);
+            txb_SearchCategory.Margin = new Padding(3, 4, 3, 4);
+            txb_SearchCategory.Name = "txb_SearchCategory";
+            txb_SearchCategory.PasswordChar = '\0';
+            txb_SearchCategory.PlaceholderText = "";
+            txb_SearchCategory.SelectedText = "";
+            txb_SearchCategory.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txb_SearchCategory.Size = new Size(346, 57);
+            txb_SearchCategory.TabIndex = 1;
+            txb_SearchCategory.TextChanged += txb_Search_TextChanged;
             // 
             // lb_Search
             // 
@@ -168,9 +168,9 @@
             // btn_AddCategory
             // 
             btn_AddCategory.BorderRadius = 25;
-            customizableEdges3.BottomRight = false;
-            customizableEdges3.TopRight = false;
-            btn_AddCategory.CustomizableEdges = customizableEdges3;
+            customizableEdges11.BottomRight = false;
+            customizableEdges11.TopRight = false;
+            btn_AddCategory.CustomizableEdges = customizableEdges11;
             btn_AddCategory.DisabledState.BorderColor = Color.DarkGray;
             btn_AddCategory.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_AddCategory.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -180,38 +180,38 @@
             btn_AddCategory.ForeColor = Color.White;
             btn_AddCategory.Location = new Point(112, 187);
             btn_AddCategory.Name = "btn_AddCategory";
-            btn_AddCategory.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_AddCategory.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_AddCategory.Size = new Size(170, 57);
             btn_AddCategory.TabIndex = 3;
             btn_AddCategory.Text = "Add";
             btn_AddCategory.Click += btn_AddCategory_Click;
             // 
-            // guna2Button1
+            // btn_UpdateCategory
             // 
-            guna2Button1.BorderRadius = 25;
-            customizableEdges5.BottomLeft = false;
-            customizableEdges5.TopLeft = false;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(108, 137, 118);
-            guna2Button1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(288, 187);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(170, 57);
-            guna2Button1.TabIndex = 3;
-            guna2Button1.Text = "Update";
-            guna2Button1.Click += guna2Button1_Click;
+            btn_UpdateCategory.BorderRadius = 25;
+            customizableEdges13.BottomLeft = false;
+            customizableEdges13.TopLeft = false;
+            btn_UpdateCategory.CustomizableEdges = customizableEdges13;
+            btn_UpdateCategory.DisabledState.BorderColor = Color.DarkGray;
+            btn_UpdateCategory.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_UpdateCategory.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_UpdateCategory.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_UpdateCategory.FillColor = Color.FromArgb(108, 137, 118);
+            btn_UpdateCategory.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_UpdateCategory.ForeColor = Color.White;
+            btn_UpdateCategory.Location = new Point(288, 187);
+            btn_UpdateCategory.Name = "btn_UpdateCategory";
+            btn_UpdateCategory.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_UpdateCategory.Size = new Size(170, 57);
+            btn_UpdateCategory.TabIndex = 3;
+            btn_UpdateCategory.Text = "Update";
+            btn_UpdateCategory.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 
             guna2Button2.Anchor = AnchorStyles.Top;
             guna2Button2.BorderRadius = 25;
-            guna2Button2.CustomizableEdges = customizableEdges7;
+            guna2Button2.CustomizableEdges = customizableEdges15;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,7 +221,7 @@
             guna2Button2.ForeColor = Color.White;
             guna2Button2.Location = new Point(577, 187);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Button2.Size = new Size(346, 57);
             guna2Button2.TabIndex = 3;
             guna2Button2.Text = "Delete";
@@ -244,11 +244,11 @@
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
             Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
+            Controls.Add(btn_UpdateCategory);
             Controls.Add(btn_AddCategory);
             Controls.Add(lb_Categories);
             Controls.Add(lb_Search);
-            Controls.Add(txb_Search);
+            Controls.Add(txb_SearchCategory);
             Controls.Add(dtgv_Categories);
             ForeColor = Color.Cyan;
             FormBorderStyle = FormBorderStyle.None;
@@ -262,10 +262,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Categories;
-        private Guna.UI2.WinForms.Guna2TextBox txb_Search;
+        private Guna.UI2.WinForms.Guna2TextBox txb_SearchCategory;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Search;
         private Guna.UI2.WinForms.Guna2Button btn_AddCategory;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_UpdateCategory;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
         private DataGridViewTextBoxColumn dtgv_id;
