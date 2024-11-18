@@ -41,5 +41,20 @@ namespace QLNT
         {
             ShowTab(new Medicines());
         }
+
+        private void btn_Staffs_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Staffs());
+        }
+
+        private void btn_Customers_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Customers());
+        }
+
+        private void btn_Bills_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Bills());
+        }
     }
 }

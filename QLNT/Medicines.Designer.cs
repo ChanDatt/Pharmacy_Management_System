@@ -194,7 +194,7 @@
             dtgv_Medicines.ReadOnly = true;
             dtgv_Medicines.RowHeadersVisible = false;
             dtgv_Medicines.RowHeadersWidth = 51;
-            dtgv_Medicines.Size = new Size(1365, 613);
+            dtgv_Medicines.Size = new Size(1365, 584);
             dtgv_Medicines.TabIndex = 4;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);

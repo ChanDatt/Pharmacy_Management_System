@@ -29,8 +29,8 @@ namespace QLNT
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -52,21 +52,18 @@ namespace QLNT
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             MenuHeader = new Guna.UI2.WinForms.Guna2Panel();
             btn_POS = new Guna.UI2.WinForms.Guna2Button();
-            btn_Settings = new Guna.UI2.WinForms.Guna2Button();
             btn_Inventories = new Guna.UI2.WinForms.Guna2Button();
             btn_Reports = new Guna.UI2.WinForms.Guna2Button();
             btn_Bills = new Guna.UI2.WinForms.Guna2Button();
@@ -93,7 +90,6 @@ namespace QLNT
             MenuHeader.BorderColor = Color.FromArgb(171, 209, 181);
             MenuHeader.BorderThickness = 8;
             MenuHeader.Controls.Add(btn_POS);
-            MenuHeader.Controls.Add(btn_Settings);
             MenuHeader.Controls.Add(btn_Inventories);
             MenuHeader.Controls.Add(btn_Reports);
             MenuHeader.Controls.Add(btn_Bills);
@@ -104,11 +100,11 @@ namespace QLNT
             MenuHeader.Controls.Add(btn_Dashboard);
             MenuHeader.Controls.Add(lb_ShortChau);
             MenuHeader.Controls.Add(guna2PictureBox1);
-            MenuHeader.CustomizableEdges = customizableEdges23;
+            MenuHeader.CustomizableEdges = customizableEdges21;
             MenuHeader.Dock = DockStyle.Left;
             MenuHeader.Location = new Point(0, 0);
             MenuHeader.Name = "MenuHeader";
-            MenuHeader.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            MenuHeader.ShadowDecoration.CustomizableEdges = customizableEdges22;
             MenuHeader.Size = new Size(324, 1102);
             MenuHeader.TabIndex = 0;
             // 
@@ -126,7 +122,7 @@ namespace QLNT
             btn_POS.Image = (Image)resources.GetObject("btn_POS.Image");
             btn_POS.ImageAlign = HorizontalAlignment.Left;
             btn_POS.ImageSize = new Size(40, 30);
-            btn_POS.Location = new Point(21, 948);
+            btn_POS.Location = new Point(21, 876);
             btn_POS.Name = "btn_POS";
             btn_POS.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_POS.Size = new Size(272, 66);
@@ -135,33 +131,10 @@ namespace QLNT
             btn_POS.TextAlign = HorizontalAlignment.Left;
             btn_POS.TextOffset = new Point(20, 0);
             // 
-            // btn_Settings
-            // 
-            btn_Settings.BackColor = Color.Transparent;
-            btn_Settings.CustomizableEdges = customizableEdges3;
-            btn_Settings.DisabledState.BorderColor = Color.DarkGray;
-            btn_Settings.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_Settings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_Settings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_Settings.FillColor = Color.Transparent;
-            btn_Settings.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Settings.ForeColor = Color.DimGray;
-            btn_Settings.Image = (Image)resources.GetObject("btn_Settings.Image");
-            btn_Settings.ImageAlign = HorizontalAlignment.Left;
-            btn_Settings.ImageSize = new Size(40, 30);
-            btn_Settings.Location = new Point(21, 876);
-            btn_Settings.Name = "btn_Settings";
-            btn_Settings.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_Settings.Size = new Size(272, 66);
-            btn_Settings.TabIndex = 3;
-            btn_Settings.Text = "Settings";
-            btn_Settings.TextAlign = HorizontalAlignment.Left;
-            btn_Settings.TextOffset = new Point(20, 0);
-            // 
             // btn_Inventories
             // 
             btn_Inventories.BackColor = Color.Transparent;
-            btn_Inventories.CustomizableEdges = customizableEdges5;
+            btn_Inventories.CustomizableEdges = customizableEdges3;
             btn_Inventories.DisabledState.BorderColor = Color.DarkGray;
             btn_Inventories.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Inventories.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -174,7 +147,7 @@ namespace QLNT
             btn_Inventories.ImageSize = new Size(40, 30);
             btn_Inventories.Location = new Point(21, 804);
             btn_Inventories.Name = "btn_Inventories";
-            btn_Inventories.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_Inventories.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_Inventories.Size = new Size(272, 66);
             btn_Inventories.TabIndex = 3;
             btn_Inventories.Text = "Inventories";
@@ -184,7 +157,7 @@ namespace QLNT
             // btn_Reports
             // 
             btn_Reports.BackColor = Color.Transparent;
-            btn_Reports.CustomizableEdges = customizableEdges7;
+            btn_Reports.CustomizableEdges = customizableEdges5;
             btn_Reports.DisabledState.BorderColor = Color.DarkGray;
             btn_Reports.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Reports.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -197,7 +170,7 @@ namespace QLNT
             btn_Reports.ImageSize = new Size(40, 30);
             btn_Reports.Location = new Point(21, 732);
             btn_Reports.Name = "btn_Reports";
-            btn_Reports.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_Reports.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_Reports.Size = new Size(272, 66);
             btn_Reports.TabIndex = 3;
             btn_Reports.Text = "Reports";
@@ -207,7 +180,7 @@ namespace QLNT
             // btn_Bills
             // 
             btn_Bills.BackColor = Color.Transparent;
-            btn_Bills.CustomizableEdges = customizableEdges9;
+            btn_Bills.CustomizableEdges = customizableEdges7;
             btn_Bills.DisabledState.BorderColor = Color.DarkGray;
             btn_Bills.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Bills.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -220,17 +193,18 @@ namespace QLNT
             btn_Bills.ImageSize = new Size(40, 30);
             btn_Bills.Location = new Point(21, 660);
             btn_Bills.Name = "btn_Bills";
-            btn_Bills.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_Bills.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_Bills.Size = new Size(272, 66);
             btn_Bills.TabIndex = 3;
             btn_Bills.Text = "Bills";
             btn_Bills.TextAlign = HorizontalAlignment.Left;
             btn_Bills.TextOffset = new Point(20, 0);
+            btn_Bills.Click += btn_Bills_Click;
             // 
             // btn_Customers
             // 
             btn_Customers.BackColor = Color.Transparent;
-            btn_Customers.CustomizableEdges = customizableEdges11;
+            btn_Customers.CustomizableEdges = customizableEdges9;
             btn_Customers.DisabledState.BorderColor = Color.DarkGray;
             btn_Customers.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Customers.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -243,17 +217,18 @@ namespace QLNT
             btn_Customers.ImageSize = new Size(40, 30);
             btn_Customers.Location = new Point(21, 588);
             btn_Customers.Name = "btn_Customers";
-            btn_Customers.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btn_Customers.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btn_Customers.Size = new Size(272, 66);
             btn_Customers.TabIndex = 3;
             btn_Customers.Text = "Customers";
             btn_Customers.TextAlign = HorizontalAlignment.Left;
             btn_Customers.TextOffset = new Point(20, 0);
+            btn_Customers.Click += btn_Customers_Click;
             // 
             // btn_Staffs
             // 
             btn_Staffs.BackColor = Color.Transparent;
-            btn_Staffs.CustomizableEdges = customizableEdges13;
+            btn_Staffs.CustomizableEdges = customizableEdges11;
             btn_Staffs.DisabledState.BorderColor = Color.DarkGray;
             btn_Staffs.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Staffs.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -266,17 +241,18 @@ namespace QLNT
             btn_Staffs.ImageSize = new Size(40, 30);
             btn_Staffs.Location = new Point(21, 516);
             btn_Staffs.Name = "btn_Staffs";
-            btn_Staffs.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_Staffs.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_Staffs.Size = new Size(272, 66);
             btn_Staffs.TabIndex = 3;
             btn_Staffs.Text = "Staffs";
             btn_Staffs.TextAlign = HorizontalAlignment.Left;
             btn_Staffs.TextOffset = new Point(20, 0);
+            btn_Staffs.Click += btn_Staffs_Click;
             // 
             // btn_Categories
             // 
             btn_Categories.BackColor = Color.Transparent;
-            btn_Categories.CustomizableEdges = customizableEdges15;
+            btn_Categories.CustomizableEdges = customizableEdges13;
             btn_Categories.DisabledState.BorderColor = Color.DarkGray;
             btn_Categories.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Categories.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -289,7 +265,7 @@ namespace QLNT
             btn_Categories.ImageSize = new Size(40, 30);
             btn_Categories.Location = new Point(21, 372);
             btn_Categories.Name = "btn_Categories";
-            btn_Categories.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btn_Categories.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Categories.Size = new Size(272, 66);
             btn_Categories.TabIndex = 3;
             btn_Categories.Text = "Categories";
@@ -300,7 +276,7 @@ namespace QLNT
             // btn_Medicines
             // 
             btn_Medicines.BackColor = Color.Transparent;
-            btn_Medicines.CustomizableEdges = customizableEdges17;
+            btn_Medicines.CustomizableEdges = customizableEdges15;
             btn_Medicines.DisabledState.BorderColor = Color.DarkGray;
             btn_Medicines.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Medicines.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -313,7 +289,7 @@ namespace QLNT
             btn_Medicines.ImageSize = new Size(40, 30);
             btn_Medicines.Location = new Point(21, 444);
             btn_Medicines.Name = "btn_Medicines";
-            btn_Medicines.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btn_Medicines.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_Medicines.Size = new Size(272, 66);
             btn_Medicines.TabIndex = 3;
             btn_Medicines.Text = "Medicines";
@@ -324,7 +300,7 @@ namespace QLNT
             // btn_Dashboard
             // 
             btn_Dashboard.BackColor = Color.Transparent;
-            btn_Dashboard.CustomizableEdges = customizableEdges19;
+            btn_Dashboard.CustomizableEdges = customizableEdges17;
             btn_Dashboard.DisabledState.BorderColor = Color.DarkGray;
             btn_Dashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Dashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -337,7 +313,7 @@ namespace QLNT
             btn_Dashboard.ImageSize = new Size(40, 30);
             btn_Dashboard.Location = new Point(21, 300);
             btn_Dashboard.Name = "btn_Dashboard";
-            btn_Dashboard.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btn_Dashboard.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btn_Dashboard.Size = new Size(272, 66);
             btn_Dashboard.TabIndex = 3;
             btn_Dashboard.Text = "Dashboard";
@@ -359,12 +335,12 @@ namespace QLNT
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges21;
+            guna2PictureBox1.CustomizableEdges = customizableEdges19;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(57, 14);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox1.Size = new Size(201, 198);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 0;
@@ -379,11 +355,11 @@ namespace QLNT
             HeaderPanel.Controls.Add(guna2ControlBox1);
             HeaderPanel.CustomBorderColor = Color.FromArgb(171, 209, 181);
             HeaderPanel.CustomBorderThickness = new Padding(0, 8, 0, 8);
-            HeaderPanel.CustomizableEdges = customizableEdges31;
+            HeaderPanel.CustomizableEdges = customizableEdges29;
             HeaderPanel.Dock = DockStyle.Top;
             HeaderPanel.Location = new Point(324, 0);
             HeaderPanel.Name = "HeaderPanel";
-            HeaderPanel.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            HeaderPanel.ShadowDecoration.CustomizableEdges = customizableEdges30;
             HeaderPanel.Size = new Size(941, 85);
             HeaderPanel.TabIndex = 0;
             // 
@@ -391,12 +367,12 @@ namespace QLNT
             // 
             guna2ControlBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox3.CustomizableEdges = customizableEdges25;
+            guna2ControlBox3.CustomizableEdges = customizableEdges23;
             guna2ControlBox3.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox3.IconColor = Color.White;
             guna2ControlBox3.Location = new Point(739, 25);
             guna2ControlBox3.Name = "guna2ControlBox3";
-            guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2ControlBox3.Size = new Size(56, 36);
             guna2ControlBox3.TabIndex = 0;
             // 
@@ -404,24 +380,24 @@ namespace QLNT
             // 
             guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges27;
+            guna2ControlBox2.CustomizableEdges = customizableEdges25;
             guna2ControlBox2.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.Location = new Point(801, 25);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2ControlBox2.Size = new Size(56, 36);
             guna2ControlBox2.TabIndex = 0;
             // 
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.CustomizableEdges = customizableEdges29;
+            guna2ControlBox1.CustomizableEdges = customizableEdges27;
             guna2ControlBox1.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox1.IconColor = Color.FromArgb(230, 239, 230);
             guna2ControlBox1.Location = new Point(863, 25);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2ControlBox1.Size = new Size(56, 36);
             guna2ControlBox1.TabIndex = 0;
             // 
@@ -430,11 +406,11 @@ namespace QLNT
             CenterPanel.BackColor = Color.FromArgb(230, 239, 230);
             CenterPanel.BorderColor = Color.Transparent;
             CenterPanel.CustomBorderColor = Color.Transparent;
-            CenterPanel.CustomizableEdges = customizableEdges33;
+            CenterPanel.CustomizableEdges = customizableEdges31;
             CenterPanel.Dock = DockStyle.Fill;
             CenterPanel.Location = new Point(324, 85);
             CenterPanel.Name = "CenterPanel";
-            CenterPanel.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            CenterPanel.ShadowDecoration.CustomizableEdges = customizableEdges32;
             CenterPanel.Size = new Size(941, 1017);
             CenterPanel.TabIndex = 0;
             // 
@@ -473,7 +449,6 @@ namespace QLNT
         private Guna.UI2.WinForms.Guna2Button btn_Medicines;
         private Guna.UI2.WinForms.Guna2Button btn_Reports;
         private Guna.UI2.WinForms.Guna2Button btn_Bills;
-        private Guna.UI2.WinForms.Guna2Button btn_Settings;
         private Guna.UI2.WinForms.Guna2Button btn_Inventories;
         private Guna.UI2.WinForms.Guna2Button btn_POS;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;

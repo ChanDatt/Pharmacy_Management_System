@@ -64,3 +64,6 @@ D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categori
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicines.resources
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicine_Add.resources
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicines_Update.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Staffs.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Bills.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Customers.resources
