@@ -19,6 +19,12 @@
     <Compile Update="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports_Predict.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -176,6 +176,7 @@ namespace QLNT
             btn_Reports.Text = "Reports";
             btn_Reports.TextAlign = HorizontalAlignment.Left;
             btn_Reports.TextOffset = new Point(20, 0);
+            btn_Reports.Click += btn_Reports_Click;
             // 
             // btn_Bills
             // 

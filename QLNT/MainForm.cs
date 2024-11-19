@@ -18,7 +18,7 @@ namespace QLNT
             InitializeComponent();
         }
 
-        //phương thức biểu các mục lên CenterPanel
+        //phương thức biểu di các mục lên CenterPanel
         public void ShowTab(Form f)
         {
             CenterPanel.Controls.Clear();
@@ -55,6 +55,11 @@ namespace QLNT
         private void btn_Bills_Click(object sender, EventArgs e)
         {
             ShowTab(new Bills());
+        }
+
+        private void btn_Reports_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Reports());
         }
     }
 }

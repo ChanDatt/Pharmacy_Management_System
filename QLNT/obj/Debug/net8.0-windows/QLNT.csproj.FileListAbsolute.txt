@@ -67,3 +67,5 @@ D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicine
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Staffs.resources
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Bills.resources
 D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Customers.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Reports.resources
+D:\3_1_LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Reports_Predict.resources
