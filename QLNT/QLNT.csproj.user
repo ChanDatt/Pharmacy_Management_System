@@ -19,6 +19,18 @@
     <Compile Update="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Inventories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inventories_SetWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="items.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Reports.cs">
       <SubType>Form</SubType>
     </Compile>

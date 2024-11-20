@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dznybvOnv+I=",
+  "dgSpecHash": "30iQ8+VFGpo=",
   "success": true,
-  "projectFilePath": "D:\\3_1_LTCSDL\\DoAnMonHoc\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
+  "projectFilePath": "D:\\3_1_LTCSDL\\New folder\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",

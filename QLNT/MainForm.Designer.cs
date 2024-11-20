@@ -107,6 +107,7 @@ namespace QLNT
             MenuHeader.ShadowDecoration.CustomizableEdges = customizableEdges22;
             MenuHeader.Size = new Size(324, 1102);
             MenuHeader.TabIndex = 0;
+            MenuHeader.Paint += MenuHeader_Paint;
             // 
             // btn_POS
             // 
@@ -130,6 +131,7 @@ namespace QLNT
             btn_POS.Text = "POS";
             btn_POS.TextAlign = HorizontalAlignment.Left;
             btn_POS.TextOffset = new Point(20, 0);
+            btn_POS.Click += btn_POS_Click;
             // 
             // btn_Inventories
             // 
@@ -153,6 +155,7 @@ namespace QLNT
             btn_Inventories.Text = "Inventories";
             btn_Inventories.TextAlign = HorizontalAlignment.Left;
             btn_Inventories.TextOffset = new Point(20, 0);
+            btn_Inventories.Click += btn_Inventories_Click;
             // 
             // btn_Reports
             // 
@@ -361,7 +364,7 @@ namespace QLNT
             HeaderPanel.Location = new Point(324, 0);
             HeaderPanel.Name = "HeaderPanel";
             HeaderPanel.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            HeaderPanel.Size = new Size(941, 85);
+            HeaderPanel.Size = new Size(941, 98);
             HeaderPanel.TabIndex = 0;
             // 
             // guna2ControlBox3
@@ -371,7 +374,7 @@ namespace QLNT
             guna2ControlBox3.CustomizableEdges = customizableEdges23;
             guna2ControlBox3.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox3.IconColor = Color.White;
-            guna2ControlBox3.Location = new Point(739, 25);
+            guna2ControlBox3.Location = new Point(740, 32);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2ControlBox3.Size = new Size(56, 36);
@@ -384,7 +387,7 @@ namespace QLNT
             guna2ControlBox2.CustomizableEdges = customizableEdges25;
             guna2ControlBox2.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox2.IconColor = Color.White;
-            guna2ControlBox2.Location = new Point(801, 25);
+            guna2ControlBox2.Location = new Point(802, 32);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2ControlBox2.Size = new Size(56, 36);
@@ -396,7 +399,7 @@ namespace QLNT
             guna2ControlBox1.CustomizableEdges = customizableEdges27;
             guna2ControlBox1.FillColor = Color.FromArgb(89, 104, 105);
             guna2ControlBox1.IconColor = Color.FromArgb(230, 239, 230);
-            guna2ControlBox1.Location = new Point(863, 25);
+            guna2ControlBox1.Location = new Point(864, 32);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2ControlBox1.Size = new Size(56, 36);
@@ -409,10 +412,10 @@ namespace QLNT
             CenterPanel.CustomBorderColor = Color.Transparent;
             CenterPanel.CustomizableEdges = customizableEdges31;
             CenterPanel.Dock = DockStyle.Fill;
-            CenterPanel.Location = new Point(324, 85);
+            CenterPanel.Location = new Point(324, 98);
             CenterPanel.Name = "CenterPanel";
             CenterPanel.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            CenterPanel.Size = new Size(941, 1017);
+            CenterPanel.Size = new Size(941, 1004);
             CenterPanel.TabIndex = 0;
             // 
             // MainForm
@@ -444,7 +447,6 @@ namespace QLNT
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label lb_ShortChau;
         private Guna.UI2.WinForms.Guna2Button btn_Dashboard;
-        private Guna.UI2.WinForms.Guna2Button btn_Customers;
         private Guna.UI2.WinForms.Guna2Button btn_Staffs;
         private Guna.UI2.WinForms.Guna2Button btn_Categories;
         private Guna.UI2.WinForms.Guna2Button btn_Medicines;
@@ -455,5 +457,6 @@ namespace QLNT
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Customers;
     }
 }

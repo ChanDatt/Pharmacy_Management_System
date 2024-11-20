@@ -61,5 +61,21 @@ namespace QLNT
         {
             ShowTab(new Reports());
         }
+
+        private void MenuHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Inventories_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Inventories());
+        }
+
+        private void btn_POS_Click(object sender, EventArgs e)
+        {
+            POS pos = new POS();
+            pos.ShowDialog();
+        }
     }
 }
