@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Categories_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Categories_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inventories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inventories_SetWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="items.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports_Predict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Medicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Medicines_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Medicine_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
