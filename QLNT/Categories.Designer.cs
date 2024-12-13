@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -39,93 +36,24 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            dtgv_Categories = new Guna.UI2.WinForms.Guna2DataGridView();
-            dtgv_id = new DataGridViewTextBoxColumn();
-            dtgv_CatergoryName = new DataGridViewTextBoxColumn();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txb_SearchCategory = new Guna.UI2.WinForms.Guna2TextBox();
             lb_Search = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btn_AddCategory = new Guna.UI2.WinForms.Guna2Button();
             btn_UpdateCategory = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            dtgv_Categories = new Guna.UI2.WinForms.Guna2DataGridView();
+            dtgv_id = new DataGridViewTextBoxColumn();
+            dtgv_CatergoryName = new DataGridViewTextBoxColumn();
+            guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Categories).BeginInit();
             SuspendLayout();
-            // 
-            // dtgv_Categories
-            // 
-            dtgv_Categories.AllowUserToAddRows = false;
-            dtgv_Categories.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dtgv_Categories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dtgv_Categories.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dtgv_Categories.BackgroundColor = Color.WhiteSmoke;
-            dtgv_Categories.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(89, 104, 105);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgv_Categories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dtgv_Categories.ColumnHeadersHeight = 35;
-            dtgv_Categories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtgv_Categories.Columns.AddRange(new DataGridViewColumn[] { dtgv_id, dtgv_CatergoryName });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Cyan;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dtgv_Categories.DefaultCellStyle = dataGridViewCellStyle3;
-            dtgv_Categories.GridColor = Color.Silver;
-            dtgv_Categories.Location = new Point(51, 280);
-            dtgv_Categories.Name = "dtgv_Categories";
-            dtgv_Categories.ReadOnly = true;
-            dtgv_Categories.RowHeadersVisible = false;
-            dtgv_Categories.RowHeadersWidth = 51;
-            dtgv_Categories.Size = new Size(1365, 583);
-            dtgv_Categories.TabIndex = 0;
-            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dtgv_Categories.ThemeStyle.BackColor = Color.WhiteSmoke;
-            dtgv_Categories.ThemeStyle.GridColor = Color.Silver;
-            dtgv_Categories.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(89, 104, 105);
-            dtgv_Categories.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dtgv_Categories.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtgv_Categories.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dtgv_Categories.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtgv_Categories.ThemeStyle.HeaderStyle.Height = 35;
-            dtgv_Categories.ThemeStyle.ReadOnly = true;
-            dtgv_Categories.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dtgv_Categories.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
-            dtgv_Categories.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtgv_Categories.ThemeStyle.RowsStyle.ForeColor = Color.Cyan;
-            dtgv_Categories.ThemeStyle.RowsStyle.Height = 29;
-            dtgv_Categories.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dtgv_Categories.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // dtgv_id
-            // 
-            dtgv_id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_id.FillWeight = 6.41711235F;
-            dtgv_id.HeaderText = "id";
-            dtgv_id.MinimumWidth = 35;
-            dtgv_id.Name = "dtgv_id";
-            dtgv_id.ReadOnly = true;
-            dtgv_id.Width = 35;
-            // 
-            // dtgv_CatergoryName
-            // 
-            dtgv_CatergoryName.FillWeight = 193.582886F;
-            dtgv_CatergoryName.HeaderText = "Catergory name";
-            dtgv_CatergoryName.MinimumWidth = 6;
-            dtgv_CatergoryName.Name = "dtgv_CatergoryName";
-            dtgv_CatergoryName.ReadOnly = true;
             // 
             // txb_SearchCategory
             // 
@@ -237,37 +165,126 @@
             lb_Categories.TabIndex = 2;
             lb_Categories.Text = "CATEGORIES";
             // 
+            // guna2Panel1
+            // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel1.BackColor = Color.FromArgb(89, 104, 105);
+            guna2Panel1.Controls.Add(dtgv_Categories);
+            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.Location = new Point(39, 269);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.Size = new Size(1387, 607);
+            guna2Panel1.TabIndex = 4;
+            // 
+            // dtgv_Categories
+            // 
+            dtgv_Categories.AllowUserToAddRows = false;
+            dtgv_Categories.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dtgv_Categories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtgv_Categories.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtgv_Categories.BackgroundColor = Color.WhiteSmoke;
+            dtgv_Categories.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(89, 104, 105);
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgv_Categories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dtgv_Categories.ColumnHeadersHeight = 35;
+            dtgv_Categories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_Categories.Columns.AddRange(new DataGridViewColumn[] { dtgv_id, dtgv_CatergoryName });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Cyan;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgv_Categories.DefaultCellStyle = dataGridViewCellStyle3;
+            dtgv_Categories.GridColor = Color.Silver;
+            dtgv_Categories.Location = new Point(12, 3);
+            dtgv_Categories.Name = "dtgv_Categories";
+            dtgv_Categories.ReadOnly = true;
+            dtgv_Categories.RowHeadersVisible = false;
+            dtgv_Categories.RowHeadersWidth = 51;
+            dtgv_Categories.Size = new Size(1360, 592);
+            dtgv_Categories.TabIndex = 1;
+            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dtgv_Categories.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dtgv_Categories.ThemeStyle.BackColor = Color.WhiteSmoke;
+            dtgv_Categories.ThemeStyle.GridColor = Color.Silver;
+            dtgv_Categories.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(89, 104, 105);
+            dtgv_Categories.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dtgv_Categories.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtgv_Categories.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dtgv_Categories.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_Categories.ThemeStyle.HeaderStyle.Height = 35;
+            dtgv_Categories.ThemeStyle.ReadOnly = true;
+            dtgv_Categories.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dtgv_Categories.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
+            dtgv_Categories.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtgv_Categories.ThemeStyle.RowsStyle.ForeColor = Color.Cyan;
+            dtgv_Categories.ThemeStyle.RowsStyle.Height = 29;
+            dtgv_Categories.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dtgv_Categories.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // dtgv_id
+            // 
+            dtgv_id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dtgv_id.FillWeight = 6.41711235F;
+            dtgv_id.HeaderText = "id";
+            dtgv_id.MinimumWidth = 35;
+            dtgv_id.Name = "dtgv_id";
+            dtgv_id.ReadOnly = true;
+            dtgv_id.Width = 35;
+            // 
+            // dtgv_CatergoryName
+            // 
+            dtgv_CatergoryName.FillWeight = 193.582886F;
+            dtgv_CatergoryName.HeaderText = "Catergory name";
+            dtgv_CatergoryName.MinimumWidth = 6;
+            dtgv_CatergoryName.Name = "dtgv_CatergoryName";
+            dtgv_CatergoryName.ReadOnly = true;
+            // 
             // Categories
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
+            Controls.Add(guna2Panel1);
             Controls.Add(guna2Button2);
             Controls.Add(btn_UpdateCategory);
             Controls.Add(btn_AddCategory);
             Controls.Add(lb_Categories);
             Controls.Add(lb_Search);
             Controls.Add(txb_SearchCategory);
-            Controls.Add(dtgv_Categories);
             ForeColor = Color.Cyan;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Categories";
             Text = "Categories";
+            guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgv_Categories).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DataGridView dtgv_Categories;
         private Guna.UI2.WinForms.Guna2TextBox txb_SearchCategory;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Search;
         private Guna.UI2.WinForms.Guna2Button btn_AddCategory;
         private Guna.UI2.WinForms.Guna2Button btn_UpdateCategory;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgv_Categories;
         private DataGridViewTextBoxColumn dtgv_id;
         private DataGridViewTextBoxColumn dtgv_CatergoryName;
     }

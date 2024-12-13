@@ -64,9 +64,9 @@ namespace QLNT
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             MenuHeader = new Guna.UI2.WinForms.Guna2Panel();
             btn_POS = new Guna.UI2.WinForms.Guna2Button();
+            btn_Suppliers = new Guna.UI2.WinForms.Guna2Button();
             btn_Inventories = new Guna.UI2.WinForms.Guna2Button();
             btn_Reports = new Guna.UI2.WinForms.Guna2Button();
-            btn_Bills = new Guna.UI2.WinForms.Guna2Button();
             btn_Customers = new Guna.UI2.WinForms.Guna2Button();
             btn_Staffs = new Guna.UI2.WinForms.Guna2Button();
             btn_Categories = new Guna.UI2.WinForms.Guna2Button();
@@ -90,9 +90,9 @@ namespace QLNT
             MenuHeader.BorderColor = Color.FromArgb(171, 209, 181);
             MenuHeader.BorderThickness = 8;
             MenuHeader.Controls.Add(btn_POS);
+            MenuHeader.Controls.Add(btn_Suppliers);
             MenuHeader.Controls.Add(btn_Inventories);
             MenuHeader.Controls.Add(btn_Reports);
-            MenuHeader.Controls.Add(btn_Bills);
             MenuHeader.Controls.Add(btn_Customers);
             MenuHeader.Controls.Add(btn_Staffs);
             MenuHeader.Controls.Add(btn_Categories);
@@ -123,7 +123,7 @@ namespace QLNT
             btn_POS.Image = (Image)resources.GetObject("btn_POS.Image");
             btn_POS.ImageAlign = HorizontalAlignment.Left;
             btn_POS.ImageSize = new Size(40, 30);
-            btn_POS.Location = new Point(21, 876);
+            btn_POS.Location = new Point(21, 804);
             btn_POS.Name = "btn_POS";
             btn_POS.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_POS.Size = new Size(272, 66);
@@ -133,10 +133,34 @@ namespace QLNT
             btn_POS.TextOffset = new Point(20, 0);
             btn_POS.Click += btn_POS_Click;
             // 
+            // btn_Suppliers
+            // 
+            btn_Suppliers.BackColor = Color.Transparent;
+            btn_Suppliers.CustomizableEdges = customizableEdges3;
+            btn_Suppliers.DisabledState.BorderColor = Color.DarkGray;
+            btn_Suppliers.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Suppliers.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Suppliers.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Suppliers.FillColor = Color.Transparent;
+            btn_Suppliers.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Suppliers.ForeColor = Color.DimGray;
+            btn_Suppliers.Image = (Image)resources.GetObject("btn_Suppliers.Image");
+            btn_Suppliers.ImageAlign = HorizontalAlignment.Left;
+            btn_Suppliers.ImageSize = new Size(40, 30);
+            btn_Suppliers.Location = new Point(21, 876);
+            btn_Suppliers.Name = "btn_Suppliers";
+            btn_Suppliers.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_Suppliers.Size = new Size(272, 66);
+            btn_Suppliers.TabIndex = 3;
+            btn_Suppliers.Text = "Suppliers";
+            btn_Suppliers.TextAlign = HorizontalAlignment.Left;
+            btn_Suppliers.TextOffset = new Point(20, 0);
+            btn_Suppliers.Click += btn_Suppliers_Click;
+            // 
             // btn_Inventories
             // 
             btn_Inventories.BackColor = Color.Transparent;
-            btn_Inventories.CustomizableEdges = customizableEdges3;
+            btn_Inventories.CustomizableEdges = customizableEdges5;
             btn_Inventories.DisabledState.BorderColor = Color.DarkGray;
             btn_Inventories.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Inventories.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -147,9 +171,9 @@ namespace QLNT
             btn_Inventories.Image = (Image)resources.GetObject("btn_Inventories.Image");
             btn_Inventories.ImageAlign = HorizontalAlignment.Left;
             btn_Inventories.ImageSize = new Size(40, 30);
-            btn_Inventories.Location = new Point(21, 804);
+            btn_Inventories.Location = new Point(21, 732);
             btn_Inventories.Name = "btn_Inventories";
-            btn_Inventories.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_Inventories.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_Inventories.Size = new Size(272, 66);
             btn_Inventories.TabIndex = 3;
             btn_Inventories.Text = "Inventories";
@@ -160,7 +184,7 @@ namespace QLNT
             // btn_Reports
             // 
             btn_Reports.BackColor = Color.Transparent;
-            btn_Reports.CustomizableEdges = customizableEdges5;
+            btn_Reports.CustomizableEdges = customizableEdges7;
             btn_Reports.DisabledState.BorderColor = Color.DarkGray;
             btn_Reports.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Reports.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -171,39 +195,15 @@ namespace QLNT
             btn_Reports.Image = (Image)resources.GetObject("btn_Reports.Image");
             btn_Reports.ImageAlign = HorizontalAlignment.Left;
             btn_Reports.ImageSize = new Size(40, 30);
-            btn_Reports.Location = new Point(21, 732);
+            btn_Reports.Location = new Point(21, 660);
             btn_Reports.Name = "btn_Reports";
-            btn_Reports.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_Reports.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_Reports.Size = new Size(272, 66);
             btn_Reports.TabIndex = 3;
             btn_Reports.Text = "Reports";
             btn_Reports.TextAlign = HorizontalAlignment.Left;
             btn_Reports.TextOffset = new Point(20, 0);
             btn_Reports.Click += btn_Reports_Click;
-            // 
-            // btn_Bills
-            // 
-            btn_Bills.BackColor = Color.Transparent;
-            btn_Bills.CustomizableEdges = customizableEdges7;
-            btn_Bills.DisabledState.BorderColor = Color.DarkGray;
-            btn_Bills.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_Bills.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_Bills.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_Bills.FillColor = Color.Transparent;
-            btn_Bills.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Bills.ForeColor = Color.DimGray;
-            btn_Bills.Image = (Image)resources.GetObject("btn_Bills.Image");
-            btn_Bills.ImageAlign = HorizontalAlignment.Left;
-            btn_Bills.ImageSize = new Size(40, 30);
-            btn_Bills.Location = new Point(21, 660);
-            btn_Bills.Name = "btn_Bills";
-            btn_Bills.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btn_Bills.Size = new Size(272, 66);
-            btn_Bills.TabIndex = 3;
-            btn_Bills.Text = "Bills";
-            btn_Bills.TextAlign = HorizontalAlignment.Left;
-            btn_Bills.TextOffset = new Point(20, 0);
-            btn_Bills.Click += btn_Bills_Click;
             // 
             // btn_Customers
             // 
@@ -451,12 +451,12 @@ namespace QLNT
         private Guna.UI2.WinForms.Guna2Button btn_Categories;
         private Guna.UI2.WinForms.Guna2Button btn_Medicines;
         private Guna.UI2.WinForms.Guna2Button btn_Reports;
-        private Guna.UI2.WinForms.Guna2Button btn_Bills;
         private Guna.UI2.WinForms.Guna2Button btn_Inventories;
         private Guna.UI2.WinForms.Guna2Button btn_POS;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button btn_Customers;
+        private Guna.UI2.WinForms.Guna2Button btn_Suppliers;
     }
 }

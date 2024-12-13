@@ -91,3 +91,43 @@ D:\3_1_LTCSDL\New folder\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Inventor
 D:\3_1_LTCSDL\New folder\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Inventories_SetWarning.resources
 D:\3_1_LTCSDL\New folder\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.items.resources
 D:\3_1_LTCSDL\New folder\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.POS.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.exe
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.deps.json
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.runtimeconfig.json
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\QLNT.pdb
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\Guna.UI2.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\System.Management.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.AssemblyReference.cache
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories_Add.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Categories_Update.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Customers.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Dashboard.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Inventories.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Inventories_SetWarning.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.items.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.LoginForm.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.MainForm.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicines.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicines_Update.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Medicine_Add.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.POS.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Properties.Resources.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Reports.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Reports_Predict.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Staffs.resources
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.GenerateResource.cache
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.AssemblyInfoInputs.cache
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.AssemblyInfo.cs
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.CoreCompileInputs.cache
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.sourcelink.json
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.csproj.Up2Date
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\refint\QLNT.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.pdb
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.genruntimeconfig.cache
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\ref\QLNT.dll
+D:\LTCSDL\DoAnMonHoc\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows\QLNT.Suppliers.resources

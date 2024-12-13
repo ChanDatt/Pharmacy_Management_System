@@ -52,11 +52,6 @@ namespace QLNT
             ShowTab(new Customers());
         }
 
-        private void btn_Bills_Click(object sender, EventArgs e)
-        {
-            ShowTab(new Bills());
-        }
-
         private void btn_Reports_Click(object sender, EventArgs e)
         {
             ShowTab(new Reports());
@@ -76,6 +71,11 @@ namespace QLNT
         {
             POS pos = new POS();
             pos.ShowDialog();
+        }
+
+        private void btn_Suppliers_Click(object sender, EventArgs e)
+        {
+            ShowTab(new Suppliers());
         }
     }
 }

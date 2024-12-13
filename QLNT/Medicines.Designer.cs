@@ -39,16 +39,20 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btn_DelMedicine = new Guna.UI2.WinForms.Guna2Button();
             btn_UpdateMedicine = new Guna.UI2.WinForms.Guna2Button();
             btn_AddMedicine = new Guna.UI2.WinForms.Guna2Button();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lb_Search = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txb_SearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
-            dtgv_Medicines = new Guna.UI2.WinForms.Guna2DataGridView();
-            dtgv_id = new DataGridViewTextBoxColumn();
             dtgv_CatergoryName = new DataGridViewTextBoxColumn();
+            dtgv_id = new DataGridViewTextBoxColumn();
+            dtgv_Medicines = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)dtgv_Medicines).BeginInit();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_DelMedicine
@@ -160,6 +164,24 @@
             txb_SearchMedicine.Size = new Size(346, 57);
             txb_SearchMedicine.TabIndex = 5;
             // 
+            // dtgv_CatergoryName
+            // 
+            dtgv_CatergoryName.FillWeight = 193.582886F;
+            dtgv_CatergoryName.HeaderText = "Catergory name";
+            dtgv_CatergoryName.MinimumWidth = 6;
+            dtgv_CatergoryName.Name = "dtgv_CatergoryName";
+            dtgv_CatergoryName.ReadOnly = true;
+            // 
+            // dtgv_id
+            // 
+            dtgv_id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dtgv_id.FillWeight = 6.41711235F;
+            dtgv_id.HeaderText = "id";
+            dtgv_id.MinimumWidth = 35;
+            dtgv_id.Name = "dtgv_id";
+            dtgv_id.ReadOnly = true;
+            dtgv_id.Width = 35;
+            // 
             // dtgv_Medicines
             // 
             dtgv_Medicines.AllowUserToAddRows = false;
@@ -189,12 +211,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgv_Medicines.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_Medicines.GridColor = Color.Silver;
-            dtgv_Medicines.Location = new Point(51, 280);
+            dtgv_Medicines.Location = new Point(12, 3);
             dtgv_Medicines.Name = "dtgv_Medicines";
             dtgv_Medicines.ReadOnly = true;
             dtgv_Medicines.RowHeadersVisible = false;
             dtgv_Medicines.RowHeadersWidth = 51;
-            dtgv_Medicines.Size = new Size(1365, 584);
+            dtgv_Medicines.Size = new Size(1360, 604);
             dtgv_Medicines.TabIndex = 4;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -217,24 +239,19 @@
             dtgv_Medicines.ThemeStyle.RowsStyle.Height = 29;
             dtgv_Medicines.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Medicines.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dtgv_Medicines.CellContentClick += dtgv_Medicines_CellContentClick;
             // 
-            // dtgv_id
+            // guna2Panel1
             // 
-            dtgv_id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dtgv_id.FillWeight = 6.41711235F;
-            dtgv_id.HeaderText = "id";
-            dtgv_id.MinimumWidth = 35;
-            dtgv_id.Name = "dtgv_id";
-            dtgv_id.ReadOnly = true;
-            dtgv_id.Width = 35;
-            // 
-            // dtgv_CatergoryName
-            // 
-            dtgv_CatergoryName.FillWeight = 193.582886F;
-            dtgv_CatergoryName.HeaderText = "Catergory name";
-            dtgv_CatergoryName.MinimumWidth = 6;
-            dtgv_CatergoryName.Name = "dtgv_CatergoryName";
-            dtgv_CatergoryName.ReadOnly = true;
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel1.BackColor = Color.FromArgb(89, 104, 105);
+            guna2Panel1.Controls.Add(dtgv_Medicines);
+            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.Location = new Point(39, 271);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.Size = new Size(1386, 622);
+            guna2Panel1.TabIndex = 11;
             // 
             // Medicines
             // 
@@ -242,17 +259,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
+            Controls.Add(guna2Panel1);
             Controls.Add(btn_DelMedicine);
             Controls.Add(btn_UpdateMedicine);
             Controls.Add(btn_AddMedicine);
             Controls.Add(lb_Categories);
             Controls.Add(lb_Search);
             Controls.Add(txb_SearchMedicine);
-            Controls.Add(dtgv_Medicines);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Medicines";
             Text = "Medicines";
             ((System.ComponentModel.ISupportInitialize)dtgv_Medicines).EndInit();
+            guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -265,8 +283,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Search;
         private Guna.UI2.WinForms.Guna2TextBox txb_SearchMedicine;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgv_Medicines;
-        private DataGridViewTextBoxColumn dtgv_id;
         private DataGridViewTextBoxColumn dtgv_CatergoryName;
+        private DataGridViewTextBoxColumn dtgv_id;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgv_Medicines;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

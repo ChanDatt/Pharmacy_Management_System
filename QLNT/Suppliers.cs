@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNT
 {
-    public partial class Bills : Form
+    public partial class Suppliers : Form
     {
-        public Bills()
+        public Suppliers()
         {
             InitializeComponent();
         }

@@ -28,5 +28,10 @@ namespace QLNT
             Medicines_Update medicines_Update = new Medicines_Update();
             medicines_Update.ShowDialog();
         }
+
+        private void dtgv_Medicines_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

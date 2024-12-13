@@ -50,7 +50,6 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             lb_ShortChau = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -75,7 +74,6 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -123,20 +121,9 @@
             lb_ShortChau.TabIndex = 5;
             lb_ShortChau.Text = "SHORT CHAU";
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            flowLayoutPanel1.Controls.Add(guna2Button1);
-            flowLayoutPanel1.Controls.Add(guna2Button2);
-            flowLayoutPanel1.Controls.Add(guna2Button4);
-            flowLayoutPanel1.Location = new Point(12, 200);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(226, 620);
-            flowLayoutPanel1.TabIndex = 6;
-            // 
             // guna2Button1
             // 
-            guna2Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button1.BorderRadius = 25;
             guna2Button1.CustomizableEdges = customizableEdges5;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -146,7 +133,7 @@
             guna2Button1.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button1.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(3, 3);
+            guna2Button1.Location = new Point(728, 128);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(223, 66);
@@ -155,7 +142,7 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button2.BorderRadius = 25;
             guna2Button2.CustomizableEdges = customizableEdges7;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
@@ -165,7 +152,7 @@
             guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button2.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(3, 75);
+            guna2Button2.Location = new Point(1186, 127);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button2.Size = new Size(223, 66);
@@ -174,7 +161,7 @@
             // 
             // guna2Button4
             // 
-            guna2Button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            guna2Button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button4.BorderRadius = 25;
             guna2Button4.CustomizableEdges = customizableEdges9;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
@@ -184,7 +171,7 @@
             guna2Button4.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button4.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(3, 147);
+            guna2Button4.Location = new Point(957, 128);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button4.Size = new Size(223, 66);
@@ -199,9 +186,9 @@
             flowLayoutPanel2.Controls.Add(items2);
             flowLayoutPanel2.Controls.Add(items3);
             flowLayoutPanel2.Controls.Add(items4);
-            flowLayoutPanel2.Location = new Point(244, 200);
+            flowLayoutPanel2.Location = new Point(0, 200);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(783, 620);
+            flowLayoutPanel2.Size = new Size(1027, 620);
             flowLayoutPanel2.TabIndex = 6;
             // 
             // items1
@@ -240,7 +227,7 @@
             items3.BackColor = Color.Transparent;
             items3.BackgroundImageLayout = ImageLayout.None;
             items3.id = 0;
-            items3.Location = new Point(3, 209);
+            items3.Location = new Point(583, 3);
             items3.name = "Medicine name";
             items3.Name = "items3";
             items3.pic = "";
@@ -254,7 +241,7 @@
             items4.BackColor = Color.Transparent;
             items4.BackgroundImageLayout = ImageLayout.None;
             items4.id = 0;
-            items4.Location = new Point(299, 209);
+            items4.Location = new Point(3, 215);
             items4.name = "Medicine name";
             items4.Name = "items4";
             items4.pic = "";
@@ -358,14 +345,14 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(247, 145);
+            guna2TextBox1.Location = new Point(27, 145);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox1.Size = new Size(363, 48);
+            guna2TextBox1.Size = new Size(514, 48);
             guna2TextBox1.TabIndex = 18;
             // 
             // guna2Button3
@@ -483,15 +470,16 @@
             Controls.Add(guna2DataGridView1);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(guna2Panel1);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(guna2Button2);
+            Controls.Add(guna2Button4);
             Controls.Add(guna2Panel2);
+            Controls.Add(guna2Button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "POS";
             Text = "POS";
             WindowState = FormWindowState.Maximized;
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
@@ -504,7 +492,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label lb_ShortChau;
-        private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel flowLayoutPanel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private items items1;

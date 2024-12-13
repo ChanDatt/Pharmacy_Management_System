@@ -41,6 +41,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +56,9 @@
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
             // lb_Categories
@@ -92,11 +96,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(34, 274);
+            guna2DataGridView1.Location = new Point(10, 7);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(966, 533);
+            guna2DataGridView1.Size = new Size(970, 545);
             guna2DataGridView1.TabIndex = 8;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -300,12 +304,25 @@
             guna2HtmlLabel6.TabIndex = 14;
             guna2HtmlLabel6.Text = "$xx.xxx";
             // 
+            // guna2Panel2
+            // 
+            guna2Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel2.BackColor = Color.FromArgb(89, 104, 105);
+            guna2Panel2.Controls.Add(guna2DataGridView1);
+            guna2Panel2.CustomizableEdges = customizableEdges11;
+            guna2Panel2.Location = new Point(25, 280);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel2.Size = new Size(990, 566);
+            guna2Panel2.TabIndex = 40;
+            // 
             // Inventories
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1447, 858);
+            Controls.Add(guna2Panel2);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
@@ -316,13 +333,13 @@
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button3);
             Controls.Add(guna2Button1);
-            Controls.Add(guna2DataGridView1);
             Controls.Add(lb_Categories);
             Controls.Add(guna2TextBox2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Inventories";
             Text = "Inventories";
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -342,5 +359,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

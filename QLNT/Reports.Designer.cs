@@ -49,6 +49,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -64,7 +66,9 @@
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             btn_ReportPredict = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)dtgv_Medicines).BeginInit();
+            guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
             // lb_Categories
@@ -171,12 +175,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgv_Medicines.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_Medicines.GridColor = Color.Silver;
-            dtgv_Medicines.Location = new Point(75, 317);
+            dtgv_Medicines.Location = new Point(13, 3);
             dtgv_Medicines.Name = "dtgv_Medicines";
             dtgv_Medicines.ReadOnly = true;
             dtgv_Medicines.RowHeadersVisible = false;
             dtgv_Medicines.RowHeadersWidth = 51;
-            dtgv_Medicines.Size = new Size(1313, 576);
+            dtgv_Medicines.Size = new Size(1287, 551);
             dtgv_Medicines.TabIndex = 12;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtgv_Medicines.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -347,12 +351,25 @@
             btn_ReportPredict.Text = "Predict";
             btn_ReportPredict.Click += btn_ReportPredict_Click;
             // 
+            // guna2Panel2
+            // 
+            guna2Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel2.BackColor = Color.FromArgb(89, 104, 105);
+            guna2Panel2.Controls.Add(dtgv_Medicines);
+            guna2Panel2.CustomizableEdges = customizableEdges19;
+            guna2Panel2.Location = new Point(75, 317);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel2.Size = new Size(1313, 566);
+            guna2Panel2.TabIndex = 41;
+            // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
+            Controls.Add(guna2Panel2);
             Controls.Add(guna2Button6);
             Controls.Add(guna2Button5);
             Controls.Add(btn_ReportPredict);
@@ -360,7 +377,6 @@
             Controls.Add(guna2Button3);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
-            Controls.Add(dtgv_Medicines);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2DateTimePicker1);
@@ -371,6 +387,7 @@
             Text = "Reports";
             Load += Reports_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_Medicines).EndInit();
+            guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,5 +409,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button btn_ReportPredict;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }
