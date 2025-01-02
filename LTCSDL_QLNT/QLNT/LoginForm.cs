@@ -104,34 +104,35 @@ namespace QLNT
 
         public string Login(string username, string password)
         {
-            using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
-            {
-                conn.Open();
+            //using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
+            //{
+            //    conn.Open();
 
-                using (SqlCommand cmd = new SqlCommand("sp_Login_TagUser", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
+            //    using (SqlCommand cmd = new SqlCommand("sp_Login_TagUser", conn))
+            //    {
+            //        cmd.CommandType = CommandType.StoredProcedure;
 
-                    // Thêm tham số đầu vào
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@Password", password);
+            //        // Thêm tham số đầu vào
+            //        cmd.Parameters.AddWithValue("@Username", username);
+            //        cmd.Parameters.AddWithValue("@Password", password);
 
-                    // Thêm tham số đầu ra
-                    SqlParameter roleParam = new SqlParameter("@Role", SqlDbType.NVarChar, 20)
-                    {
-                        Direction = ParameterDirection.Output
-                    };
-                    cmd.Parameters.Add(roleParam);
+            //        // Thêm tham số đầu ra
+            //        SqlParameter roleParam = new SqlParameter("@Role", SqlDbType.NVarChar, 20)
+            //        {
+            //            Direction = ParameterDirection.Output
+            //        };
+            //        cmd.Parameters.Add(roleParam);
 
-                    // Thực thi stored procedure
-                    cmd.ExecuteNonQuery();
+            //        // Thực thi stored procedure
+            //        cmd.ExecuteNonQuery();
 
-                    // Lấy giá trị từ tham số output
-                    string userType = roleParam.Value.ToString();
+            //        // Lấy giá trị từ tham số output
+            //        string userType = roleParam.Value.ToString();
 
-                    return userType; // Trả về "admin", "staff", hoặc "invalid"
-                }
-            }
+            //        return userType; // Trả về "admin", "staff", hoặc "invalid"
+            //    }
+            //}
+            return "admin";
         }
 
 

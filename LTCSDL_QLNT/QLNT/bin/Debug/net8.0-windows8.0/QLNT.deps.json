@@ -20,6 +20,11 @@
         },
         "runtime": {
           "QLNT.dll": {}
+        },
+        "resources": {
+          "cs/QLNT.resources.dll": {
+            "locale": "cs"
+          }
         }
       },
       "EPPlus/7.5.2": {

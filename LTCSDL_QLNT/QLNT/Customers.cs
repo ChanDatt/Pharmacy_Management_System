@@ -209,7 +209,7 @@ namespace QLNT
 
         private void txb_Update_Click(object sender, EventArgs e)
         {
-            if (dtgv_Customers.Rows.Count > 0)
+            if (dtgv_Customers.Rows.Count > 0 && textBox1.Text != string.Empty)
             {
                 UpdateCustomerInDatabase(int.Parse(textBox1.Text), txb_Name.Text, int.Parse(txb_Age.Text), cb_Gender.Text, txb_Phone.Text);
                 id = 0;

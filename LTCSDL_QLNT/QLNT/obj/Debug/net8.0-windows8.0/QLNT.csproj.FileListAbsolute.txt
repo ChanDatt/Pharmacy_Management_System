@@ -229,3 +229,6 @@ C:\Users\tuoan\source\repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.so
 C:\Users\tuoan\source\repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.csproj.Up2Date
 C:\Users\tuoan\source\repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.genruntimeconfig.cache
 C:\Users\tuoan\source\repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\ref\QLNT.dll
+C:\Users\tuoan\Source\Repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.ReceiptInfoForm.cs.resources
+C:\Users\tuoan\Source\Repos\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows8.0\cs\QLNT.resources.dll
+C:\Users\tuoan\Source\Repos\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\cs\QLNT.resources.dll

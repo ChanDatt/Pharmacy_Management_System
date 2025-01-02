@@ -176,31 +176,26 @@ namespace QLNT
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            try
+            using (var folderBrowser = new FolderBrowserDialog())
             {
-                if (i == "Item")
+                // Show the folder browser dialog
+                DialogResult result = folderBrowser.ShowDialog();
+
+                // Check if the user selected a folder
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowser.SelectedPath))
                 {
-                    new ExportFile().exportExcel(dtgv_Reports, "D:\\LTCSDL\\DoAnMonHoc\\Main\\Export\\", "Export_ReportItem");
-                    MessageBox.Show("Export successful");
+                    string exportPath = Path.Combine(folderBrowser.SelectedPath, "Export_Receipts.xlsx"); // Specify the file name
+
+                    try
+                    {
+                        new ExportFile().exportExcel(dtgv_Reports, folderBrowser.SelectedPath, "Export_Receipts");
+                        MessageBox.Show("Export successful");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
                 }
-                else if (i == "Staff")
-                {
-                    new ExportFile().exportExcel(dtgv_Reports, "D:\\LTCSDL\\DoAnMonHoc\\Main\\Export\\", "Export_ReportStaff");
-                    MessageBox.Show("Export successful");
-                }
-                else if (i == "Sales")
-                {
-                    new ExportFile().exportExcel(dtgv_Reports, "D:\\LTCSDL\\DoAnMonHoc\\Main\\Export\\", "Export_ReportSales");
-                    MessageBox.Show("Export successful");
-                }
-                else
-                {
-                    MessageBox.Show("Please select the item you want to print");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

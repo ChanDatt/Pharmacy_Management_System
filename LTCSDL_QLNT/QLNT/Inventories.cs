@@ -26,6 +26,7 @@ namespace QLNT
         {
             InitializeComponent();
             sqlConnection = new SQLConnectionClass();
+            OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             LoadMedicines(); // Load medicines when the form loads
             UpdateMedicineCountAndStock();
 
@@ -144,12 +145,12 @@ namespace QLNT
                 // Check if the user selected a folder
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowser.SelectedPath))
                 {
-                    string exportPath = Path.Combine(folderBrowser.SelectedPath, "Export_Receipts.xlsx"); // Specify the file name
+                    string exportPath = Path.Combine(folderBrowser.SelectedPath, "Export_Inventory.xlsx"); // Specify the file name
 
                     try
                     {
                         // Call the export method with the full path
-                        new ExportFile().exportExcel(dtgv_Inventories, folderBrowser.SelectedPath, "Export_Staffs");
+                        new ExportFile().exportExcel(dtgv_Inventories, folderBrowser.SelectedPath, "Export_Inventory");
                         MessageBox.Show("Export successful");
                     }
                     catch (Exception ex)
@@ -199,63 +200,69 @@ namespace QLNT
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            using (var connection = new SqlConnection(sqlConnection.ConnectionString))
+            if (!string.IsNullOrEmpty(txb_FileName.Text) &&
+                System.IO.File.Exists(txb_FileName.Text))
             {
-                connection.Open();
-
-                try
+                using (var connection = new SqlConnection(sqlConnection.ConnectionString))
                 {
-                    for (int i = 0; i < dtgv_Inventories.Rows.Count; i++)
-                    {
-                        // Lấy giá trị MID cao nhất hiện có
-                        SqlCommand maxMidCmd = new SqlCommand("SELECT ISNULL(MAX(MID), 0) FROM MedInventory", connection);
-                        int maxMid = (int)maxMidCmd.ExecuteScalar();
-                        int newMid = maxMid + 1; // Tạo giá trị MID mới
+                    connection.Open();
 
-                        SqlCommand cmd = new SqlCommand(@"SET IDENTITY_INSERT MedInventory ON; 
+                    try
+                    {
+                        for (int i = 0; i < dtgv_Inventories.Rows.Count; i++)
+                        {
+                            // Lấy giá trị MID cao nhất hiện có
+                            SqlCommand maxMidCmd = new SqlCommand("SELECT ISNULL(MAX(MID), 0) FROM MedInventory", connection);
+                            int maxMid = (int)maxMidCmd.ExecuteScalar();
+                            int newMid = maxMid + 1; // Tạo giá trị MID mới
+
+                            SqlCommand cmd = new SqlCommand(@"SET IDENTITY_INSERT MedInventory ON; 
         INSERT INTO MedInventory (MID, MedicineName, Type, Pack_Size_Label, StockQuantity, UnitPrice, ISDiscontinued, 
             Manufacturer_name, Composition1, Composition2, timestamp, ExperationDATE) 
         VALUES (@MID, @MedicineName, @Type, @PackSizeLabel, @StockQuantity, @UnitPrice, @ISDiscontinued, 
             @ManufacturerName, @Composition1, @Composition2, @Timestamp, @ExperationDATE) SET IDENTITY_INSERT MedInventory OFF;", connection);
 
-                        // Thêm tham số cho câu lệnh
-                        cmd.Parameters.AddWithValue("@MID", newMid); // Sử dụng MID mới
-                        cmd.Parameters.AddWithValue("@MedicineName", dtgv_Inventories.Rows[i].Cells[1].Value.ToString());
-                        cmd.Parameters.AddWithValue("@Type", dtgv_Inventories.Rows[i].Cells[2].Value.ToString());
-                        cmd.Parameters.AddWithValue("@PackSizeLabel", dtgv_Inventories.Rows[i].Cells[3].Value.ToString());
-                        cmd.Parameters.AddWithValue("@StockQuantity", int.Parse(dtgv_Inventories.Rows[i].Cells[4].Value.ToString()));
-                        cmd.Parameters.AddWithValue("@UnitPrice", Decimal.Parse(dtgv_Inventories.Rows[i].Cells[5].Value.ToString()));
-                        cmd.Parameters.AddWithValue("@ISDiscontinued", dtgv_Inventories.Rows[i].Cells[6].Value.ToString());
-                        cmd.Parameters.AddWithValue("@ManufacturerName", dtgv_Inventories.Rows[i].Cells[7].Value.ToString());
-                        cmd.Parameters.AddWithValue("@Composition1", dtgv_Inventories.Rows[i].Cells[8].Value.ToString());
-                        cmd.Parameters.AddWithValue("@Composition2", dtgv_Inventories.Rows[i].Cells[9].Value.ToString());
-                        cmd.Parameters.AddWithValue("@Timestamp", DateTime.Parse(dtgv_Inventories.Rows[i].Cells[10].Value.ToString()));
-                        cmd.Parameters.AddWithValue("@ExperationDATE", DateTime.Parse(dtgv_Inventories.Rows[i].Cells[11].Value.ToString()));
+                            // Thêm tham số cho câu lệnh
+                            cmd.Parameters.AddWithValue("@MID", newMid); // Sử dụng MID mới
+                            cmd.Parameters.AddWithValue("@MedicineName", dtgv_Inventories.Rows[i].Cells[1].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Type", dtgv_Inventories.Rows[i].Cells[2].Value.ToString());
+                            cmd.Parameters.AddWithValue("@PackSizeLabel", dtgv_Inventories.Rows[i].Cells[3].Value.ToString());
+                            cmd.Parameters.AddWithValue("@StockQuantity", int.Parse(dtgv_Inventories.Rows[i].Cells[4].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@UnitPrice", Decimal.Parse(dtgv_Inventories.Rows[i].Cells[5].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@ISDiscontinued", dtgv_Inventories.Rows[i].Cells[6].Value.ToString());
+                            cmd.Parameters.AddWithValue("@ManufacturerName", dtgv_Inventories.Rows[i].Cells[7].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Composition1", dtgv_Inventories.Rows[i].Cells[8].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Composition2", dtgv_Inventories.Rows[i].Cells[9].Value.ToString());
+                            cmd.Parameters.AddWithValue("@Timestamp", DateTime.Parse(dtgv_Inventories.Rows[i].Cells[10].Value.ToString()));
+                            cmd.Parameters.AddWithValue("@ExperationDATE", DateTime.Parse(dtgv_Inventories.Rows[i].Cells[11].Value.ToString()));
 
-                        try
-                        {
-                            cmd.ExecuteNonQuery();
+                            try
+                            {
+                                cmd.ExecuteNonQuery();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Có lỗi khi chèn dữ liệu: " + ex.Message);
+                                continue;
+                            }
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Có lỗi khi chèn dữ liệu: " + ex.Message);
-                            continue;
-                        }
+                        MessageBox.Show("Items saved");
+                        LoadMedicines(); // Load medicines when the form loads
+                        UpdateMedicineCountAndStock();
                     }
-                    MessageBox.Show("Items saved");
-                    LoadMedicines(); // Load medicines when the form loads
-                    UpdateMedicineCountAndStock();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select file");
             }
 
-
         }
-
         private void guna2HtmlLabel6_Click(object sender, EventArgs e)
         {
 
@@ -269,6 +276,69 @@ namespace QLNT
         private void dtgv_Inventories_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            // Check if Ctrl + A is pressed
+            if (keyData == (Keys.Control | Keys.A))
+            {
+                SelectAllRows();
+                return true; // Indicate that the key has been handled
+            }
+
+            // Check if Delete key is pressed
+            if (keyData == Keys.Delete)
+            {
+                DeleteSelectedRows();
+                return true; // Indicate that the key has been handled
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void SelectAllRows()
+        {
+            // Select all rows in the DataGridView
+            dtgv_Inventories.SelectAll();
+        }
+
+        private void DeleteSelectedRows()
+        {
+            // Check if there are any selected rows
+            if (dtgv_Inventories.SelectedRows.Count > 0)
+            {
+                using (var connection = new SqlConnection(sqlConnection.ConnectionString))
+                {
+                    connection.Open();
+                    // Confirm deletion
+                    var confirmation = MessageBox.Show("Are you sure you want to delete the selected items?", "Confirm Delete", MessageBoxButtons.YesNo);
+                    if (confirmation == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow row in dtgv_Inventories.SelectedRows)
+                        {
+                            // Assuming MID is the column name for the primary key
+                            int mid = Convert.ToInt32(row.Cells["MID"].Value);
+
+                            // Prepare the DELETE command
+                            string query = "Update MedInventory SET StockQuantity = 0 where MID = @mid";
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@mid", mid);
+                                command.ExecuteNonQuery(); // Execute the delete command
+                            }
+
+                            dtgv_Inventories.Rows.Remove(row); // Remove row from DataGridView
+                        }
+
+                    }
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
         }
     }
 }

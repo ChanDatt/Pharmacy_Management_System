@@ -39,6 +39,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Search = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,9 +49,11 @@
             txb_Delete = new Guna.UI2.WinForms.Guna2Button();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            dtgv_receiptinfos = new DataGridView();
             dtgv_Receipts = new Guna.UI2.WinForms.Guna2DataGridView();
             dtp_Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgv_receiptinfos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Receipts).BeginInit();
             SuspendLayout();
             // 
@@ -142,6 +146,7 @@
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.BackColor = Color.FromArgb(89, 104, 105);
+            guna2Panel1.Controls.Add(dtgv_receiptinfos);
             guna2Panel1.Controls.Add(dtgv_Receipts);
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Location = new Point(39, 269);
@@ -150,37 +155,59 @@
             guna2Panel1.Size = new Size(1387, 607);
             guna2Panel1.TabIndex = 4;
             // 
+            // dtgv_receiptinfos
+            // 
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dtgv_receiptinfos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtgv_receiptinfos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv_receiptinfos.BackgroundColor = Color.White;
+            dtgv_receiptinfos.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Cyan;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dtgv_receiptinfos.DefaultCellStyle = dataGridViewCellStyle2;
+            dtgv_receiptinfos.Location = new Point(1145, 502);
+            dtgv_receiptinfos.Name = "dtgv_receiptinfos";
+            dtgv_receiptinfos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dtgv_receiptinfos.Size = new Size(234, 89);
+            dtgv_receiptinfos.TabIndex = 21;
+            dtgv_receiptinfos.Visible = false;
+            // 
             // dtgv_Receipts
             // 
             dtgv_Receipts.AllowUserToAddRows = false;
             dtgv_Receipts.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(171, 209, 181);
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(89, 104, 105);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dtgv_Receipts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dtgv_Receipts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dtgv_Receipts.BackgroundColor = Color.LightGray;
-            dtgv_Receipts.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(89, 104, 105);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(108, 137, 118);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgv_Receipts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dtgv_Receipts.ColumnHeadersHeight = 35;
-            dtgv_Receipts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(171, 209, 181);
             dataGridViewCellStyle3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(89, 104, 105);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dtgv_Receipts.DefaultCellStyle = dataGridViewCellStyle3;
+            dtgv_Receipts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dtgv_Receipts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtgv_Receipts.BackgroundColor = Color.LightGray;
+            dtgv_Receipts.CellBorderStyle = DataGridViewCellBorderStyle.RaisedHorizontal;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(89, 104, 105);
+            dataGridViewCellStyle4.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(108, 137, 118);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dtgv_Receipts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dtgv_Receipts.ColumnHeadersHeight = 35;
+            dtgv_Receipts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(171, 209, 181);
+            dataGridViewCellStyle5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(89, 104, 105);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dtgv_Receipts.DefaultCellStyle = dataGridViewCellStyle5;
             dtgv_Receipts.GridColor = Color.Silver;
             dtgv_Receipts.Location = new Point(7, 5);
             dtgv_Receipts.Name = "dtgv_Receipts";
@@ -211,6 +238,8 @@
             dtgv_Receipts.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Receipts.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dtgv_Receipts.CellClick += dtgv_Reports_CellClick;
+            dtgv_Receipts.CellContentClick += dtgv_Receipts_CellContentClick;
+            dtgv_Receipts.CellDoubleClick += dtgv_Receipts_CellDoubleClick;
             // 
             // dtp_Date
             // 
@@ -252,7 +281,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Receipts";
             Text = "Categories";
+            Click += Receipts_Click;
             guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgv_receiptinfos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Receipts).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -267,5 +298,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Receipts;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_Date;
+        private DataGridView dtgv_receiptinfos;
     }
 }

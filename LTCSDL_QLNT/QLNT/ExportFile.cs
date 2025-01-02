@@ -31,7 +31,17 @@ namespace QLNT
                     {
                         if (dataGridView.Rows[row].Cells[col].Value != null) // Check for null values
                         {
-                            worksheet.Cells[row + 2, col + 1].Value = dataGridView.Rows[row].Cells[col].Value;
+                            var cellValue = dataGridView.Rows[row].Cells[col].Value;
+
+                            // Check if the value is a DateTime
+                            if (cellValue is DateTime dateTimeValue)
+                            {
+                                worksheet.Cells[row + 2, col + 1].Value = dateTimeValue.ToString("yyyy-MM-dd HH:mm:ss"); // Convert to string format
+                            }
+                            else
+                            {
+                                worksheet.Cells[row + 2, col + 1].Value = cellValue; // Copy other values as is
+                            }
                         }
                     }
                 }

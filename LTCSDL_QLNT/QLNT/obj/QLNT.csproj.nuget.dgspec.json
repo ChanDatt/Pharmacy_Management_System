@@ -11,7 +11,7 @@
         "projectName": "QLNT",
         "projectPath": "C:\\Users\\tuoan\\Source\\Repos\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
         "packagesPath": "C:\\Users\\tuoan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\obj\\",
+        "outputPath": "C:\\Users\\tuoan\\Source\\Repos\\LTCSDL_QLNT\\QLNT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -20,8 +20,8 @@ namespace QLNT
         {
             InitializeComponent();
             sqlConnection = new SQLConnectionClass();
+            OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             LoadReceiptData();
-
         }
 
         private void LoadReceiptData()
@@ -132,8 +132,7 @@ namespace QLNT
 
                     try
                     {
-                        // Call the export method with the full path
-                        new ExportFile().exportExcel(dtgv_Receipts, folderBrowser.SelectedPath, "Export_Staffs");
+                        new ExportFile().exportExcel(dtgv_Receipts, folderBrowser.SelectedPath, "Export_Receipts");
                         MessageBox.Show("Export successful");
                     }
                     catch (Exception ex)
@@ -170,5 +169,58 @@ namespace QLNT
             }
         }
 
+        private void dtgv_Receipts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int rid = (int)dtgv_Receipts.Rows[e.RowIndex].Cells["RID"].Value;
+                LoadReceiptInfoData(rid);
+                dtgv_receiptinfos.Visible = true;
+                dtgv_receiptinfos.Columns["RID"].Visible = false;
+            }
+        }
+        private void LoadReceiptInfoData(int rid)
+        {
+            // Clear existing data in the DataGridView
+            dtgv_receiptinfos.DataSource = null; // Clear the existing data source
+
+            using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(@"
+            SELECT 
+                ri.RID,
+                ri.MID, 
+                ri.Quantity 
+            FROM 
+                ReceiptInfo ri
+            WHERE 
+                ri.RID = @RID", conn);
+
+                cmd.Parameters.AddWithValue("@RID", rid);
+
+                conn.Open();
+
+                // Create a SqlDataAdapter to fill a DataTable
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                // Bind the DataTable to the DataGridView
+                // Set DefaultCellStyle after binding
+                dtgv_receiptinfos.DefaultCellStyle.BackColor = Color.White; // Example style
+                dtgv_receiptinfos.DefaultCellStyle.ForeColor = Color.Black;
+                dtgv_receiptinfos.DataSource = dt;
+            }
+        }
+
+        private void Receipts_Click(object sender, EventArgs e)
+        {
+            dtgv_receiptinfos.Visible = false;
+        }
+
+        private void dtgv_Receipts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
 using ZXing.Common;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLNT
 {
@@ -188,9 +189,8 @@ namespace QLNT
             {
                 printPreviewDialog1.ShowDialog();
                 UpdateReceiptAndInfo();
-
-                // Finally, print the document
                 printDocument1.Print();
+                ClearPOS();
             }
             catch (Exception ex)
             {
@@ -256,7 +256,7 @@ namespace QLNT
             y += 20; // Reduced space
             g.DrawString("Customer: " + customer.Name, fontHeader, Brushes.Black, new PointF(10, y));
             y += 20; // Reduced space
-            g.DrawString("Staff: " + staff.Name , fontHeader, Brushes.Black, new PointF(10, y));
+            g.DrawString("Staff: " + staff.Name, fontHeader, Brushes.Black, new PointF(10, y));
             y += 20; // Reduced space
             g.DrawString("Note: " + note, fontHeader, Brushes.Black, new PointF(10, y));
             y += 20; // Reduced space
@@ -341,6 +341,22 @@ namespace QLNT
             }
 
             e.HasMorePages = hasMorePages;
+            if (paymentmethod != "Cash")
+            {
+                try
+                {
+                    Image qrcode = Image.FromFile(@$"C:\Users\tuoan\source\repos\LTCSDL_QLNT\assets_img\{paymentmethod}.jpg");
+                    int logoWidth = 100; // Chiều rộng logo
+                    int logoHeight = 100; // Chiều cao logo
+                    g.DrawImage(qrcode, new Rectangle((pageWidth - logoWidth) / 2, y, logoWidth, logoHeight));
+                    y += logoHeight + 10; // Cập nhật vị trí Y
+                }
+                catch
+                {
+                    g.DrawString("LOGO NOT FOUND", fontHeader, Brushes.Red, new PointF(CenterText("LOGO NOT FOUND", fontHeader), y));
+                    y += 40;
+                }
+            }
         }
 
 
@@ -648,6 +664,21 @@ namespace QLNT
                     }
                 }
             }
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void ClearPOS()
+        {
+            guna2TextBox1.Text = string.Empty;
+            comboBox1.Text = string.Empty;
+            comboBox2.Text = string.Empty;
+            txb_Note.Text = string.Empty;
+            lb_AmountPaid.Text = "0.00";
+            lb_TotalAmount.Text = "0.00";
+            dtgv_items.Rows.Clear();
         }
     }
 }
