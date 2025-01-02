@@ -21,5 +21,10 @@ namespace QLNT
         {
 
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

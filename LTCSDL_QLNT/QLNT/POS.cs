@@ -64,6 +64,7 @@ namespace QLNT
                 int mid = Convert.ToInt32(row["MID"]);
                 string medicineName = row["MedicineName"].ToString();
                 decimal price = Convert.ToDecimal(row["UnitPrice"]);
+                price += price * (decimal)0.08;
                 int stockQuantity = Convert.ToInt32(row["StockQuantity"]); // Get stock quantity
 
                 // Create an instance of MedicineItem
@@ -171,30 +172,44 @@ namespace QLNT
 
         private void btn_Pay_Click(object sender, EventArgs e)
         {
-
-            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-            printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
-
-
-            // Tạo đối tượng PrintDocument
-            PrintDocument printDocument = new PrintDocument();
-
-            // Thiết lập kích thước hóa đơn (80mm x 200mm)
-            PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
-
-            printDocument1.DefaultPageSettings.PaperSize = paperSize;
-            printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
-            printPreviewDialog1.Document = printDocument1;
-            try
+            if (comboBox1.Text != "" && comboBox2.Text != "" && paymentmethod != null && dtgv_items.Rows.Count > 0)
             {
+<<<<<<< HEAD
                 printPreviewDialog1.ShowDialog();
                 UpdateReceiptAndInfo();
                 printDocument1.Print();
                 ClearPOS();
+=======
+                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
+
+
+                // Tạo đối tượng PrintDocument
+                PrintDocument printDocument = new PrintDocument();
+
+                // Thiết lập kích thước hóa đơn (80mm x 200mm)
+                PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
+
+                printDocument1.DefaultPageSettings.PaperSize = paperSize;
+                printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
+                printPreviewDialog1.Document = printDocument1;
+                try
+                {
+                    printPreviewDialog1.ShowDialog();
+                    UpdateReceiptAndInfo();
+
+                    // Finally, print the document
+                    printDocument1.Print();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to process: " + $"{ex.Message}");
+                }
+>>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Failed to process: " + $"{ex.Message}");
+                MessageBox.Show("Please fill in all information");
             }
         }
 
@@ -336,7 +351,6 @@ namespace QLNT
                 g.DrawString(grandTotal.ToString("C"), fontBoldContent, Brushes.Black, xGrandTotal, y);
                 y += 30;
 
-                // Lời cảm ơn
                 g.DrawString("THANK YOU!", fontBoldContent, Brushes.Black, new PointF(CenterText("THANK YOU!", fontBoldContent), y));
             }
 
@@ -360,10 +374,6 @@ namespace QLNT
         }
 
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void txb_Customer_TextChanged(object sender, EventArgs e)
         {
@@ -442,7 +452,7 @@ namespace QLNT
             {
                 LoadCustomerData(comboBox1.Text);
                 comboBox1.Text = string.Empty;// Call to load customer data
-                e.SuppressKeyPress = true; // Optional: Prevents the beep sound
+                e.SuppressKeyPress = true; // Optional: Prevents the beep sound 
             }
         }
         private Customer LoadCustomerData(string phoneNumber)
@@ -564,6 +574,7 @@ namespace QLNT
                 staff = new Staff { EID = selectedStaffId, Name = selectedStaffName };
             }
         }
+
         private void SelectStaff(string employeeName)
         {
             using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
@@ -650,7 +661,7 @@ namespace QLNT
                     foreach (DataGridViewRow row in dtgv_items.Rows)
                     {
                         if (row.IsNewRow) continue; // Skip the new row placeholder
-                        // Get MID and Quantity from the DataGridView
+                                                    // Get MID and Quantity from the DataGridView
                         int mid = Convert.ToInt32(row.Cells["MID"].Value); // Replace "MID" with your actual column name
                         int quantity = Convert.ToInt32(row.Cells["Quantity"].Value); // Replace "Quantity" with your actual column name
 

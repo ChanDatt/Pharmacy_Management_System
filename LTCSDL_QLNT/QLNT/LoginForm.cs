@@ -10,8 +10,12 @@ namespace QLNT
     {
         private SQLConnectionClass sqlConnection;
         private string currentName;
-        string placeholder_txb_User = "Username";
-        string placeholder_txb_Pass = "Password";
+        //string placeholder_txb_User = "Username";
+        //string placeholder_txb_Pass = "Password";
+
+        string placeholder_txb_User = "oanh.admin";
+        string placeholder_txb_Pass = "123";
+
         public string UserRole { get; private set; }
         public string CurrentName { get => currentName; set => currentName = value; }
 

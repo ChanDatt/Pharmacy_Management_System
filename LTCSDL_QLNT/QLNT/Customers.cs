@@ -211,11 +211,17 @@ namespace QLNT
         {
             if (dtgv_Customers.Rows.Count > 0 && textBox1.Text != string.Empty)
             {
-                UpdateCustomerInDatabase(int.Parse(textBox1.Text), txb_Name.Text, int.Parse(txb_Age.Text), cb_Gender.Text, txb_Phone.Text);
-                id = 0;
-                txb_Name.Clear();
-                txb_Age.Clear();
-                txb_Phone.Clear();
+                try
+                {
+                    UpdateCustomerInDatabase(int.Parse(textBox1.Text), txb_Name.Text, int.Parse(txb_Age.Text), cb_Gender.Text, txb_Phone.Text);
+                    id = 0;
+                    txb_Name.Clear();
+                    txb_Age.Clear();
+                    txb_Phone.Clear();
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Please fill put correct format: " + ex.Message);
+                }
             }
             else
             {

@@ -150,7 +150,6 @@
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(634, 800);
             flowLayoutPanel2.TabIndex = 6;
-            flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
             // 
             // guna2TextBox1
             // 
