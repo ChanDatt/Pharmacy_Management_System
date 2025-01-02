@@ -197,7 +197,6 @@ namespace QLNT
             }
         }
 
-
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txb_FileName.Text) &&

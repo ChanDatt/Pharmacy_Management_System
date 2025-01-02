@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "XmcDRe03scI=",
-=======
   "dgSpecHash": "KoHlvmcHa2w=",
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
   "success": true,
   "projectFilePath": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
   "expectedPackageFiles": [
@@ -47,6 +43,12 @@
     "C:\\Users\\DELL\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",

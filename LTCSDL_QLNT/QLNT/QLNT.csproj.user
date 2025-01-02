@@ -28,6 +28,9 @@
     <Compile Update="Reports_Predict.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StaffOfTheMonthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>

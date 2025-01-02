@@ -94,7 +94,7 @@ namespace QLNT
                 string query = "INSERT INTO Employee (EID, EmployeeName, Note, Phone, Status, Salary, Address) VALUES (@EID, @EmployeeName, @Note, @Phone, @Status, @Salary, @Address)";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    Random random = new Random();
+                    Random random = new Random();       
                     command.Parameters.AddWithValue("@EID", newId);
                     command.Parameters.AddWithValue("@EmployeeName", name);
                     command.Parameters.AddWithValue("@Note", note);

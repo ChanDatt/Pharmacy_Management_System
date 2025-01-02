@@ -174,12 +174,11 @@ namespace QLNT
         {
             if (comboBox1.Text != "" && comboBox2.Text != "" && paymentmethod != null && dtgv_items.Rows.Count > 0)
             {
-<<<<<<< HEAD
-                printPreviewDialog1.ShowDialog();
-                UpdateReceiptAndInfo();
-                printDocument1.Print();
-                ClearPOS();
-=======
+                //printPreviewDialog1.ShowDialog();
+                //UpdateReceiptAndInfo();
+                //printDocument1.Print();
+                //ClearPOS();
+
                 printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
                 printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
 
@@ -205,7 +204,8 @@ namespace QLNT
                 {
                     MessageBox.Show("Failed to process: " + $"{ex.Message}");
                 }
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
+
+
             }
             else
             {

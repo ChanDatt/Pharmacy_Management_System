@@ -1,69 +1,50 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\",
+  "WorkspaceRootPath": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\staffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\staffofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\staffofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\staffofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\staffofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\qlnt\\staffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\staffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\receipts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\receipts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\qlnt\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|c:\\users\\tuoan\\source\\repos\\ltcsdl_qlnt\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\",
-  "Documents": [
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\tone.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\tone.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\AppData\\Local\\SourceServer\\b52f520c6e0aac21007057f9d91988dc73b93cfb2609c519f98c42570d652ce7\\LTCSDL_QLNT\\QLNT\\Inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\ltcsdl\\doanmonhoc\\main\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,26 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 10,
-=======
-          "SelectedChildIndex": 11,
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "POS.cs",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\POS.cs",
-              "RelativeDocumentMoniker": "QLNT\\POS.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\POS.cs",
-              "RelativeToolTip": "QLNT\\POS.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAAAGYBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T23:27:21.811Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -123,153 +86,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reports.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Reports.cs",
-              "RelativeDocumentMoniker": "QLNT\\Reports.cs",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Reports.cs",
-              "RelativeToolTip": "QLNT\\Reports.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAUwDkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T21:02:07.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Reports.cs [Design]",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Reports.cs",
-              "RelativeDocumentMoniker": "QLNT\\Reports.cs",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Reports.cs [Design]",
-              "RelativeToolTip": "QLNT\\Reports.cs [Design]",
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
+              "RelativeDocumentMoniker": "QLNT\\Dashboard.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
+              "RelativeToolTip": "QLNT\\Dashboard.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T21:02:04.48Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-<<<<<<< HEAD
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-=======
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Inventories.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Local\\SourceServer\\b52f520c6e0aac21007057f9d91988dc73b93cfb2609c519f98c42570d652ce7\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "ToolTip": "C:\\Users\\DELL\\AppData\\Local\\SourceServer\\b52f520c6e0aac21007057f9d91988dc73b93cfb2609c519f98c42570d652ce7\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAswNIAAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T20:52:45.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T12:40:50.618Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Inventories.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeDocumentMoniker": "QLNT\\Inventories.cs",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeToolTip": "QLNT\\Inventories.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAIwEkAAAANAAAAAAAAAA==",
+              "Title": "StaffOfTheMonthForm.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\StaffOfTheMonthForm.cs",
+              "RelativeDocumentMoniker": "QLNT\\StaffOfTheMonthForm.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\StaffOfTheMonthForm.cs",
+              "RelativeToolTip": "QLNT\\StaffOfTheMonthForm.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwDkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T20:30:59.723Z",
+              "WhenOpened": "2025-01-02T10:12:39.715Z",
               "EditorCaption": ""
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "Staffs.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Staffs.cs",
-              "RelativeDocumentMoniker": "QLNT\\Staffs.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Staffs.cs [Design]",
-              "RelativeToolTip": "QLNT\\Staffs.cs [Design]",
+              "Title": "StaffOfTheMonthForm.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\StaffOfTheMonthForm.cs",
+              "RelativeDocumentMoniker": "QLNT\\StaffOfTheMonthForm.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\StaffOfTheMonthForm.cs [Design]",
+              "RelativeToolTip": "QLNT\\StaffOfTheMonthForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T00:44:06.627Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "POS.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\POS.cs",
-              "RelativeDocumentMoniker": "QLNT\\POS.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\POS.cs [Design]",
-              "RelativeToolTip": "QLNT\\POS.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T00:31:29.428Z",
+              "WhenOpened": "2025-01-02T10:04:29.49Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Receipts.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Receipts.cs",
-              "RelativeDocumentMoniker": "QLNT\\Receipts.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Receipts.cs [Design]",
-              "RelativeToolTip": "QLNT\\Receipts.cs [Design]",
+              "Title": "Staffs.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Staffs.cs",
+              "RelativeDocumentMoniker": "QLNT\\Staffs.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Staffs.cs [Design]",
+              "RelativeToolTip": "QLNT\\Staffs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T00:31:24.809Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inventories.cs",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeDocumentMoniker": "QLNT\\Inventories.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeToolTip": "QLNT\\Inventories.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAwwMsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T23:57:32.311Z",
-=======
-              "Title": "Tone.txt",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Tone.txt",
-              "RelativeDocumentMoniker": "QLNT\\Tone.txt",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Tone.txt",
-              "RelativeToolTip": "QLNT\\Tone.txt",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-01T19:55:48.902Z",
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T05:27:15.863Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-<<<<<<< HEAD
-              "Title": "Inventories.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeDocumentMoniker": "QLNT\\Inventories.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Inventories.cs [Design]",
-              "RelativeToolTip": "QLNT\\Inventories.cs [Design]",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\MainForm.cs",
+              "RelativeDocumentMoniker": "QLNT\\MainForm.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\MainForm.cs [Design]",
+              "RelativeToolTip": "QLNT\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T23:57:30.644Z",
-=======
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
-              "RelativeDocumentMoniker": "QLNT\\Dashboard.cs",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs [Design]",
-              "RelativeToolTip": "QLNT\\Dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T18:23:35.687Z",
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-02T09:19:26.404Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "Customers.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Customers.cs",
-              "RelativeDocumentMoniker": "QLNT\\Customers.cs",
-              "ToolTip": "C:\\Users\\tuoan\\source\\repos\\LTCSDL_QLNT\\QLNT\\Customers.cs [Design]",
-              "RelativeToolTip": "QLNT\\Customers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T16:52:58.107Z",
-              "EditorCaption": " [Design]"
-=======
               "DocumentIndex": 6,
               "Title": "Inventories.cs [Design]",
               "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
@@ -277,22 +152,66 @@
               "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs [Design]",
               "RelativeToolTip": "QLNT\\Inventories.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T18:39:30.516Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-02T05:27:16.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\MainForm.cs",
+              "RelativeDocumentMoniker": "QLNT\\MainForm.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\MainForm.cs",
+              "RelativeToolTip": "QLNT\\MainForm.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwGAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:02:05.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "POS.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs",
+              "RelativeDocumentMoniker": "QLNT\\POS.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs",
+              "RelativeToolTip": "QLNT\\POS.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAA7wM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T05:27:15.541Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
-              "RelativeDocumentMoniker": "QLNT\\Dashboard.cs",
-              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
-              "RelativeToolTip": "QLNT\\Dashboard.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
+              "Title": "Customers.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Customers.cs",
+              "RelativeDocumentMoniker": "QLNT\\Customers.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Customers.cs [Design]",
+              "RelativeToolTip": "QLNT\\Customers.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T18:23:44.928Z",
-              "EditorCaption": ""
->>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
+              "WhenOpened": "2025-01-02T05:27:16.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Tone.txt",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Tone.txt",
+              "RelativeDocumentMoniker": "QLNT\\Tone.txt",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Tone.txt",
+              "RelativeToolTip": "QLNT\\Tone.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-02T08:12:08.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "POS.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs",
+              "RelativeDocumentMoniker": "QLNT\\POS.cs",
+              "ToolTip": "D:\\LTCSDL\\DoAnMonHoc\\Main\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs [Design]",
+              "RelativeToolTip": "QLNT\\POS.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T05:27:16.112Z"
             }
           ]
         }

@@ -94,6 +94,7 @@ namespace QLNT
                     btn_Reports.Visible = false; // Example: hide Reports button
                 }
             }
+            ShowTab(new StaffOfTheMonthForm());
         }
 
         private void btn_Receipts_Click(object sender, EventArgs e)
@@ -107,6 +108,11 @@ namespace QLNT
         }
 
         private void CenterPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
 
         }

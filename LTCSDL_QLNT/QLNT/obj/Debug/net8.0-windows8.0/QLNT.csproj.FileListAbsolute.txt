@@ -312,3 +312,7 @@ D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8
 D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.genruntimeconfig.cache
 D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\ref\QLNT.dll
 >>>>>>> c1adb008c54d98c62f9ba1760bf93e6891ae08ed
+D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.ReceiptInfoForm.cs.resources
+D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows8.0\cs\QLNT.resources.dll
+D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\cs\QLNT.resources.dll
+D:\LTCSDL\DoAnMonHoc\Main\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.StaffOfTheMonthForm.resources
