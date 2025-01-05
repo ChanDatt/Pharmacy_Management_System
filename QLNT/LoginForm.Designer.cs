@@ -38,7 +38,6 @@
             txb_Pass = new TextBox();
             txb_Blind = new TextBox();
             btn_Login = new Button();
-            lb_fgpw = new Label();
             pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pB_logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -134,18 +133,6 @@
             btn_Login.UseVisualStyleBackColor = true;
             btn_Login.Click += btn_Login_Click;
             // 
-            // lb_fgpw
-            // 
-            lb_fgpw.AutoSize = true;
-            lb_fgpw.BackColor = Color.Transparent;
-            lb_fgpw.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            lb_fgpw.ForeColor = Color.DimGray;
-            lb_fgpw.Location = new Point(687, 559);
-            lb_fgpw.Name = "lb_fgpw";
-            lb_fgpw.Size = new Size(160, 23);
-            lb_fgpw.TabIndex = 5;
-            lb_fgpw.Text = "Forgot password?";
-            // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
@@ -159,7 +146,7 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // Login
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -170,7 +157,6 @@
             ClientSize = new Size(1300, 700);
             Controls.Add(pictureBox3);
             Controls.Add(pB_logo);
-            Controls.Add(lb_fgpw);
             Controls.Add(btn_Login);
             Controls.Add(txb_Pass);
             Controls.Add(txb_User);
@@ -181,7 +167,7 @@
             DoubleBuffered = true;
             ForeColor = SystemColors.ActiveCaptionText;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Login";
+            Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
@@ -205,7 +191,6 @@
         private Button btn_Blind;
         private TextBox txb_Blind;
         private Button btn_Login;
-        private Label lb_fgpw;
         private PictureBox pictureBox3;
     }
 }

@@ -84,12 +84,12 @@
             guna2DateTimePicker2.FillColor = Color.FromArgb(230, 239, 230);
             guna2DateTimePicker2.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2DateTimePicker2.Format = DateTimePickerFormat.Short;
-            guna2DateTimePicker2.Location = new Point(1193, 146);
+            guna2DateTimePicker2.Location = new Point(1049, 241);
             guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker2.Name = "guna2DateTimePicker2";
             guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker2.Size = new Size(195, 45);
+            guna2DateTimePicker2.Size = new Size(195, 44);
             guna2DateTimePicker2.TabIndex = 9;
             guna2DateTimePicker2.TextAlign = HorizontalAlignment.Center;
             guna2DateTimePicker2.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
@@ -105,12 +105,12 @@
             guna2DateTimePicker1.FillColor = Color.FromArgb(230, 239, 230);
             guna2DateTimePicker1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Short;
-            guna2DateTimePicker1.Location = new Point(992, 146);
+            guna2DateTimePicker1.Location = new Point(848, 241);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker1.Size = new Size(195, 45);
+            guna2DateTimePicker1.Size = new Size(195, 44);
             guna2DateTimePicker1.TabIndex = 9;
             guna2DateTimePicker1.TextAlign = HorizontalAlignment.Center;
             guna2DateTimePicker1.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
@@ -121,7 +121,7 @@
             guna2HtmlLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(992, 107);
+            guna2HtmlLabel2.Location = new Point(848, 208);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(113, 33);
             guna2HtmlLabel2.TabIndex = 11;
@@ -133,7 +133,7 @@
             guna2HtmlLabel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(1191, 107);
+            guna2HtmlLabel3.Location = new Point(1047, 208);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(106, 33);
             guna2HtmlLabel3.TabIndex = 11;
@@ -170,7 +170,7 @@
             guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button3.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(302, 221);
+            guna2Button3.Location = new Point(253, 221);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button3.Size = new Size(172, 64);
@@ -189,7 +189,7 @@
             guna2Button4.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(531, 221);
+            guna2Button4.Location = new Point(431, 221);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button4.Size = new Size(172, 64);
@@ -199,7 +199,6 @@
             // 
             // guna2Button5
             // 
-            guna2Button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button5.BorderRadius = 25;
             guna2Button5.CustomizableEdges = customizableEdges11;
             guna2Button5.DisabledState.BorderColor = Color.DarkGray;
@@ -209,7 +208,7 @@
             guna2Button5.FillColor = Color.FromArgb(64, 0, 0);
             guna2Button5.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(992, 221);
+            guna2Button5.Location = new Point(609, 221);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button5.Size = new Size(195, 64);
@@ -223,16 +222,18 @@
             guna2Panel2.BackColor = Color.FromArgb(89, 104, 105);
             guna2Panel2.Controls.Add(dtgv_Reports);
             guna2Panel2.CustomizableEdges = customizableEdges13;
-            guna2Panel2.Location = new Point(75, 317);
+            guna2Panel2.Location = new Point(30, 317);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel2.Size = new Size(1313, 566);
+            guna2Panel2.Size = new Size(1402, 566);
             guna2Panel2.TabIndex = 41;
             // 
             // dtgv_Reports
             // 
             dtgv_Reports.AllowUserToAddRows = false;
             dtgv_Reports.AllowUserToDeleteRows = false;
+            dtgv_Reports.AllowUserToResizeColumns = false;
+            dtgv_Reports.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(230, 239, 230);
             dataGridViewCellStyle1.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(89, 104, 105);
@@ -261,12 +262,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgv_Reports.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_Reports.GridColor = Color.Silver;
-            dtgv_Reports.Location = new Point(14, 7);
+            dtgv_Reports.Location = new Point(12, 3);
             dtgv_Reports.Name = "dtgv_Reports";
             dtgv_Reports.ReadOnly = true;
             dtgv_Reports.RowHeadersVisible = false;
             dtgv_Reports.RowHeadersWidth = 51;
-            dtgv_Reports.Size = new Size(1285, 541);
+            dtgv_Reports.Size = new Size(1374, 541);
             dtgv_Reports.TabIndex = 18;
             dtgv_Reports.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtgv_Reports.ThemeStyle.AlternatingRowsStyle.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -292,7 +293,8 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.BorderRadius = 25;
+            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button2.BorderRadius = 20;
             guna2Button2.CustomizableEdges = customizableEdges15;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -301,10 +303,10 @@
             guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
             guna2Button2.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(1133, 38);
+            guna2Button2.Location = new Point(1257, 241);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button2.Size = new Size(131, 45);
+            guna2Button2.Size = new Size(131, 44);
             guna2Button2.TabIndex = 42;
             guna2Button2.Text = "Find";
             guna2Button2.Click += guna2Button2_Click;

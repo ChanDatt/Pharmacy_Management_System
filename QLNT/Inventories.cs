@@ -339,6 +339,58 @@ namespace QLNT
                 MessageBox.Show("Please select a row to delete.");
             }
         }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Đọc dữ liệu từ file Excel
+                OleDbConnection cnstr = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + txb_FileName.Text + ";Extended Properties='Excel 12.0 Xml;HDR=YES;'");
+                cnstr.Open();
+                OleDbDataAdapter theDataAdapter = new OleDbDataAdapter("Select * from [Sheet1$]", cnstr);
+                DataTable dt = new DataTable();
+                theDataAdapter.Fill(dt);
+
+                // Giả sử bạn có một cột tên là "ProductID" trong Excel
+                List<string> MIDToDelete = new List<string>();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    // Thêm ProductID vào danh sách
+                    MIDToDelete.Add(row["MID"].ToString());
+                }
+
+                // Đóng kết nối Excel
+                cnstr.Close();
+
+                // Kết nối đến cơ sở dữ liệu SQL
+                using (var connection = new SqlConnection(sqlConnection.ConnectionString))
+                {
+                    connection.Open();
+
+                    foreach (string MID in MIDToDelete)
+                    {
+                        using (SqlCommand sqlCommand = new SqlCommand("DELETE FROM MedTransactions WHERE MID = @MID", connection))
+                        {
+                            sqlCommand.Parameters.AddWithValue("@MID", MID);
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                        // Thực hiện xóa sản phẩm
+                        using (SqlCommand sqlCommand = new SqlCommand("DELETE FROM MedInventory WHERE MID = @MID", connection))
+                        {
+                            sqlCommand.Parameters.AddWithValue("@MID", MID);
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                MessageBox.Show("Products deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
     }
 }
 

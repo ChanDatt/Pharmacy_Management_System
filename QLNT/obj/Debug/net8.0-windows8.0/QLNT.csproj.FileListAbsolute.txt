@@ -396,3 +396,7 @@ D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\refint\QLNT.d
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.pdb
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.genruntimeconfig.cache
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\ref\QLNT.dll
+D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.sourcelink.json
+D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.Verify.resources
+D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.Cash.resources
+D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.CashVerify.resources

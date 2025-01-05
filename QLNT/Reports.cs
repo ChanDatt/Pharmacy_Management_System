@@ -28,12 +28,6 @@ namespace QLNT
 
         }
 
-        private void btn_ReportPredict_Click(object sender, EventArgs e)
-        {
-            Reports_Predict reportPredict = new Reports_Predict();
-            reportPredict.ShowDialog();
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             LoadItemMSales();

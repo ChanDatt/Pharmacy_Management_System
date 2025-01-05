@@ -20,6 +20,7 @@ namespace QLNT
         private SQLConnectionClass sqlConnection;
         private int currentOffset = 0;
         private const int pageSize = 200;
+
         public class Customer
         {
             public int CID { get; set; }
@@ -98,7 +99,7 @@ namespace QLNT
                     break;
                 }
             }
-
+            
             // If the item does not exist, add a new row
             if (!itemExists)
             {
@@ -174,38 +175,68 @@ namespace QLNT
         {
             if (comboBox1.Text != "" && comboBox2.Text != "" && paymentmethod != null && dtgv_items.Rows.Count > 0)
             {
-                //printPreviewDialog1.ShowDialog();
-                //UpdateReceiptAndInfo();
-                //printDocument1.Print();
-                //ClearPOS();
-
-                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-                printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
-
-
-                // Tạo đối tượng PrintDocument
-                PrintDocument printDocument = new PrintDocument();
-
-                // Thiết lập kích thước hóa đơn (80mm x 200mm)
-                PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
-
-                printDocument1.DefaultPageSettings.PaperSize = paperSize;
-                printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
-                printPreviewDialog1.Document = printDocument1;
-                try
+                if (paymentmethod != "Cash")
                 {
-                    printPreviewDialog1.ShowDialog();
-                    UpdateReceiptAndInfo();
+                    if (new Verify(paymentmethod, grandTotal).ShowDialog() == DialogResult.OK)
+                    {
+                        printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                        printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
 
-                    // Finally, print the document
-                    printDocument1.Print();
+                        // Tạo đối tượng PrintDocument
+                        PrintDocument printDocument = new PrintDocument();
+
+                        // Thiết lập kích thước hóa đơn (80mm x 200mm)
+                        PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
+
+                        printDocument1.DefaultPageSettings.PaperSize = paperSize;
+                        printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
+                        printPreviewDialog1.Document = printDocument1;
+                        try
+                        {
+                            printPreviewDialog1.ShowDialog();
+                            UpdateReceiptAndInfo();
+
+                            // Finally, print the document
+                            printDocument1.Print();
+                            ClearPOS();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Failed to process: " + $"{ex.Message}");
+                        }
+                    }
                 }
-                catch (Exception ex)
+                else if (paymentmethod == "Cash")
                 {
-                    MessageBox.Show("Failed to process: " + $"{ex.Message}");
+                    if (new Cash(grandTotal).ShowDialog() == DialogResult.OK)
+                    {
+                        printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                        printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
+
+                        // Tạo đối tượng PrintDocument
+                        PrintDocument printDocument = new PrintDocument();
+
+                        // Thiết lập kích thước hóa đơn (80mm x 200mm)
+                        PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
+
+                        printDocument1.DefaultPageSettings.PaperSize = paperSize;
+                        printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
+                        printPreviewDialog1.Document = printDocument1;
+                        try
+                        {
+                            printPreviewDialog1.ShowDialog();
+                            UpdateReceiptAndInfo();
+
+                            // Finally, print the document
+                            printDocument1.Print();
+                            ClearPOS();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Failed to process: " + $"{ex.Message}");
+                        }
+                    }
                 }
-
-
             }
             else
             {
@@ -222,6 +253,7 @@ namespace QLNT
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
+            var pathImage = Directory.GetParent(Application.StartupPath);
             Graphics g = e.Graphics;
             Font fontTitle = new Font("Space Mono", 25, FontStyle.Bold);
             Font fontHeader = new Font("Space Mono", 10, FontStyle.Regular);
@@ -252,7 +284,7 @@ namespace QLNT
 
             try
             {
-                Image logo = Image.FromFile(@"C:\Users\tuoan\source\repos\LTCSDL_QLNT\assets_img\SC_logo.png");
+                Image logo = Image.FromFile(pathImage + "\\assets_img\\SC_logo.png");
                 int logoWidth = 100; // Chiều rộng logo
                 int logoHeight = 100; // Chiều cao logo
                 g.DrawImage(logo, new Rectangle((pageWidth - logoWidth) / 2, y, logoWidth, logoHeight));
@@ -359,7 +391,7 @@ namespace QLNT
             {
                 try
                 {
-                    Image qrcode = Image.FromFile(@$"C:\Users\tuoan\source\repos\LTCSDL_QLNT\assets_img\{paymentmethod}.jpg");
+                    Image qrcode = Image.FromFile(pathImage + @$"\assets_img\{paymentmethod}.jpg");
                     int logoWidth = 100; // Chiều rộng logo
                     int logoHeight = 100; // Chiều cao logo
                     g.DrawImage(qrcode, new Rectangle((pageWidth - logoWidth) / 2, y, logoWidth, logoHeight));
@@ -373,72 +405,115 @@ namespace QLNT
             }
         }
 
-
-
-        private void txb_Customer_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void dtgv_items_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Dtgv_items_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the changed cell is the Quantity column
             if (e.ColumnIndex == dtgv_items.Columns["Quantity"].Index && e.RowIndex >= 0)
             {
-                // Get the new quantity value
                 if (int.TryParse(dtgv_items.Rows[e.RowIndex].Cells["Quantity"].Value.ToString(), out int newQuantity))
                 {
-                    // Get the unit price from the same row
-                    decimal unitPrice = Convert.ToDecimal(dtgv_items.Rows[e.RowIndex].Cells["UnitPrice"].Value);
-
-                    // Calculate the new total price
-                    decimal newTotalPrice = newQuantity * unitPrice;
-
-                    // Update the TotalPrice cell
-                    dtgv_items.Rows[e.RowIndex].Cells["TotalPrice"].Value = newTotalPrice;
-
-                    totalAmount += newTotalPrice;
-                    lb_TotalAmount.Text = Math.Round(totalAmount, 2).ToString("C");
-                    grandTotal = totalAmount + totalAmount * (decimal)0.08;
-                    lb_AmountPaid.Text = Math.Round(grandTotal, 2).ToString("C");
+                    if (newQuantity == 0)
+                    {
+                        dtgv_items.Rows.RemoveAt(e.RowIndex);
+                    }
+                    else
+                    {
+                        decimal unitPrice = Convert.ToDecimal(dtgv_items.Rows[e.RowIndex].Cells["UnitPrice"].Value);
+                        decimal newTotalPrice = newQuantity * unitPrice;
+                        dtgv_items.Rows[e.RowIndex].Cells["TotalPrice"].Value = newTotalPrice;
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Invalid value", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            UpdateTotalAmount();
+        }
+
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (dtgv_items.CurrentRow != null && !dtgv_items.CurrentRow.IsNewRow)
+            {
+                // Lấy dòng hiện tại
+                DataGridViewRow currentRow = dtgv_items.CurrentRow;
+
+                if (int.TryParse(currentRow.Cells["Quantity"].Value?.ToString(), out int currentQuantity))
+                {
+                    int newQuantity = currentQuantity + 1;
+                    currentRow.Cells["Quantity"].Value = newQuantity;
+
+                    if (decimal.TryParse(currentRow.Cells["UnitPrice"].Value?.ToString(), out decimal unitPrice))
+                    {
+                        decimal newTotalPrice = newQuantity * unitPrice;
+                        currentRow.Cells["TotalPrice"].Value = newTotalPrice;
+                    }
+
+                    UpdateTotalAmount();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please choose a row you want to add", "Notification");
             }
         }
 
-        private void lb_TotalAmount_TextChanged(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
+            if (dtgv_items.CurrentRow != null && !dtgv_items.CurrentRow.IsNewRow)
+            {
+                DataGridViewRow currentRow = dtgv_items.CurrentRow;
 
+                if (int.TryParse(currentRow.Cells["Quantity"].Value?.ToString(), out int currentQuantity) && currentQuantity > 0)
+                {
+                    int newQuantity = currentQuantity - 1;
+                    currentRow.Cells["Quantity"].Value = newQuantity;
+                    try
+                    {
+                        if (newQuantity == 0)
+                        {
+                            dtgv_items.Rows.Remove(currentRow);
+                        }
+                        else
+                        {
+                            if (decimal.TryParse(currentRow.Cells["UnitPrice"].Value?.ToString(), out decimal unitPrice))
+                            {
+                                decimal newTotalPrice = newQuantity * unitPrice;
+                                currentRow.Cells["TotalPrice"].Value = newTotalPrice;
+                            }
+                        }
+                        UpdateTotalAmount();
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("Delete successfull");
+                    }
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please choose a row you want to minus", "Notification");
+            }
         }
+
+        private void UpdateTotalAmount()
+        {
+            totalAmount = 0;
+            foreach (DataGridViewRow row in dtgv_items.Rows)
+            {
+                if (decimal.TryParse(row.Cells["TotalPrice"].Value?.ToString(), out decimal rowTotal))
+                {
+                    totalAmount += rowTotal;
+                }
+            }
+
+            // Cập nhật hiển thị tổng cộng
+            lb_TotalAmount.Text = Math.Round(totalAmount, 2).ToString("C");
+            grandTotal = totalAmount + totalAmount * (decimal)0.08;
+            lb_AmountPaid.Text = Math.Round(grandTotal, 2).ToString("C");
+        }
+
 
         private void POS_Load(object sender, EventArgs e)
         {
@@ -448,13 +523,118 @@ namespace QLNT
 
         private void comboBox1_KeyDown_1(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
-                LoadCustomerData(comboBox1.Text);
-                comboBox1.Text = string.Empty;// Call to load customer data
-                e.SuppressKeyPress = true; // Optional: Prevents the beep sound 
+                if (comboBox1.DroppedDown)
+                {
+                    if (comboBox1.SelectedIndex >= 0) // Kiểm tra xem có mục nào được chọn
+                    {
+                        var selectedItem = comboBox1.SelectedItem as Customer;
+                        if (selectedItem != null) // Kiểm tra kiểu dữ liệu
+                        {
+                            comboBox1.Text = selectedItem.Name; // Gán tên vào comboBox1
+                            comboBox1.SelectedIndex = 0; // Chọn mục đầu tiên trong comboBox1 (nếu cần)
+                        }
+                    }
+                }
+                else
+                {
+                    string searchText = comboBox1.Text;
+                    LoadCustomerData(searchText); // Tìm kiếm nhân viên
+                }
+
+                e.SuppressKeyPress = true; // Ngăn chặn hành động mặc định của Enter
             }
         }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+            {
+                var selectedCustomer = (dynamic)comboBox1.SelectedItem; // Use dynamic to access properties
+                int selectedCustomerId = selectedCustomer.Value; // Get the ID
+                string selectedCustomerName = selectedCustomer.Text; // Get the Name
+
+                // Update your customer object or UI as needed
+                customer = new Customer { CID = selectedCustomerId, Name = selectedCustomerName };
+            }
+        }
+
+        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (comboBox2.DroppedDown)
+                {
+                    if (comboBox2.SelectedIndex >= 0) // Kiểm tra xem có mục nào được chọn
+                    {
+                        var selectedItem = comboBox2.SelectedItem as Staff;
+                        if (selectedItem != null)
+                        {
+                            comboBox1.Text = selectedItem.Name;
+                            comboBox1.SelectedIndex = 0;
+                        }
+                    }
+                }
+                else
+                {
+                    string searchText = comboBox2.Text;
+                    SelectStaff(searchText); // Tìm kiếm nhân viên
+                }
+
+                e.SuppressKeyPress = true; // Ngăn chặn hành động mặc định của Enter
+            }
+        }
+
+
+        private void btn_Cash_Click(object sender, EventArgs e)
+        {
+            paymentmethod = "Cash";
+            btn_Card.BorderThickness = 0;
+            btn_Momo.BorderThickness = 0;
+            btn_Zalo.BorderThickness = 0;
+            btn_Cash.BorderThickness = 9;
+        }
+
+        private void btn_Card_Click(object sender, EventArgs e)
+        {
+            paymentmethod = "CreditCard";
+            btn_Cash.BorderThickness = 0;
+            btn_Momo.BorderThickness = 0;
+            btn_Zalo.BorderThickness = 0;
+            btn_Card.BorderThickness = 9;
+        }
+
+        private void btn_Momo_Click(object sender, EventArgs e)
+        {
+            paymentmethod = "Momo";
+            btn_Card.BorderThickness = 0;
+            btn_Cash.BorderThickness = 0;
+            btn_Zalo.BorderThickness = 0;
+            btn_Momo.BorderThickness = 9;
+        }
+
+        private void btn_Zalo_Click(object sender, EventArgs e)
+        {
+            paymentmethod = "ZaloPay";
+            btn_Card.BorderThickness = 0;
+            btn_Momo.BorderThickness = 0;
+            btn_Cash.BorderThickness = 0;
+            btn_Zalo.BorderThickness = 9;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem != null)
+            {
+                var selectedStaff = (dynamic)comboBox2.SelectedItem; // Use dynamic to access properties
+                int selectedStaffId = selectedStaff.EID; // Get the ID
+                string selectedStaffName = selectedStaff.Name; // Get the Name
+                staff = new Staff { EID = selectedStaffId, Name = selectedStaffName };
+            }
+        }
+
         private Customer LoadCustomerData(string phoneNumber)
         {
             Customer customer = null; // Initialize customer to null
@@ -505,86 +685,15 @@ namespace QLNT
 
             return customer; // Return the customer object
         }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedItem != null)
-            {
-                var selectedCustomer = (dynamic)comboBox1.SelectedItem; // Use dynamic to access properties
-                int selectedCustomerId = selectedCustomer.Value; // Get the ID
-                string selectedCustomerName = selectedCustomer.Text; // Get the Name
-
-                // Update your customer object or UI as needed
-                customer = new Customer { CID = selectedCustomerId, Name = selectedCustomerName };
-            }
-        }
-
-        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SelectStaff(comboBox2.Text);
-                comboBox2.Text = string.Empty;// Call to load customer data
-                e.SuppressKeyPress = true; // Optional: Prevents the beep sound
-            }
-        }
-        private void btn_Cash_Click(object sender, EventArgs e)
-        {
-            paymentmethod = "Cash";
-            btn_Momo.BackColor = SystemColors.Control;
-            btn_Zalo.BackColor = SystemColors.Control;
-            btn_Card.BackColor = SystemColors.Control;
-            btn_Cash.BackColor = Color.Yellow;
-        }
-
-        private void btn_Card_Click(object sender, EventArgs e)
-        {
-            paymentmethod = "CreditCard";
-            btn_Momo.BackColor = SystemColors.Control;
-            btn_Zalo.BackColor = SystemColors.Control;
-            btn_Cash.BackColor = SystemColors.Control;
-            btn_Card.BackColor = Color.Yellow;
-        }
-
-        private void btn_Momo_Click(object sender, EventArgs e)
-        {
-            paymentmethod = "Momo";
-            btn_Cash.BackColor = SystemColors.Control;
-            btn_Zalo.BackColor = SystemColors.Control;
-            btn_Card.BackColor = SystemColors.Control;
-            btn_Momo.BackColor = Color.Yellow;
-        }
-
-        private void btn_Zalo_Click(object sender, EventArgs e)
-        {
-            paymentmethod = "ZaloPay";
-            btn_Momo.BackColor = SystemColors.Control;
-            btn_Cash.BackColor = SystemColors.Control;
-            btn_Card.BackColor = SystemColors.Control;
-            btn_Zalo.BackColor = Color.Yellow;
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox2.SelectedItem != null)
-            {
-                var selectedStaff = (dynamic)comboBox2.SelectedItem; // Use dynamic to access properties
-                int selectedStaffId = selectedStaff.Id; // Get the ID
-                string selectedStaffName = selectedStaff.Name; // Get the Name
-                staff = new Staff { EID = selectedStaffId, Name = selectedStaffName };
-            }
-        }
-
         private void SelectStaff(string employeeName)
         {
             using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
             {
                 conn.Open();
                 string query = "SELECT EID, EmployeeName FROM Employee WHERE EmployeeName LIKE @EmployeeName";
-
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@EmployeeName", employeeName);
+                    cmd.Parameters.AddWithValue("@EmployeeName", $"%{employeeName}%");
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -592,9 +701,9 @@ namespace QLNT
                         while (reader.Read())
                         {
                             // Create an anonymous object with ID and Name
-                            var staff = new
+                            staff = new Staff
                             {
-                                Id = (int)reader["EID"],
+                                EID = (int)reader["EID"],
                                 Name = (string)reader["EmployeeName"]
                             };
 
@@ -612,7 +721,7 @@ namespace QLNT
                         else
                         {
                             MessageBox.Show("No staff found.");
-                            return;// Inform user if no staff are found
+                            return;
                         }
                     }
                 }
@@ -629,7 +738,6 @@ namespace QLNT
             using (var connection = new SqlConnection(sqlConnection.ConnectionString))
             {
                 connection.Open();
-                // Step 1: Insert into Receipt table
                 string insertReceiptQuery = @"
             INSERT INTO Receipt (CID, EID, Date, TotalAmount, PaymentMethod, Result) 
             VALUES (@CID, @EID, GETDATE(), @TotalAmount, @PaymentMethod, @Result);
@@ -648,7 +756,6 @@ namespace QLNT
                     newRID = Convert.ToInt32(command.ExecuteScalar()); // Get the new RID
                 }
 
-                // Step 2: Insert into ReceiptInfo table
                 string insertReceiptInfoQuery = @"
     INSERT INTO ReceiptInfo (RID, MID, Quantity) 
     VALUES (@RID, @MID, @Quantity);";
@@ -676,11 +783,6 @@ namespace QLNT
                 }
             }
         }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void ClearPOS()
         {
             guna2TextBox1.Text = string.Empty;
@@ -689,7 +791,63 @@ namespace QLNT
             txb_Note.Text = string.Empty;
             lb_AmountPaid.Text = "0.00";
             lb_TotalAmount.Text = "0.00";
+            btn_Card.BorderThickness = 0;
+            btn_Momo.BorderThickness = 0;
+            btn_Zalo.BorderThickness = 0;
+            btn_Cash.BorderThickness = 0;
             dtgv_items.Rows.Clear();
+        }
+
+
+
+
+        string imagePath = Directory.GetParent(Application.StartupPath).ToString();
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(imagePath + "\\assets_img\\" + "recycle-bin.png");
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(imagePath + "\\assets_img\\" + "bin.png");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (dtgv_items.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dtgv_items.SelectedRows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        dtgv_items.Rows.Remove(row);
+                    }
+                }
+                UpdateTotalAmount();
+            }
+            else
+            {
+                MessageBox.Show("Please choose a row you want to delete", "Notification");
+            }
+
+        }
+
+        private void dtgv_items_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (dtgv_items.Columns[e.ColumnIndex].Name == "Quantity")
+            {
+                string inputValue = e.FormattedValue.ToString();
+
+                if (!int.TryParse(inputValue, out int result))
+                {
+                    MessageBox.Show("Invalid value", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    e.Cancel = true; 
+                }
+                else
+                {
+                    e.Cancel = false;
+                }
+            }
         }
     }
 }

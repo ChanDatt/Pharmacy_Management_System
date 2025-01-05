@@ -80,22 +80,21 @@ namespace QLNT
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("GetWeeklyRevenue", connection);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+                    adapter.Fill(dataTable);
 
                     chart1.Series.Clear();
-                    Series series = new Series("WeeklyRevenue");
-                    series.ChartType = SeriesChartType.Column;
+                    Series series = new Series();
+                    series.ChartType = SeriesChartType.RangeBar;
                     series.Color = ColorTranslator.FromHtml("#6C8976");
 
-                    while (reader.Read())
+                    foreach(DataRow row in dataTable.Rows)
                     {
-                        // Thêm dữ liệu vào biểu đồ
-                        string saleDate = reader.GetString(0);
-                        decimal revenue = reader.GetDecimal(1);
-                        series.Points.AddXY(saleDate, revenue); 
+                        series.Points.AddXY(row["DayMonth"], row["TotalSales"]);
                     }
                     chart1.Series.Add(series);
-                    chart1.ChartAreas[0].AxisX.Title = "Date";
+                    chart1.ChartAreas[0].AxisX.Title = "Day";
                     chart1.ChartAreas[0].AxisY.Title = "Revenue";
 
                     chart1.Titles.Add("WEEKLY REVENUE");
@@ -105,7 +104,9 @@ namespace QLNT
                     chart1.ChartAreas[0].AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 20, FontStyle.Bold);
 
                     SetChartAppearance("#6C8976", "#6C8976", "#596869");
-                } catch (Exception ex) {
+                }
+                catch (Exception ex)
+                {
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
@@ -138,7 +139,7 @@ namespace QLNT
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     chart2.Series.Clear();
-                    Series series = new Series("MonthlyRevenue");
+                    Series series = new Series();
                     series.ChartType = SeriesChartType.Pie;
                     series.Color = ColorTranslator.FromHtml("#6C8976");
 

@@ -47,7 +47,7 @@ namespace QLNT
                 Text = medicineName,
                 Font = new Font("Arial", 14, FontStyle.Bold),
                 AutoSize = true,
-                Location = new Point(10, 10)
+                Location = new Point(10, 10),
             };
 
             // Price Label

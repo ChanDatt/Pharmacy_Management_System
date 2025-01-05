@@ -55,6 +55,10 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             lb_ShortChau = new Label();
@@ -92,9 +96,13 @@
             timer1 = new System.Windows.Forms.Timer(components);
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printPreviewDialog1 = new PrintPreviewDialog();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             guna2Panel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_items).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel2
@@ -111,7 +119,6 @@
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel2.Size = new Size(1570, 107);
             guna2Panel2.TabIndex = 4;
-            guna2Panel2.Paint += guna2Panel2_Paint;
             // 
             // guna2ControlBox1
             // 
@@ -173,7 +180,6 @@
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TextBox1.Size = new Size(514, 48);
             guna2TextBox1.TabIndex = 18;
-            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged_1;
             // 
             // guna2Panel1
             // 
@@ -269,6 +275,7 @@
             // 
             // btn_Zalo
             // 
+            btn_Zalo.BorderColor = Color.FromArgb(89, 104, 105);
             btn_Zalo.BorderRadius = 40;
             btn_Zalo.CustomizableEdges = customizableEdges9;
             btn_Zalo.DisabledState.BorderColor = Color.DarkGray;
@@ -289,6 +296,7 @@
             // 
             // btn_Momo
             // 
+            btn_Momo.BorderColor = Color.FromArgb(89, 104, 105);
             btn_Momo.BorderRadius = 40;
             btn_Momo.CustomizableEdges = customizableEdges11;
             btn_Momo.DisabledState.BorderColor = Color.DarkGray;
@@ -309,6 +317,7 @@
             // 
             // btn_Card
             // 
+            btn_Card.BorderColor = Color.FromArgb(89, 104, 105);
             btn_Card.BorderRadius = 40;
             btn_Card.CustomizableEdges = customizableEdges13;
             btn_Card.DisabledState.BorderColor = Color.DarkGray;
@@ -329,6 +338,7 @@
             // 
             // btn_Cash
             // 
+            btn_Cash.BorderColor = Color.FromArgb(89, 104, 105);
             btn_Cash.BorderRadius = 40;
             btn_Cash.CustomizableEdges = customizableEdges15;
             btn_Cash.DisabledState.BorderColor = Color.DarkGray;
@@ -416,6 +426,9 @@
             // 
             // dtgv_items
             // 
+            dtgv_items.AllowUserToAddRows = false;
+            dtgv_items.AllowUserToResizeColumns = false;
+            dtgv_items.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dtgv_items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgv_items.BackgroundColor = Color.FromArgb(89, 104, 105);
@@ -465,16 +478,16 @@
             dtgv_items.ThemeStyle.RowsStyle.Height = 29;
             dtgv_items.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_items.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dtgv_items.CellValueChanged += dtgv_items_CellContentClick;
+            dtgv_items.CellValidating += dtgv_items_CellValidating;
             // 
             // Items
             // 
-            Items.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Items.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             Items.HeaderText = "Items";
-            Items.MinimumWidth = 6;
+            Items.MinimumWidth = 10;
             Items.Name = "Items";
             Items.ReadOnly = true;
-            Items.Width = 84;
+            Items.Width = 150;
             // 
             // MID
             // 
@@ -620,12 +633,74 @@
             printPreviewDialog1.Name = "printPreviewDialog1";
             printPreviewDialog1.Visible = false;
             // 
+            // guna2Button2
+            // 
+            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button2.BorderRadius = 25;
+            customizableEdges23.BottomRight = false;
+            customizableEdges23.TopRight = false;
+            guna2Button2.CustomizableEdges = customizableEdges23;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
+            guna2Button2.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
+            guna2Button2.ImageSize = new Size(30, 30);
+            guna2Button2.Location = new Point(1177, 129);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Button2.Size = new Size(133, 48);
+            guna2Button2.TabIndex = 43;
+            guna2Button2.Click += guna2Button2_Click;
+            // 
+            // guna2Button3
+            // 
+            guna2Button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button3.BorderRadius = 25;
+            customizableEdges25.BottomLeft = false;
+            customizableEdges25.TopLeft = false;
+            guna2Button3.CustomizableEdges = customizableEdges25;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
+            guna2Button3.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
+            guna2Button3.Location = new Point(1316, 129);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2Button3.Size = new Size(133, 48);
+            guna2Button3.TabIndex = 43;
+            guna2Button3.Click += guna2Button3_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1473, 129);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(45, 45);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 45;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            pictureBox1.MouseEnter += pictureBox1_MouseEnter;
+            pictureBox1.MouseLeave += pictureBox1_MouseLeave;
+            // 
             // POS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1570, 1000);
+            Controls.Add(pictureBox1);
+            Controls.Add(guna2Button3);
+            Controls.Add(guna2Button2);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2TextBox1);
             Controls.Add(flowLayoutPanel2);
@@ -640,6 +715,7 @@
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_items).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -674,13 +750,16 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridViewTextBoxColumn Items;
         private DataGridViewTextBoxColumn MID;
         private DataGridViewTextBoxColumn UnitPrice;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn TotalPrice;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private PictureBox pictureBox1;
     }
 }

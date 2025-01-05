@@ -17,6 +17,15 @@ namespace QLNT
     {
         private SQLConnectionClass sqlConnection;
         private int id;
+
+        private void clear()
+        {
+            textBox1.Clear();
+            txb_Name.Clear();
+            txb_Age.Clear();
+            txb_Phone.Clear();
+            txb_Name.Focus();
+        }
         public Customers()
         {
             InitializeComponent();
@@ -105,10 +114,7 @@ namespace QLNT
                     {
                         command.ExecuteNonQuery();
                         MessageBox.Show("Add successful");
-                        txb_Name.Clear();
-                        txb_Age.Clear();
-                        txb_Phone.Clear();
-                        txb_Name.Focus();
+                        clear();
                         LoadCustomerData();
                     }
                     catch (SqlException ex)
@@ -136,6 +142,7 @@ namespace QLNT
                     {
                         int rowsAffected = command.ExecuteNonQuery();
                         MessageBox.Show("Delete successful");
+                        clear();
                         LoadCustomerData();
                     }
                     catch (SqlException ex)
@@ -215,9 +222,7 @@ namespace QLNT
                 {
                     UpdateCustomerInDatabase(int.Parse(textBox1.Text), txb_Name.Text, int.Parse(txb_Age.Text), cb_Gender.Text, txb_Phone.Text);
                     id = 0;
-                    txb_Name.Clear();
-                    txb_Age.Clear();
-                    txb_Phone.Clear();
+                    clear();
                 } catch(Exception ex)
                 {
                     MessageBox.Show("Please fill put correct format: " + ex.Message);

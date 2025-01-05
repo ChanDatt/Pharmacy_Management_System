@@ -31,8 +31,8 @@ namespace QLNT
                 var receipts = sqlConnection.GetReceiptsData();
                 if (receipts.Rows.Count > 0)
                 {
-                    dtgv_Receipts.DataSource = receipts;
-                    dtgv_Receipts.AutoGenerateColumns = true;
+                    dtgv_receiptinfos.DataSource = receipts;
+                    dtgv_receiptinfos.AutoGenerateColumns = true;
                 }
                 else
                 {
@@ -57,24 +57,15 @@ namespace QLNT
 
         }
 
-        private void btn_AddCategory_Click(object sender, EventArgs e)
-        {
-            Receipts_Add addCategory = new Receipts_Add(dtgv_Receipts);
-            if (addCategory.ShowDialog() == DialogResult.OK)
-            {
-                LoadReceiptData();
-            }
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (dtgv_Receipts.SelectedRows.Count == 0)
+            if (dtgv_receiptinfos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select an item to delete.");
                 return;
             }
 
-            var selectedRow = dtgv_Receipts.SelectedRows[0];
+            var selectedRow = dtgv_receiptinfos.SelectedRows[0];
             int rid = Convert.ToInt32(selectedRow.Cells["RID"].Value); // Ensure "RID" matches your actual column name
 
             var confirmResult = MessageBox.Show("Are you sure you want to delete this item?", "Confirm Delete", MessageBoxButtons.YesNo);
@@ -114,7 +105,7 @@ namespace QLNT
         {
             if (e.ColumnIndex > 0 && e.RowIndex >= 0)
             {
-                id = int.Parse(dtgv_Receipts.Rows[e.RowIndex].Cells[0].Value.ToString());
+                id = int.Parse(dtgv_receiptinfos.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
 
@@ -132,7 +123,7 @@ namespace QLNT
 
                     try
                     {
-                        new ExportFile().exportExcel(dtgv_Receipts, folderBrowser.SelectedPath, "Export_Receipts");
+                        new ExportFile().exportExcel(dtgv_receiptinfos, folderBrowser.SelectedPath, "Export_Receipts");
                         MessageBox.Show("Export successful");
                     }
                     catch (Exception ex)
@@ -160,7 +151,7 @@ namespace QLNT
                 {
                     connection.Open();
                     adapter.Fill(dataTable);
-                    dtgv_Receipts.DataSource = dataTable;
+                    dtgv_receiptinfos.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {
@@ -173,7 +164,7 @@ namespace QLNT
         {
             if (e.RowIndex >= 0)
             {
-                int rid = (int)dtgv_Receipts.Rows[e.RowIndex].Cells["RID"].Value;
+                int rid = (int)dtgv_receiptinfos.Rows[e.RowIndex].Cells["RID"].Value;
                 LoadReceiptInfoData(rid);
                 dtgv_receiptinfos.Visible = true;
                 dtgv_receiptinfos.Columns["RID"].Visible = false;
@@ -205,10 +196,6 @@ namespace QLNT
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                // Bind the DataTable to the DataGridView
-                // Set DefaultCellStyle after binding
-                dtgv_receiptinfos.DefaultCellStyle.BackColor = Color.White; // Example style
-                dtgv_receiptinfos.DefaultCellStyle.ForeColor = Color.Black;
                 dtgv_receiptinfos.DataSource = dt;
             }
         }

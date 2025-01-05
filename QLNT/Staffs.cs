@@ -220,12 +220,12 @@ namespace QLNT
                     {
                         command.Parameters.AddWithValue("@EID", id);
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Delete succesful");
+                        MessageBox.Show("Delete successful");
                         LoadEmployeeData();
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("You can not delete this row. \rError:" + ex.Message);
                     }
                 }
             }
@@ -236,7 +236,15 @@ namespace QLNT
         {
             if (dtgv_Staffs.Rows.Count > 0)
             {
-                UpdateEmployeeInDatabase(id, txb_Name.Text, txb_Phone.Text, cb_Note.Text, cb_Status.Text, decimal.Parse(txb_Salary.Text), txb_Address.Text);
+                try
+                {
+                    UpdateEmployeeInDatabase(id, txb_Name.Text, txb_Phone.Text, cb_Note.Text, cb_Status.Text, decimal.Parse(txb_Salary.Text), txb_Address.Text);
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please fill out the information");
+                }
             }
             else
             {
