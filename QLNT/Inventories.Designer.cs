@@ -49,8 +49,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -69,7 +67,6 @@
             txb_FileName = new Guna.UI2.WinForms.Guna2TextBox();
             btn_Browse = new Guna.UI2.WinForms.Guna2Button();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Inventories).BeginInit();
             SuspendLayout();
@@ -395,33 +392,12 @@
             guna2Button6.Text = "Save";
             guna2Button6.Click += guna2Button6_Click;
             // 
-            // guna2Button7
-            // 
-            guna2Button7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button7.BorderRadius = 25;
-            guna2Button7.CustomizableEdges = customizableEdges19;
-            guna2Button7.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button7.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button7.FillColor = Color.FromArgb(64, 0, 0);
-            guna2Button7.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold);
-            guna2Button7.ForeColor = Color.White;
-            guna2Button7.Location = new Point(1039, 700);
-            guna2Button7.Name = "guna2Button7";
-            guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button7.Size = new Size(377, 65);
-            guna2Button7.TabIndex = 56;
-            guna2Button7.Text = "Delete";
-            guna2Button7.Click += guna2Button7_Click;
-            // 
             // Inventories
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1447, 858);
-            Controls.Add(guna2Button7);
             Controls.Add(txb_FileName);
             Controls.Add(guna2Button6);
             Controls.Add(btn_Browse);
@@ -467,6 +443,5 @@
         private Guna.UI2.WinForms.Guna2Button btn_Browse;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Inventories;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
     }
 }
