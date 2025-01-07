@@ -125,11 +125,6 @@ namespace QLNT
             LoadMedicines();
         }
 
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             LoadOutOfStockProduct();
@@ -260,20 +255,6 @@ namespace QLNT
             {
                 MessageBox.Show("Please select file");
             }
-
-        }
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgv_Inventories_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 

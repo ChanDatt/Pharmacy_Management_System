@@ -20,6 +20,17 @@ namespace QLNT
             sqlConnection = new SQLConnectionClass();
             ShowTopEmployee();
         }
+        private void StaffOfTheMonthForm_Load(object sender, EventArgs e)
+        {
+            string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "assets_img");
+            string imagePath = Path.Combine(directoryPath, "profile_image.png");
+
+            if (File.Exists(imagePath))
+            {
+                // Load the saved image
+                guna2PictureBox2.Image = new Bitmap(imagePath);
+            }
+        }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
@@ -33,25 +44,26 @@ namespace QLNT
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                // Giải phóng bộ nhớ hình ảnh cũ nếu có
+                // Dispose of the old image to free up memory
                 if (guna2PictureBox2.Image != null)
                 {
                     guna2PictureBox2.Image.Dispose();
+                    guna2PictureBox2.Image = null; // Release the reference
                 }
 
-                // Tải hình ảnh mới
+                // Load the new image
                 guna2PictureBox2.Image = new Bitmap(ofd.FileName);
 
-                // Đường dẫn lưu hình ảnh mới vào thư mục của ứng dụng
-                string directoryPath = AppDomain.CurrentDomain.BaseDirectory + "assets_img";
+                // Define the directory path to save the new image
+                string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "assets_img");
                 if (!Directory.Exists(directoryPath))
                 {
                     Directory.CreateDirectory(directoryPath);
                 }
 
-                string newPath = Path.Combine(directoryPath, Path.GetFileName(ofd.FileName));
+                string newPath = Path.Combine(directoryPath, "profile_image.png"); // Fixed name for profile image
 
-                // Xóa tệp nếu nó đã tồn tại
+                // Delete the file if it already exists
                 if (File.Exists(newPath))
                 {
                     File.Delete(newPath);
@@ -59,7 +71,7 @@ namespace QLNT
 
                 try
                 {
-                    // Lưu hình ảnh dưới định dạng PNG
+                    // Save the image in PNG format
                     guna2PictureBox2.Image.Save(newPath, System.Drawing.Imaging.ImageFormat.Png);
                     MessageBox.Show("Image saved successfully!");
                 }

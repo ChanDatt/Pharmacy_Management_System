@@ -1,18 +1,7 @@
-﻿using Guna.UI2.WinForms;
-using Microsoft.Office.Interop.Excel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
-using static System.Net.Mime.MediaTypeNames;
-using Series = System.Windows.Forms.DataVisualization.Charting.Series;
+using Guna.Charts.WinForms;
+
 
 namespace QLNT
 {
@@ -24,7 +13,7 @@ namespace QLNT
             InitializeComponent();
             sqlConnection = new SQLConnectionClass(); // Initialize SQLConnectionClass
             ShowInfo();
-            loadColumnChart();
+            LoadBarChart();
             loadPieChart();
         }
         private void Dashboard_Load(object sender, EventArgs e)
@@ -70,8 +59,7 @@ namespace QLNT
             lb_Profit.Text = getProfit.ToString("C");
         }
 
-
-        private void loadColumnChart()
+        private void LoadBarChart()
         {
             using (var connection = new SqlConnection(sqlConnection.ConnectionString))
             {
@@ -80,51 +68,49 @@ namespace QLNT
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("GetWeeklyRevenue", connection);
                     cmd.CommandType = CommandType.StoredProcedure;
+
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    System.Data.DataTable dataTable = new System.Data.DataTable();
+                    DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    chart1.Series.Clear();
-                    Series series = new Series();
-                    series.ChartType = SeriesChartType.RangeBar;
-                    series.Color = ColorTranslator.FromHtml("#6C8976");
+                    gunaChart1.Datasets.Clear();
 
-                    foreach(DataRow row in dataTable.Rows)
+                    // Tạo dataset mới
+                    Guna.Charts.WinForms.GunaBarDataset barDataset = new Guna.Charts.WinForms.GunaBarDataset
                     {
-                        series.Points.AddXY(row["DayMonth"], row["TotalSales"]);
+                        Label = "Dayly Revenue",
+                    };
+
+                    // Duyệt qua từng dòng dữ liệu trong DataTable
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        string day = row["DayMonth"]?.ToString() ?? "Unknown";
+
+                        if (double.TryParse(row["TotalSales"]?.ToString(), out double totalSales))
+                        {
+                            barDataset.DataPoints.Add(day, totalSales);
+                        }
                     }
-                    chart1.Series.Add(series);
-                    chart1.ChartAreas[0].AxisX.Title = "Day";
-                    chart1.ChartAreas[0].AxisY.Title = "Revenue";
 
-                    chart1.Titles.Add("WEEKLY REVENUE");
-                    chart1.Titles[0].Font = new System.Drawing.Font("Times New Roman", 30, FontStyle.Bold);
+                    // Thêm dataset vào chart
+                    gunaChart1.Datasets.Add(barDataset);
 
-                    chart1.ChartAreas[0].AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 20, FontStyle.Bold);
-                    chart1.ChartAreas[0].AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 20, FontStyle.Bold);
+                    // Cấu hình tiêu đề
+                    gunaChart1.Title.Text = "WEEKLY REVENUE";
+                    gunaChart1.Title.Font = new Guna.Charts.WinForms.ChartFont
+                    {
+                        FontName = "Times New Roman",
+                        Size = 40,
+                        Style = ChartFontStyle.Bold
+                    };
 
-                    SetChartAppearance("#6C8976", "#6C8976", "#596869");
+                    gunaChart1.Update(); // Cập nhật biểu đồ
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-        }
-
-        private void SetChartAppearance(string axisXTitleColorHex, string axisYTitleColorHex, string chartTitleColorHex)
-        {
-            // Chuyển đổi mã màu hex thành đối tượng Color
-            Color axisXTitleColor = ColorTranslator.FromHtml(axisXTitleColorHex);
-            Color axisYTitleColor = ColorTranslator.FromHtml(axisYTitleColorHex);
-            Color chartTitleColor = ColorTranslator.FromHtml(chartTitleColorHex);
-
-            // Thiết lập màu cho tiêu đề trục
-            chart1.ChartAreas[0].AxisX.TitleForeColor = axisXTitleColor;
-            chart1.ChartAreas[0].AxisY.TitleForeColor = axisYTitleColor;
-
-            chart1.Titles[0].ForeColor = chartTitleColor;
-
         }
 
         private void loadPieChart()
@@ -136,42 +122,47 @@ namespace QLNT
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("GetMonthlyRevenue", connection);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    chart2.Series.Clear();
-                    Series series = new Series();
-                    series.ChartType = SeriesChartType.Pie;
-                    series.Color = ColorTranslator.FromHtml("#6C8976");
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
 
-                    Color[] colors = { ColorTranslator.FromHtml("#758467"), ColorTranslator.FromHtml("#819171"), ColorTranslator.FromHtml("#9CAF88"), ColorTranslator.FromHtml("#CBD5C0"),
-                         ColorTranslator.FromHtml("#CBD5C0"),  ColorTranslator.FromHtml("#3A5A40"),  ColorTranslator.FromHtml("#588157"),  ColorTranslator.FromHtml("#A3B18A"),
-                          ColorTranslator.FromHtml("#DAD7CD"),  ColorTranslator.FromHtml("#DFE6DA"),  ColorTranslator.FromHtml("#CBD5C0"),  ColorTranslator.FromHtml("#9CAF88"),
-                           ColorTranslator.FromHtml("#819171") };
+                    gunaChart2.Datasets.Clear();
 
-                    int colorIndex = 0;
-
-                    while (reader.Read())
+                    // Tạo dataset mới
+                    Guna.Charts.WinForms.GunaPieDataset pieDataset = new Guna.Charts.WinForms.GunaPieDataset
                     {
-                        string saleMonth = reader.GetString(0);
-                        decimal revenue = reader.GetDecimal(1);
-                        series.Points.AddXY(saleMonth, revenue);
+                        Label = "Monthly Revenue",
+                    };
 
-                        series.Points[series.Points.Count - 1].Color = colors[colorIndex % colors.Length]; 
-                        series.Points[series.Points.Count - 1].Font = new System.Drawing.Font("Times New Roman", 14, FontStyle.Bold); 
-
-                        colorIndex++; 
-                    }
-                    chart2.Series.Add(series);
-
-                    chart2.Titles.Add("MONTHLY REVENUE");
-                    chart2.Titles[0].Font = new System.Drawing.Font("Times New Roman", 30, FontStyle.Bold);
-                    chart2.Titles[0].ForeColor = ColorTranslator.FromHtml("#596869");
-
-
-                    foreach (var point in series.Points)
+                    // Duyệt qua từng dòng dữ liệu trong DataTable
+                    foreach (DataRow row in dataTable.Rows)
                     {
-                        point.Label = $"{point.YValues[0]:C}"; 
+                        string day = row["MonthYear"]?.ToString() ?? "Unknown";
+
+                        if (double.TryParse(row["TotalSales"]?.ToString(), out double totalSales))
+                        {
+                            pieDataset.DataPoints.Add(day, totalSales);
+                        }
                     }
+
+                    // Config chart
+                    gunaChart2.XAxes.Display = false;
+                    gunaChart2.YAxes.Display = false;
+
+                    // Thêm dataset vào chart
+                    gunaChart2.Datasets.Add(pieDataset);
+
+                    // Cấu hình tiêu đề
+                    gunaChart2.Title.Text = "MONTHLY REVENUE";
+                    gunaChart2.Title.Font = new Guna.Charts.WinForms.ChartFont
+                    {
+                        FontName = "Times New Roman",
+                        Size = 40,
+                        Style = ChartFontStyle.Bold
+                    };
+
+                    gunaChart2.Update(); // Cập nhật biểu đồ
                 }
                 catch (Exception ex)
                 {

@@ -173,7 +173,6 @@
             guna2HtmlLabel3.Size = new Size(208, 33);
             guna2HtmlLabel3.TabIndex = 14;
             guna2HtmlLabel3.Text = "Expired Products";
-            guna2HtmlLabel3.Click += guna2HtmlLabel3_Click;
             // 
             // guna2HtmlLabel4
             // 
@@ -195,7 +194,6 @@
             guna2HtmlLabel5.Size = new Size(68, 33);
             guna2HtmlLabel5.TabIndex = 14;
             guna2HtmlLabel5.Text = "xxxxx";
-            guna2HtmlLabel5.Click += guna2HtmlLabel5_Click;
             // 
             // guna2HtmlLabel6
             // 
@@ -207,7 +205,6 @@
             guna2HtmlLabel6.Size = new Size(89, 33);
             guna2HtmlLabel6.TabIndex = 14;
             guna2HtmlLabel6.Text = "$xx.xxx";
-            guna2HtmlLabel6.Click += guna2HtmlLabel6_Click;
             // 
             // guna2Panel2
             // 
@@ -282,7 +279,6 @@
             dtgv_Inventories.ThemeStyle.RowsStyle.Height = 29;
             dtgv_Inventories.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Inventories.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dtgv_Inventories.CellContentClick += dtgv_Inventories_CellContentClick;
             // 
             // guna2Button4
             // 

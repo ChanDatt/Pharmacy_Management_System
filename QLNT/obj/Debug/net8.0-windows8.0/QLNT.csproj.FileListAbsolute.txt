@@ -400,3 +400,4 @@ D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.sourceli
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.Verify.resources
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.Cash.resources
 D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.CashVerify.resources
+D:\LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\QLNT\bin\Debug\net8.0-windows8.0\Guna.Charts.WinForms.dll
