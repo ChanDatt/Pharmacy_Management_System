@@ -8,13 +8,16 @@
     ".NETCoreApp,Version=v8.0": {
       "QLNT/1.0.0": {
         "dependencies": {
+          "BL": "1.0.0",
           "EPPlus": "7.5.2",
           "Guna.Charts.WinForms": "1.1.0",
           "Guna.UI2.WinForms": "2.0.4.6",
           "OxyPlot.Core": "2.2.0",
           "OxyPlot.WindowsForms": "2.2.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
           "System.Data.OleDb": "9.0.0",
           "System.Data.SqlClient": "4.9.0",
+          "TL": "1.0.0",
           "WinForms.DataVisualization": "1.9.2",
           "ZXing.Net": "0.16.9"
         },
@@ -413,6 +416,45 @@
             "fileVersion": "0.16.9.0"
           }
         }
+      },
+      "BL/1.0.0": {
+        "dependencies": {
+          "DL": "1.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Data.SqlClient": "4.9.0",
+          "TL": "1.0.0"
+        },
+        "runtime": {
+          "BL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DL/1.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Data.SqlClient": "4.9.0",
+          "TL": "1.0.0"
+        },
+        "runtime": {
+          "DL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TL/1.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Data.SqlClient": "4.9.0"
+        },
+        "runtime": {
+          "TL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -666,6 +708,21 @@
       "sha512": "sha512-7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
       "path": "zxing.net/0.16.9",
       "hashPath": "zxing.net.0.16.9.nupkg.sha512"
+    },
+    "BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

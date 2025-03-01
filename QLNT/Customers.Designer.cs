@@ -53,8 +53,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btn_AddStaff = new Guna.UI2.WinForms.Guna2Button();
@@ -70,11 +68,9 @@
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             btn_DeleteCustomer = new Guna.UI2.WinForms.Guna2Button();
             txb_Update = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            txb_Search = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             dtgv_Customers = new Guna.UI2.WinForms.Guna2DataGridView();
-            label1 = new Label();
-            textBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -346,30 +342,30 @@
             txb_Update.Text = "Update";
             txb_Update.Click += txb_Update_Click;
             // 
-            // guna2TextBox3
+            // txb_Search
             // 
-            guna2TextBox3.BorderColor = SystemColors.ButtonShadow;
-            guna2TextBox3.BorderRadius = 20;
-            guna2TextBox3.CustomizableEdges = customizableEdges19;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FillColor = SystemColors.MenuBar;
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(140, 194);
-            guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2TextBox3.Size = new Size(408, 39);
-            guna2TextBox3.TabIndex = 46;
-            guna2TextBox3.TextChanged += guna2TextBox3_TextChanged;
+            txb_Search.BorderColor = SystemColors.ButtonShadow;
+            txb_Search.BorderRadius = 20;
+            txb_Search.CustomizableEdges = customizableEdges19;
+            txb_Search.DefaultText = "";
+            txb_Search.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txb_Search.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txb_Search.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txb_Search.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txb_Search.FillColor = SystemColors.MenuBar;
+            txb_Search.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_Search.Font = new Font("Segoe UI", 9F);
+            txb_Search.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_Search.Location = new Point(140, 194);
+            txb_Search.Margin = new Padding(3, 4, 3, 4);
+            txb_Search.Name = "txb_Search";
+            txb_Search.PasswordChar = '\0';
+            txb_Search.PlaceholderText = "";
+            txb_Search.SelectedText = "";
+            txb_Search.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txb_Search.Size = new Size(408, 39);
+            txb_Search.TabIndex = 46;
+            txb_Search.TextChanged += txb_Search_TextChanged;
             // 
             // guna2Panel2
             // 
@@ -445,57 +441,17 @@
             dtgv_Customers.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dtgv_Customers.CellClick += dtgv_Customers_CellClick;
             // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(89, 104, 105);
-            label1.Location = new Point(1201, 143);
-            label1.Name = "label1";
-            label1.Size = new Size(80, 38);
-            label1.TabIndex = 55;
-            label1.Text = "CID";
-            label1.Click += label1_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.BorderColor = SystemColors.ButtonShadow;
-            textBox1.BorderRadius = 20;
-            textBox1.CustomizableEdges = customizableEdges23;
-            textBox1.DefaultText = "";
-            textBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textBox1.FillColor = SystemColors.MenuBar;
-            textBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox1.Font = new Font("Segoe UI", 9F);
-            textBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox1.Location = new Point(1201, 185);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '\0';
-            textBox1.PlaceholderText = "";
-            textBox1.SelectedText = "";
-            textBox1.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            textBox1.Size = new Size(252, 34);
-            textBox1.TabIndex = 45;
-            // 
             // Customers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
-            Controls.Add(label1);
-            Controls.Add(guna2TextBox3);
+            Controls.Add(txb_Search);
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2HtmlLabel6);
-            Controls.Add(textBox1);
             Controls.Add(lb_Categories);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Customers";
@@ -520,7 +476,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_Age;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txb_Search;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
@@ -529,7 +485,5 @@
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Customers;
         private Guna.UI2.WinForms.Guna2Button txb_Update;
         private Guna.UI2.WinForms.Guna2ComboBox cb_Gender;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox1;
     }
 }

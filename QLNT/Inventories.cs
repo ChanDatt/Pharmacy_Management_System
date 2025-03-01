@@ -1,19 +1,7 @@
-﻿using Guna.UI2.WinForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
 using System.Data.OleDb;
 using DataTable = System.Data.DataTable;
-using Microsoft.Office.Interop.Excel;
-using ScrollBars = System.Windows.Forms.ScrollBars;
-using System.Windows.Forms;
-
 
 namespace QLNT
 {
@@ -301,7 +289,7 @@ namespace QLNT
                             int mid = Convert.ToInt32(row.Cells["MID"].Value);
 
                             // Prepare the DELETE command
-                            string query = "Update MedInventory SET StockQuantity = 0 where MID = @mid";
+                            string query = "DELETE FROM MedInventory where MID = @mid";
                             using (SqlCommand command = new SqlCommand(query, connection))
                             {
                                 command.Parameters.AddWithValue("@mid", mid);

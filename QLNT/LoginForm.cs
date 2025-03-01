@@ -61,9 +61,6 @@ namespace QLNT
             btn_Login.BackColor = ColorTranslator.FromHtml("#596869");
             btn_Login.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
         }
-
-
-
         private void txb_User_Enter(object sender, EventArgs e)
         {
             if (txb_User.Text == placeholder_txb_User)
@@ -72,7 +69,6 @@ namespace QLNT
                 txb_User.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
             }
         }
-
         private void txb_Pass_Enter(object sender, EventArgs e)
         {
             if (txb_Pass.Text == placeholder_txb_Pass)
@@ -81,9 +77,6 @@ namespace QLNT
                 txb_Pass.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
             }
         }
-
-
-
         private void txb_User_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_User.Text))
@@ -100,51 +93,15 @@ namespace QLNT
                 txb_Pass.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
             }
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        public string Login(string username, string password)
-        {
-            //using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
-            //{
-            //    conn.Open();
-
-            //    using (SqlCommand cmd = new SqlCommand("sp_Login_TagUser", conn))
-            //    {
-            //        cmd.CommandType = CommandType.StoredProcedure;
-
-            //        // Thêm tham số đầu vào
-            //        cmd.Parameters.AddWithValue("@Username", username);
-            //        cmd.Parameters.AddWithValue("@Password", password);
-
-            //        // Thêm tham số đầu ra
-            //        SqlParameter roleParam = new SqlParameter("@Role", SqlDbType.NVarChar, 20)
-            //        {
-            //            Direction = ParameterDirection.Output
-            //        };
-            //        cmd.Parameters.Add(roleParam);
-
-            //        // Thực thi stored procedure
-            //        cmd.ExecuteNonQuery();
-
-            //        // Lấy giá trị từ tham số output
-            //        string userType = roleParam.Value.ToString();
-
-            //        return userType; // Trả về "admin", "staff", hoặc "invalid"
-            //    }
-            //}
-            return "admin";
-        }
-
-
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string username = txb_User.Text;
             string password = txb_Pass.Text;
-            string result = Login(username, password);
+            string result = new BL.UserBL().AuthenticateUser(username, password);
 
             if (result == "admin")
             {

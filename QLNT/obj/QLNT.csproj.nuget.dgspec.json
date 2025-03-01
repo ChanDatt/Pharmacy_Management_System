@@ -1,17 +1,178 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj": {}
+    "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj": {}
   },
   "projects": {
-    "D:\\LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj": {
+    "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
-        "projectName": "QLNT",
-        "projectPath": "D:\\LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
+        "projectUniqueName": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\obj\\",
+        "outputPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj": {
+                "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj"
+              },
+              "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj": {
+                "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj",
+        "projectName": "DL",
+        "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj": {
+                "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
+        "projectName": "QLNT",
+        "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\QLNT.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,7 +192,14 @@
         "frameworks": {
           "net8.0-windows8.0": {
             "targetAlias": "net8.0-windows8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj": {
+                "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj"
+              },
+              "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj": {
+                "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -70,6 +238,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "System.Data.OleDb": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -104,6 +276,81 @@
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj",
+        "projectName": "TL",
+        "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"

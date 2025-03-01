@@ -73,10 +73,10 @@
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Delete = new Guna.UI2.WinForms.Guna2Button();
+            btn_Export = new Guna.UI2.WinForms.Guna2Button();
+            btn_Update = new Guna.UI2.WinForms.Guna2Button();
+            btn_Add = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             dtgv_Staffs = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2Panel1.SuspendLayout();
@@ -253,10 +253,10 @@
             guna2Panel1.Controls.Add(guna2HtmlLabel7);
             guna2Panel1.Controls.Add(guna2HtmlLabel5);
             guna2Panel1.Controls.Add(guna2HtmlLabel4);
-            guna2Panel1.Controls.Add(guna2Button1);
-            guna2Panel1.Controls.Add(guna2Button2);
-            guna2Panel1.Controls.Add(guna2Button4);
-            guna2Panel1.Controls.Add(guna2Button3);
+            guna2Panel1.Controls.Add(btn_Delete);
+            guna2Panel1.Controls.Add(btn_Export);
+            guna2Panel1.Controls.Add(btn_Update);
+            guna2Panel1.Controls.Add(btn_Add);
             guna2Panel1.Controls.Add(txb_Address);
             guna2Panel1.Controls.Add(guna2HtmlLabel3);
             guna2Panel1.Controls.Add(txb_Phone);
@@ -371,85 +371,85 @@
             guna2HtmlLabel4.TabIndex = 57;
             guna2HtmlLabel4.Text = "Status";
             // 
-            // guna2Button1
+            // btn_Delete
             // 
-            guna2Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button1.BorderRadius = 25;
-            guna2Button1.CustomizableEdges = customizableEdges15;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(64, 0, 0);
-            guna2Button1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1167, 167);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button1.Size = new Size(138, 57);
-            guna2Button1.TabIndex = 55;
-            guna2Button1.Text = "Delete";
-            guna2Button1.Click += guna2Button1_Click_1;
+            btn_Delete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Delete.BorderRadius = 25;
+            btn_Delete.CustomizableEdges = customizableEdges15;
+            btn_Delete.DisabledState.BorderColor = Color.DarkGray;
+            btn_Delete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Delete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Delete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Delete.FillColor = Color.FromArgb(64, 0, 0);
+            btn_Delete.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
+            btn_Delete.ForeColor = Color.White;
+            btn_Delete.Location = new Point(1167, 167);
+            btn_Delete.Name = "btn_Delete";
+            btn_Delete.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btn_Delete.Size = new Size(138, 57);
+            btn_Delete.TabIndex = 55;
+            btn_Delete.Text = "Delete";
+            btn_Delete.Click += btn_Delete_Click;
             // 
-            // guna2Button2
+            // btn_Export
             // 
-            guna2Button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button2.BorderRadius = 25;
-            guna2Button2.CustomizableEdges = customizableEdges17;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(64, 0, 0);
-            guna2Button2.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(1023, 168);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button2.Size = new Size(138, 57);
-            guna2Button2.TabIndex = 56;
-            guna2Button2.Text = "Export";
-            guna2Button2.Click += guna2Button2_Click_1;
+            btn_Export.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Export.BorderRadius = 25;
+            btn_Export.CustomizableEdges = customizableEdges17;
+            btn_Export.DisabledState.BorderColor = Color.DarkGray;
+            btn_Export.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Export.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Export.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Export.FillColor = Color.FromArgb(64, 0, 0);
+            btn_Export.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Export.ForeColor = Color.White;
+            btn_Export.Location = new Point(1023, 168);
+            btn_Export.Name = "btn_Export";
+            btn_Export.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btn_Export.Size = new Size(138, 57);
+            btn_Export.TabIndex = 56;
+            btn_Export.Text = "Export";
+            btn_Export.Click += btn_Export_Click;
             // 
-            // guna2Button4
+            // btn_Update
             // 
-            guna2Button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button4.BorderRadius = 25;
-            guna2Button4.CustomizableEdges = customizableEdges19;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button4.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.FromArgb(230, 239, 230);
-            guna2Button4.Location = new Point(1023, 105);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button4.Size = new Size(282, 57);
-            guna2Button4.TabIndex = 53;
-            guna2Button4.Text = "Update";
-            guna2Button4.Click += guna2Button4_Click;
+            btn_Update.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Update.BorderRadius = 25;
+            btn_Update.CustomizableEdges = customizableEdges19;
+            btn_Update.DisabledState.BorderColor = Color.DarkGray;
+            btn_Update.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Update.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Update.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Update.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Update.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Update.ForeColor = Color.FromArgb(230, 239, 230);
+            btn_Update.Location = new Point(1023, 105);
+            btn_Update.Name = "btn_Update";
+            btn_Update.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btn_Update.Size = new Size(282, 57);
+            btn_Update.TabIndex = 53;
+            btn_Update.Text = "Update";
+            btn_Update.Click += btn_Update_Click;
             // 
-            // guna2Button3
+            // btn_Add
             // 
-            guna2Button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button3.BorderRadius = 25;
-            guna2Button3.CustomizableEdges = customizableEdges21;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button3.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.FromArgb(230, 239, 230);
-            guna2Button3.Location = new Point(1023, 47);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Button3.Size = new Size(282, 57);
-            guna2Button3.TabIndex = 53;
-            guna2Button3.Text = "Add";
-            guna2Button3.Click += guna2Button3_Click;
+            btn_Add.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Add.BorderRadius = 25;
+            btn_Add.CustomizableEdges = customizableEdges21;
+            btn_Add.DisabledState.BorderColor = Color.DarkGray;
+            btn_Add.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Add.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Add.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Add.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Add.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Add.ForeColor = Color.FromArgb(230, 239, 230);
+            btn_Add.Location = new Point(1023, 47);
+            btn_Add.Name = "btn_Add";
+            btn_Add.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btn_Add.Size = new Size(282, 57);
+            btn_Add.TabIndex = 53;
+            btn_Add.Text = "Add";
+            btn_Add.Click += btn_Add_Click;
             // 
             // guna2Panel2
             // 
@@ -524,7 +524,6 @@
             dtgv_Staffs.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Staffs.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dtgv_Staffs.CellClick += dtgv_Staffs_CellClick;
-            dtgv_Staffs.CellContentClick += dtgv_Staffs_CellContentClick_1;
             // 
             // Staffs
             // 
@@ -560,9 +559,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox txb_SearchMedicine;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btn_Delete;
+        private Guna.UI2.WinForms.Guna2Button btn_Export;
+        private Guna.UI2.WinForms.Guna2Button btn_Add;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txb_Salary;
@@ -571,6 +570,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cb_Status;
         private Guna.UI2.WinForms.Guna2ComboBox cb_Note;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btn_Update;
     }
 }

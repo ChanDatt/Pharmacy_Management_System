@@ -32,16 +32,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Search = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btn_Export = new Guna.UI2.WinForms.Guna2Button();
-            btn_Update = new Guna.UI2.WinForms.Guna2Button();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             dtgv_receiptinfos = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -81,26 +78,6 @@
             btn_Export.Text = "Export";
             btn_Export.Click += btn_Export_Click;
             // 
-            // btn_Update
-            // 
-            btn_Update.Anchor = AnchorStyles.Top;
-            btn_Update.BorderRadius = 25;
-            btn_Update.CustomizableEdges = customizableEdges3;
-            btn_Update.DisabledState.BorderColor = Color.DarkGray;
-            btn_Update.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_Update.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_Update.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_Update.FillColor = Color.FromArgb(64, 0, 0);
-            btn_Update.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Update.ForeColor = Color.White;
-            btn_Update.Location = new Point(579, 187);
-            btn_Update.Name = "btn_Update";
-            btn_Update.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_Update.Size = new Size(310, 57);
-            btn_Update.TabIndex = 3;
-            btn_Update.Text = "Delete";
-            btn_Update.Click += guna2Button1_Click;
-            // 
             // lb_Categories
             // 
             lb_Categories.BackColor = Color.Transparent;
@@ -117,10 +94,10 @@
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.BackColor = Color.FromArgb(89, 104, 105);
             guna2Panel1.Controls.Add(dtgv_receiptinfos);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new Point(39, 269);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(1387, 607);
             guna2Panel1.TabIndex = 4;
             // 
@@ -186,9 +163,6 @@
             dtgv_receiptinfos.ThemeStyle.RowsStyle.Height = 29;
             dtgv_receiptinfos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_receiptinfos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dtgv_receiptinfos.CellClick += dtgv_Reports_CellClick;
-            dtgv_receiptinfos.CellContentClick += dtgv_Receipts_CellContentClick;
-            dtgv_receiptinfos.CellDoubleClick += dtgv_Receipts_CellDoubleClick;
             // 
             // dtp_Date
             // 
@@ -196,7 +170,7 @@
             dtp_Date.BackColor = Color.Transparent;
             dtp_Date.BorderRadius = 25;
             dtp_Date.Checked = true;
-            dtp_Date.CustomizableEdges = customizableEdges7;
+            dtp_Date.CustomizableEdges = customizableEdges5;
             dtp_Date.FillColor = Color.FromArgb(230, 239, 230);
             dtp_Date.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtp_Date.ForeColor = Color.Black;
@@ -205,12 +179,11 @@
             dtp_Date.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtp_Date.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtp_Date.Name = "dtp_Date";
-            dtp_Date.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            dtp_Date.ShadowDecoration.CustomizableEdges = customizableEdges6;
             dtp_Date.Size = new Size(310, 57);
             dtp_Date.TabIndex = 11;
             dtp_Date.TextAlign = HorizontalAlignment.Center;
             dtp_Date.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
-            dtp_Date.CheckedChanged += dtp_Date_CheckedChanged;
             dtp_Date.ValueChanged += dtp_Date_ValueChanged;
             // 
             // Receipts
@@ -221,7 +194,6 @@
             ClientSize = new Size(1465, 905);
             Controls.Add(dtp_Date);
             Controls.Add(guna2Panel1);
-            Controls.Add(btn_Update);
             Controls.Add(btn_Export);
             Controls.Add(lb_Categories);
             Controls.Add(lb_Search);
@@ -229,7 +201,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Receipts";
             Text = "Categories";
-            Click += Receipts_Click;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgv_receiptinfos).EndInit();
             ResumeLayout(false);
@@ -239,7 +210,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Search;
         private Guna.UI2.WinForms.Guna2Button btn_Export;
-        private Guna.UI2.WinForms.Guna2Button btn_Update;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_Date;

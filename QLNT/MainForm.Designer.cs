@@ -372,7 +372,6 @@ namespace QLNT
             CenterPanel.ShadowDecoration.CustomizableEdges = customizableEdges28;
             CenterPanel.Size = new Size(941, 1004);
             CenterPanel.TabIndex = 0;
-            CenterPanel.Paint += CenterPanel_Paint_1;
             // 
             // MainForm
             // 

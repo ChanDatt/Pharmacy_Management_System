@@ -28,7 +28,7 @@
     <Compile Update="Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="StaffOfTheMonthForm.cs">
+    <Compile Update="EmployeeOfTheMonthForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Staffs.cs">
@@ -38,9 +38,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControl1.cs">
