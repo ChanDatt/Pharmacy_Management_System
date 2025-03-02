@@ -54,29 +54,31 @@ namespace QLNT
         }
         private void LoadMedicines(string searchText = "")
         {
-            DataTable medicines = string.IsNullOrEmpty(searchText)
-                ? sqlConnection.GetMedicines(currentOffset, pageSize)
-                : GetMedicinesFromDatabase(searchText);
-
-            flowLayoutPanel2.Controls.Clear();
-
-            foreach (DataRow row in medicines.Rows)
+            try
             {
-                int mid = Convert.ToInt32(row["MID"]);
-                string medicineName = row["MedicineName"].ToString();
-                decimal price = Convert.ToDecimal(row["UnitPrice"]);
-                price += price * (decimal)0.08;
-                int stockQuantity = Convert.ToInt32(row["StockQuantity"]); // Get stock quantity
+                DataTable medicines = string.IsNullOrEmpty(searchText)
+                ? new BL.InventoriesBL().getMedicines(currentOffset, pageSize)
+                : new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
 
-                // Create an instance of MedicineItem
-                MedicineItem medicineItem = new MedicineItem(mid, medicineName, price, stockQuantity);
+                flowLayoutPanel2.Controls.Clear();
 
-                // Subscribe to the ItemClicked event
-                medicineItem.ItemClicked += MedicineItem_ItemClicked;
+                foreach (DataRow row in medicines.Rows)
+                {
+                    int mid = Convert.ToInt32(row["MID"]);
+                    string medicineName = row["MedicineName"].ToString();
+                    decimal price = Convert.ToDecimal(row["UnitPrice"]);
+                    price += price * (decimal)0.08;
+                    int stockQuantity = Convert.ToInt32(row["StockQuantity"]); // Get stock quantity
 
-                // Add the user control to the flow layout panel
-                flowLayoutPanel2.Controls.Add(medicineItem);
+                    MedicineItem medicineItem = new MedicineItem(mid, medicineName, price, stockQuantity);
+                    medicineItem.ItemClicked += MedicineItem_ItemClicked;
 
+                    flowLayoutPanel2.Controls.Add(medicineItem);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void MedicineItem_ItemClicked(object sender, ItemClickedEventArgs e)
@@ -110,30 +112,6 @@ namespace QLNT
                 newRow.Cells["Quantity"].Value = 1; // Set initial quantity to 1
                 newRow.Cells["TotalPrice"].Value = e.Price; // Set total price
             }
-        }
-
-        private DataTable GetMedicinesFromDatabase(string searchText, int limit = 100)
-        {
-            DataTable medicines = new DataTable();
-
-            using (var connection = new SqlConnection(sqlConnection.ConnectionString))
-            {
-                connection.Open();
-                string query = $"SELECT TOP 30 MID, MedicineName, UnitPrice, StockQuantity FROM MedInventory WHERE MedicineName LIKE @searchText";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
-                    command.Parameters.AddWithValue("@limit", limit); // Add the limit parameter
-
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(medicines);
-                    }
-                }
-            }
-
-            return medicines;
         }
 
         // Usage in TextChanged event

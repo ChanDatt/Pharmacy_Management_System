@@ -48,17 +48,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpk_EndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpk_StartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Item = new Guna.UI2.WinForms.Guna2Button();
+            btn_Staff = new Guna.UI2.WinForms.Guna2Button();
+            btn_Sales = new Guna.UI2.WinForms.Guna2Button();
+            btn_Export = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             dtgv_Reports = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Find = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Reports).BeginInit();
             SuspendLayout();
@@ -74,47 +74,45 @@
             lb_Categories.TabIndex = 8;
             lb_Categories.Text = "REPORTS";
             // 
-            // guna2DateTimePicker2
+            // dtpk_EndDate
             // 
-            guna2DateTimePicker2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2DateTimePicker2.BackColor = Color.Transparent;
-            guna2DateTimePicker2.BorderRadius = 20;
-            guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges1;
-            guna2DateTimePicker2.FillColor = Color.FromArgb(230, 239, 230);
-            guna2DateTimePicker2.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2DateTimePicker2.Format = DateTimePickerFormat.Short;
-            guna2DateTimePicker2.Location = new Point(1049, 241);
-            guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker2.Size = new Size(195, 44);
-            guna2DateTimePicker2.TabIndex = 9;
-            guna2DateTimePicker2.TextAlign = HorizontalAlignment.Center;
-            guna2DateTimePicker2.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
-            guna2DateTimePicker2.Click += guna2DateTimePicker2_Click;
+            dtpk_EndDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dtpk_EndDate.BackColor = Color.Transparent;
+            dtpk_EndDate.BorderRadius = 20;
+            dtpk_EndDate.Checked = true;
+            dtpk_EndDate.CustomizableEdges = customizableEdges1;
+            dtpk_EndDate.FillColor = Color.FromArgb(230, 239, 230);
+            dtpk_EndDate.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtpk_EndDate.Format = DateTimePickerFormat.Short;
+            dtpk_EndDate.Location = new Point(1049, 241);
+            dtpk_EndDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpk_EndDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpk_EndDate.Name = "dtpk_EndDate";
+            dtpk_EndDate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtpk_EndDate.Size = new Size(195, 44);
+            dtpk_EndDate.TabIndex = 9;
+            dtpk_EndDate.TextAlign = HorizontalAlignment.Center;
+            dtpk_EndDate.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
             // 
-            // guna2DateTimePicker1
+            // dtpk_StartDate
             // 
-            guna2DateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2DateTimePicker1.BackColor = Color.Transparent;
-            guna2DateTimePicker1.BorderRadius = 20;
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges3;
-            guna2DateTimePicker1.FillColor = Color.FromArgb(230, 239, 230);
-            guna2DateTimePicker1.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Short;
-            guna2DateTimePicker1.Location = new Point(848, 241);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker1.Size = new Size(195, 44);
-            guna2DateTimePicker1.TabIndex = 9;
-            guna2DateTimePicker1.TextAlign = HorizontalAlignment.Center;
-            guna2DateTimePicker1.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
-            guna2DateTimePicker1.ValueChanged += guna2DateTimePicker1_ValueChanged;
+            dtpk_StartDate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dtpk_StartDate.BackColor = Color.Transparent;
+            dtpk_StartDate.BorderRadius = 20;
+            dtpk_StartDate.Checked = true;
+            dtpk_StartDate.CustomizableEdges = customizableEdges3;
+            dtpk_StartDate.FillColor = Color.FromArgb(230, 239, 230);
+            dtpk_StartDate.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtpk_StartDate.Format = DateTimePickerFormat.Short;
+            dtpk_StartDate.Location = new Point(848, 241);
+            dtpk_StartDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpk_StartDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpk_StartDate.Name = "dtpk_StartDate";
+            dtpk_StartDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtpk_StartDate.Size = new Size(195, 44);
+            dtpk_StartDate.TabIndex = 9;
+            dtpk_StartDate.TextAlign = HorizontalAlignment.Center;
+            dtpk_StartDate.Value = new DateTime(2024, 11, 19, 14, 58, 16, 433);
             // 
             // guna2HtmlLabel2
             // 
@@ -140,81 +138,81 @@
             guna2HtmlLabel3.Text = "End Date";
             guna2HtmlLabel3.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // guna2Button1
+            // btn_Item
             // 
-            guna2Button1.BorderRadius = 25;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(75, 221);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(172, 64);
-            guna2Button1.TabIndex = 13;
-            guna2Button1.Text = "Item";
-            guna2Button1.Click += guna2Button1_Click;
+            btn_Item.BorderRadius = 25;
+            btn_Item.CustomizableEdges = customizableEdges5;
+            btn_Item.DisabledState.BorderColor = Color.DarkGray;
+            btn_Item.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Item.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Item.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Item.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Item.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Item.ForeColor = Color.White;
+            btn_Item.Location = new Point(75, 221);
+            btn_Item.Name = "btn_Item";
+            btn_Item.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_Item.Size = new Size(172, 64);
+            btn_Item.TabIndex = 13;
+            btn_Item.Text = "Item";
+            btn_Item.Click += btn_Item_Click;
             // 
-            // guna2Button3
+            // btn_Staff
             // 
-            guna2Button3.BorderRadius = 25;
-            guna2Button3.CustomizableEdges = customizableEdges7;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button3.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(253, 221);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(172, 64);
-            guna2Button3.TabIndex = 13;
-            guna2Button3.Text = "Staff";
-            guna2Button3.Click += guna2Button3_Click;
+            btn_Staff.BorderRadius = 25;
+            btn_Staff.CustomizableEdges = customizableEdges7;
+            btn_Staff.DisabledState.BorderColor = Color.DarkGray;
+            btn_Staff.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Staff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Staff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Staff.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Staff.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Staff.ForeColor = Color.White;
+            btn_Staff.Location = new Point(253, 221);
+            btn_Staff.Name = "btn_Staff";
+            btn_Staff.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_Staff.Size = new Size(172, 64);
+            btn_Staff.TabIndex = 13;
+            btn_Staff.Text = "Staff";
+            btn_Staff.Click += btn_Staff_Click;
             // 
-            // guna2Button4
+            // btn_Sales
             // 
-            guna2Button4.BorderRadius = 25;
-            guna2Button4.CustomizableEdges = customizableEdges9;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(431, 221);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button4.Size = new Size(172, 64);
-            guna2Button4.TabIndex = 13;
-            guna2Button4.Text = "Sales";
-            guna2Button4.Click += guna2Button4_Click;
+            btn_Sales.BorderRadius = 25;
+            btn_Sales.CustomizableEdges = customizableEdges9;
+            btn_Sales.DisabledState.BorderColor = Color.DarkGray;
+            btn_Sales.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Sales.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Sales.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Sales.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Sales.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Sales.ForeColor = Color.White;
+            btn_Sales.Location = new Point(431, 221);
+            btn_Sales.Name = "btn_Sales";
+            btn_Sales.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_Sales.Size = new Size(172, 64);
+            btn_Sales.TabIndex = 13;
+            btn_Sales.Text = "Sales";
+            btn_Sales.Click += btn_Sales_Click;
             // 
-            // guna2Button5
+            // btn_Export
             // 
-            guna2Button5.BorderRadius = 25;
-            guna2Button5.CustomizableEdges = customizableEdges11;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.FromArgb(64, 0, 0);
-            guna2Button5.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(609, 221);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button5.Size = new Size(195, 64);
-            guna2Button5.TabIndex = 13;
-            guna2Button5.Text = "Export";
-            guna2Button5.Click += guna2Button5_Click;
+            btn_Export.BorderRadius = 25;
+            btn_Export.CustomizableEdges = customizableEdges11;
+            btn_Export.DisabledState.BorderColor = Color.DarkGray;
+            btn_Export.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Export.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Export.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Export.FillColor = Color.FromArgb(64, 0, 0);
+            btn_Export.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Export.ForeColor = Color.White;
+            btn_Export.Location = new Point(609, 221);
+            btn_Export.Name = "btn_Export";
+            btn_Export.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btn_Export.Size = new Size(195, 64);
+            btn_Export.TabIndex = 13;
+            btn_Export.Text = "Export";
+            btn_Export.Click += btn_Export_Click;
             // 
             // guna2Panel2
             // 
@@ -291,25 +289,25 @@
             dtgv_Reports.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Reports.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // guna2Button2
+            // btn_Find
             // 
-            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button2.BorderRadius = 20;
-            guna2Button2.CustomizableEdges = customizableEdges15;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button2.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(1257, 241);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button2.Size = new Size(131, 44);
-            guna2Button2.TabIndex = 42;
-            guna2Button2.Text = "Find";
-            guna2Button2.Click += guna2Button2_Click;
+            btn_Find.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Find.BorderRadius = 20;
+            btn_Find.CustomizableEdges = customizableEdges15;
+            btn_Find.DisabledState.BorderColor = Color.DarkGray;
+            btn_Find.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Find.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Find.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Find.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Find.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Find.ForeColor = Color.White;
+            btn_Find.Location = new Point(1257, 241);
+            btn_Find.Name = "btn_Find";
+            btn_Find.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btn_Find.Size = new Size(131, 44);
+            btn_Find.TabIndex = 42;
+            btn_Find.Text = "Find";
+            btn_Find.Click += btn_Find_Click;
             // 
             // Reports
             // 
@@ -317,16 +315,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1465, 905);
-            Controls.Add(guna2Button2);
+            Controls.Add(btn_Find);
             Controls.Add(guna2Panel2);
-            Controls.Add(guna2Button5);
-            Controls.Add(guna2Button4);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button1);
+            Controls.Add(btn_Export);
+            Controls.Add(btn_Sales);
+            Controls.Add(btn_Staff);
+            Controls.Add(btn_Item);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2DateTimePicker1);
-            Controls.Add(guna2DateTimePicker2);
+            Controls.Add(dtpk_StartDate);
+            Controls.Add(dtpk_EndDate);
             Controls.Add(lb_Categories);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Reports";
@@ -341,16 +339,16 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpk_EndDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpk_StartDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btn_Item;
+        private Guna.UI2.WinForms.Guna2Button btn_Staff;
+        private Guna.UI2.WinForms.Guna2Button btn_Sales;
+        private Guna.UI2.WinForms.Guna2Button btn_Export;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Reports;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_Find;
     }
 }

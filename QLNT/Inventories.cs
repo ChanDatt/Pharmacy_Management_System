@@ -17,53 +17,74 @@ namespace QLNT
             OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             LoadMedicines(); // Load medicines when the form loads
             UpdateMedicineCountAndStock();
-
         }
         private void LoadExpiredOrNearExpiredProducts()
         {
-            DataTable expiredProducts = sqlConnection.GetExpiredOrNearExpiredProducts();
+            try
+            {
+                DataTable expiredProducts = new BL.InventoriesBL().getExpiredOrNearExpiredProducts();
 
-            if (expiredProducts.Rows.Count > 0)
-            {
-                dtgv_Inventories.AutoGenerateColumns = true; // Ensure columns are auto-generated
-                dtgv_Inventories.DataSource = expiredProducts;
-                dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                if (expiredProducts.Rows.Count > 0)
+                {
+                    dtgv_Inventories.AutoGenerateColumns = true;
+                    dtgv_Inventories.DataSource = expiredProducts;
+                    dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                }
+                else
+                {
+                    MessageBox.Show("No expired or near-expired products found.");
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                MessageBox.Show("No expired or near-expired products found.");
+                MessageBox.Show(ex.Message);
             }
         }
+
         private void LoadOutOfStockProduct()
         {
-            DataTable oosProduct = sqlConnection.GetOutOfStockProduct();
-
-            if (oosProduct.Rows.Count > 0)
+            try
             {
-                dtgv_Inventories.AutoGenerateColumns = true; // Ensure columns are auto-generated
-                dtgv_Inventories.DataSource = oosProduct;
-                dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                DataTable oosProduct = new BL.InventoriesBL().getOutOfStockProduct();
 
+                if (oosProduct.Rows.Count > 0)
+                {
+                    dtgv_Inventories.AutoGenerateColumns = true; // Ensure columns are auto-generated
+                    dtgv_Inventories.DataSource = oosProduct;
+                    dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                }
+                else
+                {
+                    MessageBox.Show("No product is out of stock ");
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                MessageBox.Show("No product is out of stock ");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void LoadMedicines()
         {
-            DataTable medicinesTable = sqlConnection.GetMedicines(currentOffset, pageSize);
-            dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-            if (medicinesTable.Columns.Count == 0)
+            try
             {
-                MessageBox.Show("No columns found in the DataTable.");
-                return;
-            }
+                DataTable medicinesTable = new BL.InventoriesBL().getMedicines(currentOffset, pageSize);
+                dtgv_Inventories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            dtgv_Inventories.AutoGenerateColumns = true; // Ensure columns are auto-generated
-            dtgv_Inventories.DataSource = medicinesTable;
+                if (medicinesTable.Columns.Count == 0)
+                {
+                    MessageBox.Show("No columns found in the DataTable.");
+                    return;
+                }
+
+                dtgv_Inventories.AutoGenerateColumns = true; // Ensure columns are auto-generated
+                dtgv_Inventories.DataSource = medicinesTable;
+
+            }
+            catch (SqlException ex) { 
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -73,39 +94,18 @@ namespace QLNT
 
         private void UpdateMedicineCountAndStock()
         {
-            int totalMedicines = 0;
-            int totalStockQuantity = 0;
-            int totalExpiredProducts = 0;
-
-            using (var connection = new SqlConnection(sqlConnection.ConnectionString)) // Replace with your connection string
+            try
             {
-                SqlCommand command = new SqlCommand("CountMedicinesAndStock", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                List<int> list = new BL.InventoriesBL().updateMedicineCountAndStock();
 
-                try
-                {
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            totalMedicines = reader.GetInt32(0); // TotalMedicines
-                            totalStockQuantity = reader.GetInt32(1); // TotalStockQuantity
-                            totalExpiredProducts = reader.GetInt32(2); // TotalExpiredProducts
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
-                }
+                guna2HtmlLabel4.Text = list[0].ToString(); // TotalMedicines
+                guna2HtmlLabel6.Text = list[1].ToString(); // TotalStockQuantity
+                guna2HtmlLabel5.Text = list[2].ToString(); // TotalExpiredProducts 
             }
-
-
-            // Update the labels
-            guna2HtmlLabel4.Text = $"{totalMedicines}";
-            guna2HtmlLabel6.Text = $"{totalStockQuantity}";
-            guna2HtmlLabel5.Text = $"{totalExpiredProducts}";
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -182,8 +182,7 @@ namespace QLNT
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txb_FileName.Text) &&
-                System.IO.File.Exists(txb_FileName.Text))
+            if (!string.IsNullOrEmpty(txb_FileName.Text) && System.IO.File.Exists(txb_FileName.Text))
             {
                 using (var connection = new SqlConnection(sqlConnection.ConnectionString))
                 {

@@ -1,174 +1,84 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace QLNT
 {
     public partial class Reports : Form
     {
         private string i = "";
-        private SQLConnectionClass sQLConnection;
+
         public Reports()
         {
             InitializeComponent();
-            sQLConnection = new SQLConnectionClass();
-            LoadItemMSales();
         }
 
         private void Reports_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
             LoadItemMSales();
-            i = "Item";
         }
+
         private void LoadItemMSales()
         {
-            sQLConnection = new SQLConnectionClass();
-            using (SqlConnection conn = new SqlConnection(sQLConnection.ConnectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    // Query to select data from the view
-                    string query = $"EXEC dbo.LoadItemsSale;";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // Bind the DataTable to the DataGridView
-                    dtgv_Reports.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                dtgv_Reports.DataSource = new BL.ReportBL().LoadItemSales();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
         private void LoadItemMSalesBySelectedMY(int startmonth, int endmonth, int year)
         {
-            sQLConnection = new SQLConnectionClass();
-            using (SqlConnection conn = new SqlConnection(sQLConnection.ConnectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    // Query to select data from the view
-                    string query = $"select * from SalesItemView where Month BETWEEN {startmonth} AND {endmonth} and Year = {year}";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // Bind the DataTable to the DataGridView
-                    dtgv_Reports.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                dtgv_Reports.DataSource = new BL.ReportBL().LoadItemMSalesBySelectedMY(startmonth, endmonth, year);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
         private void LoadEmployeeMSales()
         {
-            sQLConnection = new SQLConnectionClass();
-            using (SqlConnection conn = new SqlConnection(sQLConnection.ConnectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    // Query to select data from the view
-                    string query = $"exec CreateEmployeeSalesForMonth SELECT * FROM EmployeeMonthlySalesView";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // Bind the DataTable to the DataGridView
-                    dtgv_Reports.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                dtgv_Reports.DataSource = new BL.ReportBL().LoadEmployeeMSales();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
         private void LoadEmployeeMSalesByMY(int startmonth, int endmonth, int year)
         {
-            sQLConnection = new SQLConnectionClass();
-            using (SqlConnection conn = new SqlConnection(sQLConnection.ConnectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    // Query to select data from the view
-                    string query = $"SELECT * FROM EmployeeMonthlySalesView WHERE  Month BETWEEN {startmonth} AND {endmonth} and Year = {year} group by EID, EmployeeName, Receipts, TotalAmount, Month, Year";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // Bind the DataTable to the DataGridView
-                    dtgv_Reports.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                dtgv_Reports.DataSource = new BL.ReportBL().LoadEmployeeMSalesByMY(startmonth, endmonth, year);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            i = "Staff";
-            LoadEmployeeMSales();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            i = "Sales";
-            LoadMonthlySalesSummary();
-        }
         private void LoadMonthlySalesSummary()
         {
-            sQLConnection = new SQLConnectionClass();
-            using (SqlConnection conn = new SqlConnection(sQLConnection.ConnectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    // Query to select data from the view
-                    string query = "exec CreateMonthlySalesSummaryView\r\nselect * from MonthlySalesSummary";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    // Bind the DataTable to the DataGridView
-                    dtgv_Reports.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                dtgv_Reports.DataSource = new BL.ReportBL().LoadMonthlySalesSummary();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+
+        private void btn_Export_Click(object sender, EventArgs e)
         {
             using (var folderBrowser = new FolderBrowserDialog())
             {
@@ -193,16 +103,29 @@ namespace QLNT
             }
         }
 
-        private void guna2DateTimePicker2_Click(object sender, EventArgs e)
+        private void btn_Item_Click(object sender, EventArgs e)
         {
-
+            LoadItemMSales();
+            i = "Item";
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btn_Staff_Click(object sender, EventArgs e)
         {
-            int startmonth = guna2DateTimePicker1.Value.Month;
-            int endmonth = guna2DateTimePicker2.Value.Month;
-            int year = guna2DateTimePicker2.Value.Year;
+            i = "Staff";
+            LoadEmployeeMSales();
+        }
+
+        private void btn_Sales_Click(object sender, EventArgs e)
+        {
+            i = "Sales";
+            LoadMonthlySalesSummary();
+        }
+
+        private void btn_Find_Click(object sender, EventArgs e)
+        {
+            int startmonth = dtpk_StartDate.Value.Month;
+            int endmonth = dtpk_EndDate.Value.Month;
+            int year = dtpk_EndDate.Value.Year;
             if (i == "Item")
             {
                 LoadItemMSalesBySelectedMY(startmonth, endmonth, year);
