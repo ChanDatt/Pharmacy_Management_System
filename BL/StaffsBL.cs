@@ -71,5 +71,17 @@ namespace BL
                 throw ex;
             }
         }
+
+        public List<StaffsTL> SelectStaff()
+        {
+            try
+            {
+                return new StaffsDL().SelectStaff();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

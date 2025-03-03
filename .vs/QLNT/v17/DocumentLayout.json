@@ -7,28 +7,40 @@
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\staffsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\staffsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\reportdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\reportdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\bl\\inventoriesbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|solutionrelative:bl\\inventoriesbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\inventoriesdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\inventoriesdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\customersdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\customersdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\bl\\staffsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|solutionrelative:bl\\staffsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\dl\\reportdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\reportdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\bl\\customersbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|solutionrelative:bl\\customersbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14E8DE4-BA6B-49C5-89F4-D6CEF0DBAACB}|TL\\TL.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\tl\\staffstl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14E8DE4-BA6B-49C5-89F4-D6CEF0DBAACB}|TL\\TL.csproj|solutionrelative:tl\\staffstl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\ltcsdl_qlnt\\ltcsdl_qlnt\\qlnt\\reports.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,67 +86,105 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StaffsTL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\StaffsTL.cs",
+              "RelativeDocumentMoniker": "TL\\StaffsTL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\StaffsTL.cs",
+              "RelativeToolTip": "TL\\StaffsTL.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T14:03:36.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InventoriesBL.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\InventoriesBL.cs",
-              "RelativeDocumentMoniker": "BL\\InventoriesBL.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\InventoriesBL.cs",
-              "RelativeToolTip": "BL\\InventoriesBL.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAhwBsAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:37:10.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventoriesDL.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\InventoriesDL.cs",
-              "RelativeDocumentMoniker": "DL\\InventoriesDL.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\InventoriesDL.cs",
-              "RelativeToolTip": "DL\\InventoriesDL.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:25:19.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportDL.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReportDL.cs",
-              "RelativeDocumentMoniker": "DL\\ReportDL.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReportDL.cs",
-              "RelativeToolTip": "DL\\ReportDL.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwHAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:24:57.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReceiptsDL.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReceiptsDL.cs",
-              "RelativeDocumentMoniker": "DL\\ReceiptsDL.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReceiptsDL.cs",
-              "RelativeToolTip": "DL\\ReceiptsDL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:25:12.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "POS.cs [Design]",
               "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs",
               "RelativeDocumentMoniker": "QLNT\\POS.cs",
               "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs [Design]",
               "RelativeToolTip": "QLNT\\POS.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:22:45.566Z",
+              "WhenOpened": "2025-03-03T14:03:33.806Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StaffsBL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\StaffsBL.cs",
+              "RelativeDocumentMoniker": "BL\\StaffsBL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\StaffsBL.cs",
+              "RelativeToolTip": "BL\\StaffsBL.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAxwEwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:57:25.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customers.cs [Design]",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Customers.cs",
+              "RelativeDocumentMoniker": "QLNT\\Customers.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Customers.cs [Design]",
+              "RelativeToolTip": "QLNT\\Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:21:33.064Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReportDL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReportDL.cs",
+              "RelativeDocumentMoniker": "DL\\ReportDL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\ReportDL.cs",
+              "RelativeToolTip": "DL\\ReportDL.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAIwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T05:24:57.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomersBL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\CustomersBL.cs",
+              "RelativeDocumentMoniker": "BL\\CustomersBL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\CustomersBL.cs",
+              "RelativeToolTip": "BL\\CustomersBL.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:14:13.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomersDL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\CustomersDL.cs",
+              "RelativeDocumentMoniker": "DL\\CustomersDL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\CustomersDL.cs",
+              "RelativeToolTip": "DL\\CustomersDL.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHcAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T12:42:52.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StaffsDL.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\StaffsDL.cs",
+              "RelativeDocumentMoniker": "DL\\StaffsDL.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\StaffsDL.cs",
+              "RelativeToolTip": "DL\\StaffsDL.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAIAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T12:59:17.634Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -144,27 +194,27 @@
               "RelativeDocumentMoniker": "QLNT\\POS.cs",
               "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\POS.cs",
               "RelativeToolTip": "QLNT\\POS.cs",
-              "ViewState": "AgIAAM8BAAAAAAAAAAAmwIIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAADoCAAAAAAAAAAAywE0CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T05:22:48.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Inventories.cs",
               "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
               "RelativeDocumentMoniker": "QLNT\\Inventories.cs",
               "ToolTip": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
               "RelativeToolTip": "QLNT\\Inventories.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T05:22:23.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Reports.Designer.cs",
               "DocumentMoniker": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\QLNT\\Reports.Designer.cs",
               "RelativeDocumentMoniker": "QLNT\\Reports.Designer.cs",

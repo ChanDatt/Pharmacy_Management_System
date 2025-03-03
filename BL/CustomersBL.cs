@@ -59,5 +59,12 @@ namespace BL
                 throw ex;
             }
         }
+
+
+        public CustomersTL LoadCustomerData(string phoneNumber)
+        {
+            new CustomersDL().UpdateLastVisited(phoneNumber);
+            return new CustomersDL().GetCustomersByPhone(phoneNumber);
+        }
     }
 }

@@ -17,6 +17,11 @@ namespace TL
         private string lastMedicalExamination;
         private string status;
 
+        public CustomersTL(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
         public CustomersTL(int id, string name, int age, string gender, string phone)
         {
             this.id = id;

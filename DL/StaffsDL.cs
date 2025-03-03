@@ -121,5 +121,32 @@ namespace DL
                 throw ex;
             }
         }
+
+        public List<StaffsTL> SelectStaff()
+        {
+            List<StaffsTL> list = new List<StaffsTL> { };
+            DataTable dt = new DataTable();
+            string query = "SELECT EID, EmployeeName FROM Employee";
+            connection();
+            try
+            {
+                using (SqlDataReader reader = MyExecuteReader(query, CommandType.Text))
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new StaffsTL(reader.GetInt32(0), reader.GetString(1)));
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                disConnection();
+            }
+            return list;
+        }
     }
 }

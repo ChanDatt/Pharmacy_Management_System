@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BL;
+using Guna.UI2.WinForms;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ZXing;
-using ZXing.Common;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TL;
 
 namespace QLNT
 {
@@ -20,6 +12,12 @@ namespace QLNT
         private SQLConnectionClass sqlConnection;
         private int currentOffset = 0;
         private const int pageSize = 200;
+        private Customer customer;
+        private Staff staff;
+        private string note;
+        private string paymentmethod;
+        private decimal totalAmount = 0;
+        private decimal grandTotal = 0;
 
         public class Customer
         {
@@ -32,15 +30,13 @@ namespace QLNT
             public int EID { get; set; }
             public string Name { get; set; }
         }
-        private Customer customer;
-        private Staff staff;
-        private string note;
-        private string paymentmethod;
-        private decimal totalAmount = 0;
-        private decimal grandTotal = 0;
         public POS(string currentName)
         {
             InitializeComponent();
+        }
+
+        private void POS_Load(object sender, EventArgs e)
+        {
             sqlConnection = new SQLConnectionClass();
             bool isConnected = sqlConnection.TestConnection();
             if (!isConnected)
@@ -48,10 +44,15 @@ namespace QLNT
                 MessageBox.Show("Connection failed. Check your settings.");
             }
             LoadMedicines();
+
             flowLayoutPanel2.Scroll += MedicinesPanel_Scroll;
             guna2TextBox1.TextChanged += Guna2TextBox1_TextChanged;
             dtgv_items.CellValueChanged += Dtgv_items_CellValueChanged;
+
+            lb_AmountPaid.TextAlignment = ContentAlignment.MiddleRight;
+            lb_GrandTotal.TextAlignment = ContentAlignment.MiddleRight;
         }
+
         private void LoadMedicines(string searchText = "")
         {
             try
@@ -101,7 +102,7 @@ namespace QLNT
                     break;
                 }
             }
-            
+
             // If the item does not exist, add a new row
             if (!itemExists)
             {
@@ -160,11 +161,10 @@ namespace QLNT
                         printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
                         printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
 
-                        // Tạo đối tượng PrintDocument
                         PrintDocument printDocument = new PrintDocument();
 
                         // Thiết lập kích thước hóa đơn (80mm x 200mm)
-                        PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
+                        PaperSize paperSize = new PaperSize("Receipt", 315, 787);
 
                         printDocument1.DefaultPageSettings.PaperSize = paperSize;
                         printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
@@ -174,7 +174,6 @@ namespace QLNT
                             printPreviewDialog1.ShowDialog();
                             UpdateReceiptAndInfo();
 
-                            // Finally, print the document
                             printDocument1.Print();
                             ClearPOS();
                         }
@@ -191,11 +190,10 @@ namespace QLNT
                         printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
                         printDocument1.BeginPrint += new PrintEventHandler(printDocument1_BeginPrint);
 
-                        // Tạo đối tượng PrintDocument
                         PrintDocument printDocument = new PrintDocument();
 
-                        // Thiết lập kích thước hóa đơn (80mm x 200mm)
-                        PaperSize paperSize = new PaperSize("Receipt", 315, 787); // Kích thước tính bằng 100ths of an inch (80mm x 200mm)
+                        // size of the receipt (80mm x 200mm)
+                        PaperSize paperSize = new PaperSize("Receipt", 315, 787);
 
                         printDocument1.DefaultPageSettings.PaperSize = paperSize;
                         printDocument1.DefaultPageSettings.Margins = new Margins(10, 10, 10, 10);
@@ -205,7 +203,6 @@ namespace QLNT
                             printPreviewDialog1.ShowDialog();
                             UpdateReceiptAndInfo();
 
-                            // Finally, print the document
                             printDocument1.Print();
                             ClearPOS();
                         }
@@ -462,11 +459,11 @@ namespace QLNT
                         }
                         UpdateTotalAmount();
                     }
-                    catch 
+                    catch
                     {
                         MessageBox.Show("Delete successfull");
                     }
-                    
+
                 }
             }
             else
@@ -490,13 +487,6 @@ namespace QLNT
             lb_TotalAmount.Text = Math.Round(totalAmount, 2).ToString("C");
             grandTotal = totalAmount + totalAmount * (decimal)0.08;
             lb_AmountPaid.Text = Math.Round(grandTotal, 2).ToString("C");
-        }
-
-
-        private void POS_Load(object sender, EventArgs e)
-        {
-            lb_AmountPaid.TextAlignment = ContentAlignment.MiddleRight;
-            lb_GrandTotal.TextAlignment = ContentAlignment.MiddleRight;
         }
 
         private void comboBox1_KeyDown_1(object sender, KeyEventArgs e)
@@ -566,40 +556,36 @@ namespace QLNT
         }
 
 
-        private void btn_Cash_Click(object sender, EventArgs e)
+        private void SetPaymentMethod(string method, Guna2Button selectedButton)
         {
-            paymentmethod = "Cash";
+            paymentmethod = method;
+
+            btn_Cash.BorderThickness = 0;
             btn_Card.BorderThickness = 0;
             btn_Momo.BorderThickness = 0;
             btn_Zalo.BorderThickness = 0;
-            btn_Cash.BorderThickness = 9;
+
+            selectedButton.BorderThickness = 9;
+        }
+
+        private void btn_Cash_Click(object sender, EventArgs e)
+        {
+            SetPaymentMethod("Cash", btn_Cash);
         }
 
         private void btn_Card_Click(object sender, EventArgs e)
         {
-            paymentmethod = "CreditCard";
-            btn_Cash.BorderThickness = 0;
-            btn_Momo.BorderThickness = 0;
-            btn_Zalo.BorderThickness = 0;
-            btn_Card.BorderThickness = 9;
+            SetPaymentMethod("CreditCard", btn_Card);
         }
 
         private void btn_Momo_Click(object sender, EventArgs e)
         {
-            paymentmethod = "Momo";
-            btn_Card.BorderThickness = 0;
-            btn_Cash.BorderThickness = 0;
-            btn_Zalo.BorderThickness = 0;
-            btn_Momo.BorderThickness = 9;
+            SetPaymentMethod("Momo", btn_Momo);
         }
 
         private void btn_Zalo_Click(object sender, EventArgs e)
         {
-            paymentmethod = "ZaloPay";
-            btn_Card.BorderThickness = 0;
-            btn_Momo.BorderThickness = 0;
-            btn_Cash.BorderThickness = 0;
-            btn_Zalo.BorderThickness = 9;
+            SetPaymentMethod("ZaloPay", btn_Zalo);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -607,102 +593,56 @@ namespace QLNT
             if (comboBox2.SelectedItem != null)
             {
                 var selectedStaff = (dynamic)comboBox2.SelectedItem; // Use dynamic to access properties
-                int selectedStaffId = selectedStaff.EID; // Get the ID
+                int selectedStaffId = selectedStaff.ID; // Get the ID
                 string selectedStaffName = selectedStaff.Name; // Get the Name
                 staff = new Staff { EID = selectedStaffId, Name = selectedStaffName };
             }
         }
 
-        private Customer LoadCustomerData(string phoneNumber)
+        private void LoadCustomerData(string phoneNumber)
         {
-            Customer customer = null; // Initialize customer to null
-
-            using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
+            CustomersTL customer = null;
+            try
             {
-                conn.Open();
-                string query = @"
-            SELECT CID, CustomerName 
-            FROM Customer 
-            WHERE Phone LIKE @PhoneNumber;
-            UPDATE Customer SET LastDateVisted = GETDATE() WHERE Phone LIKE @PhoneNumber;";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                customer = new BL.CustomersBL().LoadCustomerData(phoneNumber);
+                if (customer != null)
                 {
-                    cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        comboBox1.Items.Clear(); // Clear previous results
-                        while (reader.Read())
-                        {
-                            // Create a new customer object
-                            customer = new Customer
-                            {
-                                CID = (int)reader["CID"],
-                                Name = (string)reader["CustomerName"]
-                            };
-
-                            // Add to the ComboBox with the customer ID as the Tag
-                            comboBox1.Items.Add(new { Text = customer.Name, Value = customer.CID });
-                        }
-
-                        // Automatically drop down the ComboBox if items were found
-                        if (comboBox1.Items.Count > 0)
-                        {
-                            comboBox1.DisplayMember = "Text"; // Set display member
-                            comboBox1.ValueMember = "Value"; // Set value member
-                            comboBox1.DroppedDown = true; // Open the dropdown
-                        }
-                        else
-                        {
-                            MessageBox.Show("No customers found."); // Inform user if no customers are found
-                        }
-                    }
+                    comboBox1.Items.Clear();
+                    comboBox1.Items.Add(new { Text = customer.Name, Value = customer.Id });
+                    comboBox1.DisplayMember = "Text";
+                    comboBox1.ValueMember = "Value";
+                    comboBox1.DroppedDown = true;
+                } else {
+                    MessageBox.Show("No customers found.");
                 }
             }
-
-            return customer; // Return the customer object
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         private void SelectStaff(string employeeName)
         {
-            using (SqlConnection conn = new SqlConnection(sqlConnection.ConnectionString))
+            try
             {
-                conn.Open();
-                string query = "SELECT EID, EmployeeName FROM Employee WHERE EmployeeName LIKE @EmployeeName";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                List<StaffsTL> list = new StaffsBL().SelectStaff();
+                comboBox2.Items.Add(list);
+                if (comboBox2.Items.Count > 0)
                 {
-                    cmd.Parameters.AddWithValue("@EmployeeName", $"%{employeeName}%");
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        comboBox2.Items.Clear(); // Clear previous results
-                        while (reader.Read())
-                        {
-                            // Create an anonymous object with ID and Name
-                            staff = new Staff
-                            {
-                                EID = (int)reader["EID"],
-                                Name = (string)reader["EmployeeName"]
-                            };
-
-                            // Add the anonymous object to the ComboBox
-                            comboBox2.Items.Add(staff);
-                        }
-
-                        // Automatically drop down the ComboBox if items were found
-                        if (comboBox2.Items.Count > 0)
-                        {
-                            comboBox2.DisplayMember = "Name"; // Set display member
-                            comboBox2.ValueMember = "Id"; // Set value member
-                            comboBox2.DroppedDown = true; // Open the dropdown
-                        }
-                        else
-                        {
-                            MessageBox.Show("No staff found.");
-                            return;
-                        }
-                    }
+                    comboBox2.DisplayMember = "Name";
+                    comboBox2.ValueMember = "Id";
+                    comboBox2.DroppedDown = true;
                 }
+                else
+                {
+                    MessageBox.Show("No staff found.");
+                    return;
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -775,9 +715,6 @@ namespace QLNT
             btn_Cash.BorderThickness = 0;
             dtgv_items.Rows.Clear();
         }
-
-
-
 
         string imagePath = Directory.GetParent(Application.StartupPath).ToString();
         private void pictureBox1_MouseEnter(object sender, EventArgs e)

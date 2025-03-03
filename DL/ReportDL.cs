@@ -86,7 +86,7 @@ namespace DL
         {
 
             DataTable dt = new DataTable();
-            string query = $"SELECT * FROM EmployeeMonthlySalesView WHERE  Month BETWEEN {startmonth} AND {endmonth} and Year = {year} group by EID, EmployeeName, Receipts, TotalAmount, Month, Year";
+            string query = $"SELECT * FROM EmployeeMonthlySalesView WHERE Month BETWEEN {startmonth} AND {endmonth} and Year = {year} group by EID, EmployeeName, Receipts, TotalAmount, Month, Year";
             connection();
             try
             {
@@ -129,5 +129,7 @@ namespace DL
                 disConnection();
             }
         }
+
+
     }
 }
