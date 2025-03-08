@@ -44,7 +44,6 @@ namespace QLNT
                 List<(string Day, double TotalSales)> listRevenue = new BL.DashBoardBL().getWeeklyRevenue();
                 gunaChart1.Datasets.Clear();
 
-                // Tạo dataset mới
                 Guna.Charts.WinForms.GunaBarDataset barDataset = new Guna.Charts.WinForms.GunaBarDataset
                 {
                     Label = "Dayly Revenue",
@@ -55,10 +54,8 @@ namespace QLNT
                     barDataset.DataPoints.Add(data.Day, data.TotalSales);
                 }
 
-                // Thêm dataset vào chart
                 gunaChart1.Datasets.Add(barDataset);
 
-                // Cấu hình tiêu đề
                 gunaChart1.Title.Text = "WEEKLY REVENUE";
                 gunaChart1.Title.Font = new Guna.Charts.WinForms.ChartFont
                 {
@@ -83,13 +80,11 @@ namespace QLNT
                 List<(string Day, double TotalSales)> listRevenue = new BL.DashBoardBL().getMonthlyRevenue();
                 gunaChart2.Datasets.Clear();
 
-                // Tạo dataset mới
                 Guna.Charts.WinForms.GunaPieDataset pieDataset = new Guna.Charts.WinForms.GunaPieDataset
                 {
                     Label = "Monthly Revenue",
                 };
 
-                // Duyệt qua từng dòng dữ liệu trong DataTable
                 foreach (var data in listRevenue)
                 {
 
@@ -97,14 +92,10 @@ namespace QLNT
 
                 }
 
-                // Config chart
                 gunaChart2.XAxes.Display = false;
                 gunaChart2.YAxes.Display = false;
 
-                // Thêm dataset vào chart
                 gunaChart2.Datasets.Add(pieDataset);
-
-                // Cấu hình tiêu đề
                 gunaChart2.Title.Text = "MONTHLY REVENUE";
                 gunaChart2.Title.Font = new Guna.Charts.WinForms.ChartFont
                 {
@@ -113,7 +104,7 @@ namespace QLNT
                     Style = ChartFontStyle.Bold
                 };
 
-                gunaChart2.Update(); // Cập nhật biểu đồ
+                gunaChart2.Update(); 
             }
             catch (Exception ex)
             {

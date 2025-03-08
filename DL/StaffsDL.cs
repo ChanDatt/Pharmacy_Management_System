@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using TL;
 
 namespace DL
@@ -122,21 +115,35 @@ namespace DL
             }
         }
 
-        public List<StaffsTL> SelectStaff()
+        public List<StaffsTL> SelectStaff(string searchStaff = null)
         {
-            List<StaffsTL> list = new List<StaffsTL> { };
-            DataTable dt = new DataTable();
-            string query = "SELECT EID, EmployeeName FROM Employee";
+            string query;
+            if (searchStaff != null)
+            {
+                query = "SELECT EID, EmployeeName FROM Employee WHERE EmployeeName like '%" + searchStaff + "%'";
+            }
+            else
+            {
+                query = "SELECT EID, EmployeeName FROM Employee";
+            }
+            List<StaffsTL> list = new List<StaffsTL>();
+            StaffsTL staff;
+            int id = 0;
+            string name = "";
             connection();
             try
             {
-                using (SqlDataReader reader = MyExecuteReader(query, CommandType.Text))
+                SqlDataReader reader = MyExecuteReader(query, CommandType.Text);
+
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        list.Add(new StaffsTL(reader.GetInt32(0), reader.GetString(1)));
-                    }
+                    id = reader.GetInt32(0);
+                    name = reader.GetString(1);
+                    staff = new StaffsTL(id, name);
+                    list.Add(staff);
                 }
+                reader.Close();
+                return list;
             }
             catch (SqlException ex)
             {
@@ -146,7 +153,6 @@ namespace DL
             {
                 disConnection();
             }
-            return list;
         }
     }
 }

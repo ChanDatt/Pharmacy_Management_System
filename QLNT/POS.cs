@@ -3,7 +3,9 @@ using Guna.UI2.WinForms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Printing;
+using System.Windows.Forms;
 using TL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLNT
 {
@@ -12,24 +14,14 @@ namespace QLNT
         private SQLConnectionClass sqlConnection;
         private int currentOffset = 0;
         private const int pageSize = 200;
-        private Customer customer;
-        private Staff staff;
+        private CustomersTL customer;
+        private StaffsTL staff;
         private string note;
         private string paymentmethod;
         private decimal totalAmount = 0;
         private decimal grandTotal = 0;
+        private int rowIndex = 0;
 
-        public class Customer
-        {
-            public int CID { get; set; }
-            public string Name { get; set; }
-        }
-
-        public class Staff
-        {
-            public int EID { get; set; }
-            public string Name { get; set; }
-        }
         public POS(string currentName)
         {
             InitializeComponent();
@@ -44,15 +36,12 @@ namespace QLNT
                 MessageBox.Show("Connection failed. Check your settings.");
             }
             LoadMedicines();
+            SelectStaff();
 
-            flowLayoutPanel2.Scroll += MedicinesPanel_Scroll;
-            guna2TextBox1.TextChanged += Guna2TextBox1_TextChanged;
-            dtgv_items.CellValueChanged += Dtgv_items_CellValueChanged;
-
+            dtgv_items.CellValueChanged += dtgv_items_CellValueChanged;
             lb_AmountPaid.TextAlignment = ContentAlignment.MiddleRight;
             lb_GrandTotal.TextAlignment = ContentAlignment.MiddleRight;
         }
-
         private void LoadMedicines(string searchText = "")
         {
             try
@@ -61,7 +50,7 @@ namespace QLNT
                 ? new BL.InventoriesBL().getMedicines(currentOffset, pageSize)
                 : new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
 
-                flowLayoutPanel2.Controls.Clear();
+                flop_Items.Controls.Clear();
 
                 foreach (DataRow row in medicines.Rows)
                 {
@@ -74,7 +63,7 @@ namespace QLNT
                     MedicineItem medicineItem = new MedicineItem(mid, medicineName, price, stockQuantity);
                     medicineItem.ItemClicked += MedicineItem_ItemClicked;
 
-                    flowLayoutPanel2.Controls.Add(medicineItem);
+                    flop_Items.Controls.Add(medicineItem);
                 }
             }
             catch (SqlException ex)
@@ -116,43 +105,20 @@ namespace QLNT
         }
 
         // Usage in TextChanged event
-        private void Guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void txb_Search_TextChanged(object sender, EventArgs e)
         {
-            string searchText = guna2TextBox1.Text; // Get the current text from the textbox
-            LoadMedicines(searchText); // Load medicines based on the search text
+            string searchText = txb_Search.Text;
+            LoadMedicines(searchText);
         }
-
-
-
-        private void MedicinesPanel_Scroll(object sender, EventArgs e)
-        {
-            // Check if the user has scrolled to the bottom of the panel
-            if (flowLayoutPanel2.VerticalScroll.Value + flowLayoutPanel2.ClientSize.Height >= flowLayoutPanel2.VerticalScroll.Maximum - 10) // Adjust threshold if needed
-            {
-                currentOffset += pageSize; // Prepare for next load
-                LoadMedicines(); // Load more medicines
-            }
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lb_Date.Text = DateTime.Now.ToLongTimeString() + "  " + DateTime.Now.ToShortDateString();
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void btn_Pay_POS_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void btn_Pay_Click(object sender, EventArgs e)
-        {
-            if (comboBox1.Text != "" && comboBox2.Text != "" && paymentmethod != null && dtgv_items.Rows.Count > 0)
+            if (cb_Customer.Text != "" && cb_Staff.Text != "" && paymentmethod != null && dtgv_items.Rows.Count > 0)
             {
                 if (paymentmethod != "Cash")
                 {
@@ -218,8 +184,6 @@ namespace QLNT
                 MessageBox.Show("Please fill in all information");
             }
         }
-
-        private int rowIndex = 0;
 
         private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
         {
@@ -380,7 +344,7 @@ namespace QLNT
             }
         }
 
-        private void Dtgv_items_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void dtgv_items_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dtgv_items.Columns["Quantity"].Index && e.RowIndex >= 0)
             {
@@ -405,8 +369,7 @@ namespace QLNT
             UpdateTotalAmount();
         }
 
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
             if (dtgv_items.CurrentRow != null && !dtgv_items.CurrentRow.IsNewRow)
             {
@@ -433,7 +396,7 @@ namespace QLNT
             }
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btn_Del_Click(object sender, EventArgs e)
         {
             if (dtgv_items.CurrentRow != null && !dtgv_items.CurrentRow.IsNewRow)
             {
@@ -489,73 +452,147 @@ namespace QLNT
             lb_AmountPaid.Text = Math.Round(grandTotal, 2).ToString("C");
         }
 
-        private void comboBox1_KeyDown_1(object sender, KeyEventArgs e)
-        {
 
-            if (e.KeyCode == Keys.Enter)
+
+
+        ///////////////// CUSTOMERS COMBO_BOX ///////////////////// 
+        private void LoadCustomerData(string phoneNumber)
+        {
+            try
             {
-                if (comboBox1.DroppedDown)
+                CustomersTL customer = new BL.CustomersBL().LoadCustomerData(phoneNumber);
+                if (customer != null)
                 {
-                    if (comboBox1.SelectedIndex >= 0) // Kiểm tra xem có mục nào được chọn
-                    {
-                        var selectedItem = comboBox1.SelectedItem as Customer;
-                        if (selectedItem != null) // Kiểm tra kiểu dữ liệu
-                        {
-                            comboBox1.Text = selectedItem.Name; // Gán tên vào comboBox1
-                            comboBox1.SelectedIndex = 0; // Chọn mục đầu tiên trong comboBox1 (nếu cần)
-                        }
-                    }
+                    cb_Customer.Items.Clear();
+                    cb_Customer.Items.Add(new { Text = customer.Name, Value = customer.Id });
+                    cb_Customer.DisplayMember = "Text";
+                    cb_Customer.ValueMember = "Value";
+                    cb_Customer.DroppedDown = false;
                 }
                 else
                 {
-                    string searchText = comboBox1.Text;
-                    LoadCustomerData(searchText); // Tìm kiếm nhân viên
+                    MessageBox.Show("No customers found.");
                 }
-
-                e.SuppressKeyPress = true; // Ngăn chặn hành động mặc định của Enter
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedItem != null)
+            catch (SqlException ex)
             {
-                var selectedCustomer = (dynamic)comboBox1.SelectedItem; // Use dynamic to access properties
-                int selectedCustomerId = selectedCustomer.Value; // Get the ID
-                string selectedCustomerName = selectedCustomer.Text; // Get the Name
-
-                // Update your customer object or UI as needed
-                customer = new Customer { CID = selectedCustomerId, Name = selectedCustomerName };
+                MessageBox.Show(ex.Message);
             }
         }
-
-        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
+        private void cb_Customer_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (comboBox2.DroppedDown)
+                if (cb_Customer.DroppedDown)
                 {
-                    if (comboBox2.SelectedIndex >= 0) // Kiểm tra xem có mục nào được chọn
+                    if (cb_Customer.SelectedIndex >= 0)
                     {
-                        var selectedItem = comboBox2.SelectedItem as Staff;
+                        var selectedItem = cb_Customer.SelectedItem as CustomersTL;
                         if (selectedItem != null)
                         {
-                            comboBox1.Text = selectedItem.Name;
-                            comboBox1.SelectedIndex = 0;
+                            cb_Customer.Text = selectedItem.Name; 
+                            cb_Customer.SelectedIndex = 0; 
                         }
                     }
                 }
                 else
                 {
-                    string searchText = comboBox2.Text;
-                    SelectStaff(searchText); // Tìm kiếm nhân viên
+                    string searchText = cb_Customer.Text;
+                    LoadCustomerData(searchText); 
                 }
 
-                e.SuppressKeyPress = true; // Ngăn chặn hành động mặc định của Enter
+                e.SuppressKeyPress = true; 
+            }
+        }
+        private void cb_Customer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_Customer.SelectedItem != null)
+            {
+                var selectedCustomer = (dynamic)cb_Customer.SelectedItem;
+                int selectedCustomerId = selectedCustomer.Value; 
+                string selectedCustomerName = selectedCustomer.Text;
+
+                customer = new CustomersTL(selectedCustomerId, selectedCustomerName);
+            }
+        }
+        ////////////////////////////////////////////////////////
+        ///////////////// STAFFS COMBO_BOX ///////////////////// 
+        private void SelectStaff(string searchStaff = null)
+        {
+            cb_Staff.DataSource = null;
+            try
+            {
+                List<StaffsTL> list = new StaffsBL().SelectStaff(searchStaff);
+                cb_Staff.DataSource = list;
+                if (cb_Staff.Items.Count > 0)
+                {
+                    cb_Staff.DisplayMember = "Name";
+                    cb_Staff.ValueMember = "Id";
+                    cb_Staff.SelectedIndex = -1;
+                    if (searchStaff != null)
+                    {
+                        cb_Staff.DroppedDown = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No staff found.");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
+        private void cb_Staff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_Staff.SelectedItem != null)
+            {
+                var selectedStaff = (dynamic)cb_Staff.SelectedItem; 
+                int selectedStaffId = selectedStaff.Id; 
+                string selectedStaffName = selectedStaff.Name; 
+                staff = new StaffsTL(selectedStaffId, selectedStaffName);
+            }
+        }
 
+        private void cb_Staff_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (cb_Staff.DroppedDown)
+                {
+                    var selectedItem = cb_Staff.SelectedItem as StaffsTL;
+                    if (selectedItem != null)
+                    {
+                        cb_Staff.Text = selectedItem.Name;
+
+                        if (cb_Staff.Items.Count > 0)
+                        {
+                            cb_Staff.SelectedIndex = 0;
+                        }
+                    }
+                }
+                else
+                {
+                    string searchText = cb_Staff.Text;
+                    SelectStaff(searchText);
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+        //////////////////////////////////////////////////////////
+     
+
+        private void flop_Items_Scroll(object sender, EventArgs e)
+        {
+            // Check if the user has scrolled to the bottom of the panel
+            if (flop_Items.VerticalScroll.Value + flop_Items.ClientSize.Height >= flop_Items.VerticalScroll.Maximum - 10) // Adjust threshold if needed
+            {
+                currentOffset += pageSize; // Prepare for next load
+                LoadMedicines(); // Load more medicines
+            }
+        }
         private void SetPaymentMethod(string method, Guna2Button selectedButton)
         {
             paymentmethod = method;
@@ -588,64 +625,6 @@ namespace QLNT
             SetPaymentMethod("ZaloPay", btn_Zalo);
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox2.SelectedItem != null)
-            {
-                var selectedStaff = (dynamic)comboBox2.SelectedItem; // Use dynamic to access properties
-                int selectedStaffId = selectedStaff.ID; // Get the ID
-                string selectedStaffName = selectedStaff.Name; // Get the Name
-                staff = new Staff { EID = selectedStaffId, Name = selectedStaffName };
-            }
-        }
-
-        private void LoadCustomerData(string phoneNumber)
-        {
-            CustomersTL customer = null;
-            try
-            {
-                customer = new BL.CustomersBL().LoadCustomerData(phoneNumber);
-                if (customer != null)
-                {
-                    comboBox1.Items.Clear();
-                    comboBox1.Items.Add(new { Text = customer.Name, Value = customer.Id });
-                    comboBox1.DisplayMember = "Text";
-                    comboBox1.ValueMember = "Value";
-                    comboBox1.DroppedDown = true;
-                } else {
-                    MessageBox.Show("No customers found.");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void SelectStaff(string employeeName)
-        {
-            try
-            {
-                List<StaffsTL> list = new StaffsBL().SelectStaff();
-                comboBox2.Items.Add(list);
-                if (comboBox2.Items.Count > 0)
-                {
-                    comboBox2.DisplayMember = "Name";
-                    comboBox2.ValueMember = "Id";
-                    comboBox2.DroppedDown = true;
-                }
-                else
-                {
-                    MessageBox.Show("No staff found.");
-                    return;
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void txb_Note_TextChanged(object sender, EventArgs e)
         {
             note = txb_Note.Text;
@@ -665,8 +644,8 @@ namespace QLNT
 
                 using (var command = new SqlCommand(insertReceiptQuery, connection))
                 {
-                    command.Parameters.AddWithValue("@CID", customer.CID); // Replace with actual CID
-                    command.Parameters.AddWithValue("@EID", staff.EID); // Replace with actual EID
+                    command.Parameters.AddWithValue("@CID", customer.Id); // Replace with actual CID
+                    command.Parameters.AddWithValue("@EID", staff.Id); // Replace with actual EID
                     command.Parameters.AddWithValue("@TotalAmount", grandTotal); // Replace with actual TotalAmount
                     command.Parameters.AddWithValue("@PaymentMethod", paymentmethod); // Replace with actual PaymentMethod
                     command.Parameters.AddWithValue("@Result", note); // Replace with actual Result
@@ -703,9 +682,9 @@ namespace QLNT
         }
         private void ClearPOS()
         {
-            guna2TextBox1.Text = string.Empty;
-            comboBox1.Text = string.Empty;
-            comboBox2.Text = string.Empty;
+            txb_Search.Text = string.Empty;
+            cb_Customer.Text = string.Empty;
+            cb_Staff.Text = string.Empty;
             txb_Note.Text = string.Empty;
             lb_AmountPaid.Text = "0.00";
             lb_TotalAmount.Text = "0.00";
@@ -716,18 +695,33 @@ namespace QLNT
             dtgv_items.Rows.Clear();
         }
 
+        private void dtgv_items_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (dtgv_items.Columns[e.ColumnIndex].Name == "Quantity")
+            {
+                string inputValue = e.FormattedValue.ToString();
+
+                if (!int.TryParse(inputValue, out int result))
+                {
+                    MessageBox.Show("Invalid value", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    e.Cancel = true;
+                }
+                else
+                {
+                    e.Cancel = false;
+                }
+            }
+        }
+
+
+        ///
+        ///
+        /// Recycle Bin
+        /// 
+        ///
         string imagePath = Directory.GetParent(Application.StartupPath).ToString();
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Image.FromFile(imagePath + "\\assets_img\\" + "recycle-bin.png");
-        }
 
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Image.FromFile(imagePath + "\\assets_img\\" + "bin.png");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pic_Recycle_Bin_Click(object sender, EventArgs e)
         {
             if (dtgv_items.SelectedRows.Count > 0)
             {
@@ -744,25 +738,21 @@ namespace QLNT
             {
                 MessageBox.Show("Please choose a row you want to delete", "Notification");
             }
-
         }
 
-        private void dtgv_items_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        private void pic_Recycle_Bin_MouseEnter(object sender, EventArgs e)
         {
-            if (dtgv_items.Columns[e.ColumnIndex].Name == "Quantity")
-            {
-                string inputValue = e.FormattedValue.ToString();
+            pic_Recycle_Bin.Image = Image.FromFile(imagePath + "\\assets_img\\" + "recycle-bin.png");
+        }
 
-                if (!int.TryParse(inputValue, out int result))
-                {
-                    MessageBox.Show("Invalid value", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    e.Cancel = true; 
-                }
-                else
-                {
-                    e.Cancel = false;
-                }
-            }
+        private void pic_Recycle_Bin_MouseLeave(object sender, EventArgs e)
+        {
+            pic_Recycle_Bin.Image = Image.FromFile(imagePath + "\\assets_img\\" + "bin.png");
+        }
+
+        private void btn_Exist_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

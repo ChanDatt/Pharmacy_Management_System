@@ -60,15 +60,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            btn_Exist = new Guna.UI2.WinForms.Guna2ControlBox();
             lb_ShortChau = new Label();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            flop_Items = new FlowLayoutPanel();
+            txb_Search = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            comboBox2 = new ComboBox();
+            cb_Staff = new ComboBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            comboBox1 = new ComboBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Pay_POS = new Guna.UI2.WinForms.Guna2Button();
             guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             btn_Zalo = new Guna.UI2.WinForms.Guna2Button();
             btn_Momo = new Guna.UI2.WinForms.Guna2Button();
@@ -96,13 +95,14 @@
             timer1 = new System.Windows.Forms.Timer(components);
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printPreviewDialog1 = new PrintPreviewDialog();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            pictureBox1 = new PictureBox();
+            btn_Add = new Guna.UI2.WinForms.Guna2Button();
+            btn_Del = new Guna.UI2.WinForms.Guna2Button();
+            pic_Recycle_Bin = new PictureBox();
+            cb_Customer = new ComboBox();
             guna2Panel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_items).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_Recycle_Bin).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel2
@@ -110,7 +110,7 @@
             guna2Panel2.BackColor = Color.FromArgb(89, 104, 105);
             guna2Panel2.BorderColor = Color.FromArgb(89, 104, 105);
             guna2Panel2.BorderThickness = 5;
-            guna2Panel2.Controls.Add(guna2ControlBox1);
+            guna2Panel2.Controls.Add(btn_Exist);
             guna2Panel2.Controls.Add(lb_ShortChau);
             guna2Panel2.CustomizableEdges = customizableEdges3;
             guna2Panel2.Dock = DockStyle.Top;
@@ -120,20 +120,20 @@
             guna2Panel2.Size = new Size(1570, 107);
             guna2Panel2.TabIndex = 4;
             // 
-            // guna2ControlBox1
+            // btn_Exist
             // 
-            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.BackColor = Color.FromArgb(230, 239, 230);
-            guna2ControlBox1.CustomizableEdges = customizableEdges1;
-            guna2ControlBox1.FillColor = Color.FromArgb(230, 239, 230);
-            guna2ControlBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2ControlBox1.IconColor = Color.FromArgb(0, 64, 64);
-            guna2ControlBox1.Location = new Point(1474, 34);
-            guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ControlBox1.Size = new Size(68, 42);
-            guna2ControlBox1.TabIndex = 6;
-            guna2ControlBox1.Click += guna2ControlBox1_Click;
+            btn_Exist.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Exist.BackColor = Color.FromArgb(230, 239, 230);
+            btn_Exist.CustomizableEdges = customizableEdges1;
+            btn_Exist.FillColor = Color.FromArgb(230, 239, 230);
+            btn_Exist.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Exist.IconColor = Color.FromArgb(0, 64, 64);
+            btn_Exist.Location = new Point(1474, 34);
+            btn_Exist.Name = "btn_Exist";
+            btn_Exist.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_Exist.Size = new Size(68, 42);
+            btn_Exist.TabIndex = 6;
+            btn_Exist.Click += btn_Exist_Click;
             // 
             // lb_ShortChau
             // 
@@ -147,48 +147,50 @@
             lb_ShortChau.TabIndex = 5;
             lb_ShortChau.Text = "SHORT CHAU";
             // 
-            // flowLayoutPanel2
+            // flop_Items
             // 
-            flowLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel2.AutoScroll = true;
-            flowLayoutPanel2.BackColor = Color.FromArgb(224, 224, 224);
-            flowLayoutPanel2.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanel2.Location = new Point(0, 200);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(634, 800);
-            flowLayoutPanel2.TabIndex = 6;
+            flop_Items.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flop_Items.AutoScroll = true;
+            flop_Items.BackColor = Color.FromArgb(224, 224, 224);
+            flop_Items.BorderStyle = BorderStyle.FixedSingle;
+            flop_Items.Location = new Point(0, 200);
+            flop_Items.Name = "flop_Items";
+            flop_Items.Size = new Size(634, 800);
+            flop_Items.TabIndex = 6;
+            flop_Items.Scroll += flop_Items_Scroll;
             // 
-            // guna2TextBox1
+            // txb_Search
             // 
-            guna2TextBox1.BorderColor = Color.Gray;
-            guna2TextBox1.BorderRadius = 20;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(27, 129);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(514, 48);
-            guna2TextBox1.TabIndex = 18;
+            txb_Search.BorderColor = Color.Gray;
+            txb_Search.BorderRadius = 20;
+            txb_Search.CustomizableEdges = customizableEdges5;
+            txb_Search.DefaultText = "";
+            txb_Search.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txb_Search.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txb_Search.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txb_Search.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txb_Search.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_Search.Font = new Font("Segoe UI", 9F);
+            txb_Search.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txb_Search.Location = new Point(27, 129);
+            txb_Search.Margin = new Padding(3, 4, 3, 4);
+            txb_Search.Name = "txb_Search";
+            txb_Search.PasswordChar = '\0';
+            txb_Search.PlaceholderText = "";
+            txb_Search.SelectedText = "";
+            txb_Search.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txb_Search.Size = new Size(514, 48);
+            txb_Search.TabIndex = 18;
+            txb_Search.TextChanged += txb_Search_TextChanged;
             // 
             // guna2Panel1
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Panel1.BackColor = Color.White;
-            guna2Panel1.Controls.Add(comboBox2);
+            guna2Panel1.Controls.Add(cb_Customer);
+            guna2Panel1.Controls.Add(cb_Staff);
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
-            guna2Panel1.Controls.Add(comboBox1);
-            guna2Panel1.Controls.Add(guna2Button1);
+            guna2Panel1.Controls.Add(btn_Pay_POS);
             guna2Panel1.Controls.Add(guna2vSeparator1);
             guna2Panel1.Controls.Add(btn_Zalo);
             guna2Panel1.Controls.Add(btn_Momo);
@@ -215,15 +217,18 @@
             guna2Panel1.Size = new Size(937, 800);
             guna2Panel1.TabIndex = 19;
             // 
-            // comboBox2
+            // cb_Staff
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(218, 164);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(217, 28);
-            comboBox2.TabIndex = 30;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            comboBox2.KeyDown += comboBox2_KeyDown;
+            cb_Staff.BackColor = Color.FromArgb(210, 219, 210);
+            cb_Staff.Font = new Font("Times New Roman", 13.8F);
+            cb_Staff.ForeColor = Color.FromArgb(68, 88, 112);
+            cb_Staff.FormattingEnabled = true;
+            cb_Staff.Location = new Point(218, 158);
+            cb_Staff.Name = "cb_Staff";
+            cb_Staff.Size = new Size(217, 34);
+            cb_Staff.TabIndex = 33;
+            cb_Staff.SelectedIndexChanged += cb_Staff_SelectedIndexChanged;
+            cb_Staff.KeyDown += cb_Staff_KeyDown;
             // 
             // guna2HtmlLabel1
             // 
@@ -236,35 +241,25 @@
             guna2HtmlLabel1.TabIndex = 29;
             guna2HtmlLabel1.Text = "Staff";
             // 
-            // comboBox1
+            // btn_Pay_POS
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(218, 100);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(217, 28);
-            comboBox1.TabIndex = 28;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
-            comboBox1.KeyDown += comboBox1_KeyDown_1;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Anchor = AnchorStyles.Right;
-            guna2Button1.BorderRadius = 25;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(64, 0, 0);
-            guna2Button1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(567, 764);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(306, 56);
-            guna2Button1.TabIndex = 26;
-            guna2Button1.Text = "Pay";
-            guna2Button1.Click += btn_Pay_Click;
+            btn_Pay_POS.Anchor = AnchorStyles.Right;
+            btn_Pay_POS.BorderRadius = 25;
+            btn_Pay_POS.CustomizableEdges = customizableEdges7;
+            btn_Pay_POS.DisabledState.BorderColor = Color.DarkGray;
+            btn_Pay_POS.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Pay_POS.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Pay_POS.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Pay_POS.FillColor = Color.FromArgb(64, 0, 0);
+            btn_Pay_POS.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Pay_POS.ForeColor = Color.White;
+            btn_Pay_POS.Location = new Point(567, 764);
+            btn_Pay_POS.Name = "btn_Pay_POS";
+            btn_Pay_POS.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_Pay_POS.Size = new Size(306, 56);
+            btn_Pay_POS.TabIndex = 26;
+            btn_Pay_POS.Text = "Pay";
+            btn_Pay_POS.Click += btn_Pay_POS_Click;
             // 
             // guna2vSeparator1
             // 
@@ -633,64 +628,77 @@
             printPreviewDialog1.Name = "printPreviewDialog1";
             printPreviewDialog1.Visible = false;
             // 
-            // guna2Button2
+            // btn_Add
             // 
-            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button2.BorderRadius = 25;
+            btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Add.BorderRadius = 25;
             customizableEdges23.BottomRight = false;
             customizableEdges23.TopRight = false;
-            guna2Button2.CustomizableEdges = customizableEdges23;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button2.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageSize = new Size(30, 30);
-            guna2Button2.Location = new Point(1177, 129);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Button2.Size = new Size(133, 48);
-            guna2Button2.TabIndex = 43;
-            guna2Button2.Click += guna2Button2_Click;
+            btn_Add.CustomizableEdges = customizableEdges23;
+            btn_Add.DisabledState.BorderColor = Color.DarkGray;
+            btn_Add.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Add.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Add.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Add.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Add.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Add.ForeColor = Color.White;
+            btn_Add.Image = (Image)resources.GetObject("btn_Add.Image");
+            btn_Add.ImageSize = new Size(30, 30);
+            btn_Add.Location = new Point(1177, 129);
+            btn_Add.Name = "btn_Add";
+            btn_Add.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btn_Add.Size = new Size(133, 48);
+            btn_Add.TabIndex = 43;
+            btn_Add.Click += btn_Add_Click;
             // 
-            // guna2Button3
+            // btn_Del
             // 
-            guna2Button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button3.BorderRadius = 25;
+            btn_Del.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Del.BorderRadius = 25;
             customizableEdges25.BottomLeft = false;
             customizableEdges25.TopLeft = false;
-            guna2Button3.CustomizableEdges = customizableEdges25;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button3.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.Location = new Point(1316, 129);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Button3.Size = new Size(133, 48);
-            guna2Button3.TabIndex = 43;
-            guna2Button3.Click += guna2Button3_Click;
+            btn_Del.CustomizableEdges = customizableEdges25;
+            btn_Del.DisabledState.BorderColor = Color.DarkGray;
+            btn_Del.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Del.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Del.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Del.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Del.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Del.ForeColor = Color.White;
+            btn_Del.Image = (Image)resources.GetObject("btn_Del.Image");
+            btn_Del.Location = new Point(1316, 129);
+            btn_Del.Name = "btn_Del";
+            btn_Del.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btn_Del.Size = new Size(133, 48);
+            btn_Del.TabIndex = 43;
+            btn_Del.Click += btn_Del_Click;
             // 
-            // pictureBox1
+            // pic_Recycle_Bin
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1473, 129);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(45, 45);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 45;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            pictureBox1.MouseEnter += pictureBox1_MouseEnter;
-            pictureBox1.MouseLeave += pictureBox1_MouseLeave;
+            pic_Recycle_Bin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pic_Recycle_Bin.Image = (Image)resources.GetObject("pic_Recycle_Bin.Image");
+            pic_Recycle_Bin.Location = new Point(1473, 129);
+            pic_Recycle_Bin.Name = "pic_Recycle_Bin";
+            pic_Recycle_Bin.Size = new Size(45, 45);
+            pic_Recycle_Bin.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_Recycle_Bin.TabIndex = 45;
+            pic_Recycle_Bin.TabStop = false;
+            pic_Recycle_Bin.Click += pic_Recycle_Bin_Click;
+            pic_Recycle_Bin.MouseEnter += pic_Recycle_Bin_MouseEnter;
+            pic_Recycle_Bin.MouseLeave += pic_Recycle_Bin_MouseLeave;
+            // 
+            // cb_Customer
+            // 
+            cb_Customer.BackColor = Color.FromArgb(210, 219, 210);
+            cb_Customer.Font = new Font("Times New Roman", 13.8F);
+            cb_Customer.ForeColor = Color.FromArgb(68, 88, 112);
+            cb_Customer.FormattingEnabled = true;
+            cb_Customer.Location = new Point(218, 94);
+            cb_Customer.Name = "cb_Customer";
+            cb_Customer.Size = new Size(217, 34);
+            cb_Customer.TabIndex = 33;
+            cb_Customer.SelectedIndexChanged += cb_Customer_SelectedIndexChanged;
+            cb_Customer.KeyDown += cb_Customer_KeyDown;
             // 
             // POS
             // 
@@ -698,12 +706,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1570, 1000);
-            Controls.Add(pictureBox1);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button2);
+            Controls.Add(pic_Recycle_Bin);
+            Controls.Add(btn_Del);
+            Controls.Add(btn_Add);
             Controls.Add(guna2Panel1);
-            Controls.Add(guna2TextBox1);
-            Controls.Add(flowLayoutPanel2);
+            Controls.Add(txb_Search);
+            Controls.Add(flop_Items);
             Controls.Add(guna2Panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "POS";
@@ -715,7 +723,7 @@
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_items).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_Recycle_Bin).EndInit();
             ResumeLayout(false);
         }
 
@@ -723,9 +731,9 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label lb_ShortChau;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private FlowLayoutPanel flop_Items;
+        private Guna.UI2.WinForms.Guna2TextBox txb_Search;
+        private Guna.UI2.WinForms.Guna2ControlBox btn_Exist;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2vSeparator1;
         private Guna.UI2.WinForms.Guna2Button btn_Zalo;
@@ -749,17 +757,17 @@
         private System.Windows.Forms.Timer timer1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private Guna.UI2.WinForms.Guna2Button btn_Pay_POS;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridViewTextBoxColumn Items;
         private DataGridViewTextBoxColumn MID;
         private DataGridViewTextBoxColumn UnitPrice;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn TotalPrice;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Add;
+        private Guna.UI2.WinForms.Guna2Button btn_Del;
+        private PictureBox pic_Recycle_Bin;
+        private ComboBox cb_Staff;
+        private ComboBox cb_Customer;
     }
 }

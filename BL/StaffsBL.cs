@@ -72,11 +72,11 @@ namespace BL
             }
         }
 
-        public List<StaffsTL> SelectStaff()
+        public List<StaffsTL> SelectStaff(string searchStaff = null)
         {
             try
             {
-                return new StaffsDL().SelectStaff();
+                return new StaffsDL().SelectStaff(searchStaff);
             }
             catch (SqlException ex)
             {
