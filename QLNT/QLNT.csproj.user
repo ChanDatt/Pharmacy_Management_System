@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Cash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CashVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Receipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inventories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MedicineItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EmployeeOfTheMonthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Verify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
