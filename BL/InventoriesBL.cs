@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TL;
+using System.Runtime.CompilerServices;
 
 namespace BL
 {
@@ -66,6 +68,36 @@ namespace BL
             {
                 throw ex;
             }
+        }
+
+        public bool AddMedicines(List<MedInventory> medicines)
+        {
+            
+            int maxMID = new DL.InventoriesDL().GetMaxMID();
+            bool success = true;
+
+            foreach (var med in medicines)
+            {
+                med.MID = ++maxMID; // Tạo MID mới
+                if (!new DL.InventoriesDL().InsertMedicine(med))
+                {
+                    success = false;
+                }
+            }
+            return success;
+        }
+
+        public bool DeleteMedicines(List<int> mids)
+        {
+            bool success = true;
+            foreach (int mid in mids)
+            {
+                if (! new DL.InventoriesDL().DeleteMedicine(mid))
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }

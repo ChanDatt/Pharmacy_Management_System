@@ -134,5 +134,64 @@ namespace DL
                 disConnection();
             }
         }
+
+        public int GetMaxMID()
+        {
+            try
+            {
+                return (int)MyExecuteScalar("SELECT ISNULL(MAX(MID), 0) FROM MedInventory", CommandType.Text);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool InsertMedicine(MedInventory medicine)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@MID", medicine.MID));
+            parameters.Add(new SqlParameter("@MedicineName", medicine.MedicineName));
+            parameters.Add(new SqlParameter("@Type", medicine.Type));
+            parameters.Add(new SqlParameter("@PackSizeLabel", medicine.PackSizeLabel));
+            parameters.Add(new SqlParameter("@StockQuantity", medicine.StockQuantity));
+            parameters.Add(new SqlParameter("@UnitPrice", medicine.UnitPrice));
+            parameters.Add(new SqlParameter("@ISDiscontinued", medicine.ISDiscontinued));
+            parameters.Add(new SqlParameter("@ManufacturerName", medicine.ManufacturerName));
+            parameters.Add(new SqlParameter("@Composition1", medicine.Composition1));
+            parameters.Add(new SqlParameter("@Composition2", medicine.Composition2));
+            parameters.Add(new SqlParameter("@Timestamp", medicine.Timestamp));
+            parameters.Add(new SqlParameter("@ExperationDATE", medicine.ExperationDATE));
+
+            string query = @"
+                SET IDENTITY_INSERT MedInventory ON;
+                INSERT INTO MedInventory (MID, MedicineName, Type, Pack_Size_Label, StockQuantity, UnitPrice, ISDiscontinued, 
+                    Manufacturer_name, Composition1, Composition2, timestamp, ExperationDATE) 
+                VALUES (@MID, @MedicineName, @Type, @PackSizeLabel, @StockQuantity, @UnitPrice, @ISDiscontinued, 
+                    @ManufacturerName, @Composition1, @Composition2, @Timestamp, @ExperationDATE);
+                SET IDENTITY_INSERT MedInventory OFF;";
+
+            try
+            {
+                return MyExecuteNonQuery(query, CommandType.Text, parameters) > 0;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool DeleteMedicine(int mid)
+        {
+            string query = "DELETE FROM MedInventory WHERE MID = " + mid;
+            try
+            {
+                return MyExecuteNonQuery(query, CommandType.Text) > 0;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

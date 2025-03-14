@@ -3,15 +3,12 @@ using Guna.UI2.WinForms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Printing;
-using System.Windows.Forms;
 using TL;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLNT
 {
     public partial class POS : Form
     {
-        private SQLConnectionClass sqlConnection;
         private int currentOffset = 0;
         private const int pageSize = 200;
         private CustomersTL customer;
@@ -29,12 +26,6 @@ namespace QLNT
 
         private void POS_Load(object sender, EventArgs e)
         {
-            sqlConnection = new SQLConnectionClass();
-            bool isConnected = sqlConnection.TestConnection();
-            if (!isConnected)
-            {
-                MessageBox.Show("Connection failed. Check your settings.");
-            }
             LoadMedicines();
             SelectStaff();
 
@@ -515,6 +506,7 @@ namespace QLNT
                 customer = new CustomersTL(selectedCustomerId, selectedCustomerName);
             }
         }
+
         ////////////////////////////////////////////////////////
         ///////////////// STAFFS COMBO_BOX ///////////////////// 
         private void SelectStaff(string searchStaff = null)
@@ -586,11 +578,10 @@ namespace QLNT
 
         private void flop_Items_Scroll(object sender, EventArgs e)
         {
-            // Check if the user has scrolled to the bottom of the panel
-            if (flop_Items.VerticalScroll.Value + flop_Items.ClientSize.Height >= flop_Items.VerticalScroll.Maximum - 10) // Adjust threshold if needed
+            if (flop_Items.VerticalScroll.Value + flop_Items.ClientSize.Height >= flop_Items.VerticalScroll.Maximum - 10) 
             {
-                currentOffset += pageSize; // Prepare for next load
-                LoadMedicines(); // Load more medicines
+                currentOffset += pageSize; 
+                LoadMedicines(); 
             }
         }
         private void SetPaymentMethod(string method, Guna2Button selectedButton)
@@ -632,52 +623,29 @@ namespace QLNT
 
         private void UpdateReceiptAndInfo()
         {
-            using (var connection = new SqlConnection(sqlConnection.ConnectionString))
+            int customerId = customer.Id;
+            int staffId = staff.Id;
+            decimal totalAmount = grandTotal;
+            string paymentMethod = paymentmethod;
+            string result = note;
+            List<(int MID, int Quantity)> items = new List<(int, int)>();
+
+            try
             {
-                connection.Open();
-                string insertReceiptQuery = @"
-            INSERT INTO Receipt (CID, EID, Date, TotalAmount, PaymentMethod, Result) 
-            VALUES (@CID, @EID, GETDATE(), @TotalAmount, @PaymentMethod, @Result);
-            SELECT SCOPE_IDENTITY();"; // This will return the new RID
-
-                int newRID;
-
-                using (var command = new SqlCommand(insertReceiptQuery, connection))
+                foreach (DataGridViewRow row in dtgv_items.Rows)
                 {
-                    command.Parameters.AddWithValue("@CID", customer.Id); // Replace with actual CID
-                    command.Parameters.AddWithValue("@EID", staff.Id); // Replace with actual EID
-                    command.Parameters.AddWithValue("@TotalAmount", grandTotal); // Replace with actual TotalAmount
-                    command.Parameters.AddWithValue("@PaymentMethod", paymentmethod); // Replace with actual PaymentMethod
-                    command.Parameters.AddWithValue("@Result", note); // Replace with actual Result
+                    if (row.IsNewRow) continue;
 
-                    newRID = Convert.ToInt32(command.ExecuteScalar()); // Get the new RID
+                    int mid = Convert.ToInt32(row.Cells["MID"].Value);
+                    int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                    items.Add((mid, quantity));
                 }
-
-                string insertReceiptInfoQuery = @"
-    INSERT INTO ReceiptInfo (RID, MID, Quantity) 
-    VALUES (@RID, @MID, @Quantity);";
-
-                using (var command = new SqlCommand(insertReceiptInfoQuery, connection))
-                {
-                    // Set the RID outside the loop as it remains the same for all items
-                    command.Parameters.AddWithValue("@RID", newRID); // Use the new RID
-
-                    foreach (DataGridViewRow row in dtgv_items.Rows)
-                    {
-                        if (row.IsNewRow) continue; // Skip the new row placeholder
-                                                    // Get MID and Quantity from the DataGridView
-                        int mid = Convert.ToInt32(row.Cells["MID"].Value); // Replace "MID" with your actual column name
-                        int quantity = Convert.ToInt32(row.Cells["Quantity"].Value); // Replace "Quantity" with your actual column name
-
-                        // Clear previous parameters and add new ones for each item
-                        command.Parameters.Clear();
-                        command.Parameters.AddWithValue("@RID", newRID);
-                        command.Parameters.AddWithValue("@MID", mid);
-                        command.Parameters.AddWithValue("@Quantity", quantity);
-
-                        command.ExecuteNonQuery(); // Execute the insert for each item
-                    }
-                }
+                new BL.ReceiptsBL().CreateReceipt(customerId, staffId, totalAmount, paymentMethod, result, items);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void ClearPOS()

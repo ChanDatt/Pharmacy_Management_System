@@ -378,11 +378,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj",
+      "projectUniqueName": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\BL.csproj",
+      "projectPath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\BL\\obj\\",
+      "outputPath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -403,11 +403,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj": {
-              "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj"
+            "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\DL.csproj": {
+              "projectPath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\DL.csproj"
             },
-            "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj": {
-              "projectPath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\TL\\TL.csproj"
+            "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\TL\\TL.csproj": {
+              "projectPath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\TL\\TL.csproj"
             }
           }
         }

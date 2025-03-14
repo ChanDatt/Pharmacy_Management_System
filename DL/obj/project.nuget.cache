@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U9T0ZJidQAs=",
+  "dgSpecHash": "5hL1C0VEV0o=",
   "success": true,
-  "projectFilePath": "D:\\CS_LTCSDL\\LTCSDL_QLNT\\LTCSDL_QLNT\\DL\\DL.csproj",
+  "projectFilePath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\DL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

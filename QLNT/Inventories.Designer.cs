@@ -34,11 +34,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -50,9 +50,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Categories = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Product = new Guna.UI2.WinForms.Guna2Button();
+            btn_ExpireProduct = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -61,12 +60,13 @@
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             dtgv_Inventories = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            btn_OutOfStock = new Guna.UI2.WinForms.Guna2Button();
+            btn_Restock = new Guna.UI2.WinForms.Guna2Button();
             openFileDialog1 = new OpenFileDialog();
             txb_FileName = new Guna.UI2.WinForms.Guna2TextBox();
             btn_Browse = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            btn_Report = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Inventories).BeginInit();
             SuspendLayout();
@@ -82,65 +82,45 @@
             lb_Categories.TabIndex = 7;
             lb_Categories.Text = "INVENTORIES";
             // 
-            // guna2Button1
+            // btn_Product
             // 
-            guna2Button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button1.BorderRadius = 25;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1039, 616);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(377, 65);
-            guna2Button1.TabIndex = 9;
-            guna2Button1.Text = "Export";
-            guna2Button1.Click += guna2Button1_Click;
+            btn_Product.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Product.BorderRadius = 25;
+            btn_Product.CustomizableEdges = customizableEdges1;
+            btn_Product.DisabledState.BorderColor = Color.DarkGray;
+            btn_Product.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Product.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Product.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Product.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Product.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Product.ForeColor = Color.White;
+            btn_Product.Location = new Point(1039, 364);
+            btn_Product.Name = "btn_Product";
+            btn_Product.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_Product.Size = new Size(377, 65);
+            btn_Product.TabIndex = 9;
+            btn_Product.Text = "Product";
+            btn_Product.Click += btn_Product_Click;
             // 
-            // guna2Button2
+            // btn_ExpireProduct
             // 
-            guna2Button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button2.BorderRadius = 25;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button2.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(1039, 364);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(377, 65);
-            guna2Button2.TabIndex = 9;
-            guna2Button2.Text = "Product";
-            guna2Button2.Click += guna2Button2_Click;
-            // 
-            // guna2Button3
-            // 
-            guna2Button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button3.BorderRadius = 25;
-            guna2Button3.CustomizableEdges = customizableEdges5;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button3.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(1039, 448);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(377, 65);
-            guna2Button3.TabIndex = 9;
-            guna2Button3.Text = "ExpireProduct";
-            guna2Button3.Click += guna2Button3_Click;
+            btn_ExpireProduct.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_ExpireProduct.BorderRadius = 25;
+            btn_ExpireProduct.CustomizableEdges = customizableEdges3;
+            btn_ExpireProduct.DisabledState.BorderColor = Color.DarkGray;
+            btn_ExpireProduct.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_ExpireProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_ExpireProduct.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_ExpireProduct.FillColor = Color.FromArgb(89, 104, 105);
+            btn_ExpireProduct.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_ExpireProduct.ForeColor = Color.White;
+            btn_ExpireProduct.Location = new Point(1039, 448);
+            btn_ExpireProduct.Name = "btn_ExpireProduct";
+            btn_ExpireProduct.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_ExpireProduct.Size = new Size(377, 65);
+            btn_ExpireProduct.TabIndex = 9;
+            btn_ExpireProduct.Text = "ExpireProduct";
+            btn_ExpireProduct.Click += btn_ExpireProduct_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -211,10 +191,10 @@
             guna2Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel2.BackColor = Color.FromArgb(89, 104, 105);
             guna2Panel2.Controls.Add(dtgv_Inventories);
-            guna2Panel2.CustomizableEdges = customizableEdges7;
+            guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Location = new Point(25, 280);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel2.Size = new Size(990, 566);
             guna2Panel2.TabIndex = 40;
             // 
@@ -280,45 +260,45 @@
             dtgv_Inventories.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtgv_Inventories.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // guna2Button4
+            // btn_OutOfStock
             // 
-            guna2Button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button4.BorderRadius = 25;
-            guna2Button4.CustomizableEdges = customizableEdges9;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(1039, 532);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button4.Size = new Size(377, 65);
-            guna2Button4.TabIndex = 41;
-            guna2Button4.Text = "OutOfStock";
-            guna2Button4.Click += guna2Button4_Click;
+            btn_OutOfStock.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_OutOfStock.BorderRadius = 25;
+            btn_OutOfStock.CustomizableEdges = customizableEdges7;
+            btn_OutOfStock.DisabledState.BorderColor = Color.DarkGray;
+            btn_OutOfStock.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_OutOfStock.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_OutOfStock.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_OutOfStock.FillColor = Color.FromArgb(89, 104, 105);
+            btn_OutOfStock.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_OutOfStock.ForeColor = Color.White;
+            btn_OutOfStock.Location = new Point(1039, 532);
+            btn_OutOfStock.Name = "btn_OutOfStock";
+            btn_OutOfStock.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_OutOfStock.Size = new Size(377, 65);
+            btn_OutOfStock.TabIndex = 41;
+            btn_OutOfStock.Text = "OutOfStock";
+            btn_OutOfStock.Click += btn_OutOfStock_Click;
             // 
-            // guna2Button5
+            // btn_Restock
             // 
-            guna2Button5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2Button5.BorderRadius = 25;
-            guna2Button5.CustomizableEdges = customizableEdges11;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button5.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(1039, 280);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button5.Size = new Size(377, 65);
-            guna2Button5.TabIndex = 42;
-            guna2Button5.Text = "Restock";
-            guna2Button5.Click += guna2Button5_Click;
+            btn_Restock.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Restock.BorderRadius = 25;
+            btn_Restock.CustomizableEdges = customizableEdges9;
+            btn_Restock.DisabledState.BorderColor = Color.DarkGray;
+            btn_Restock.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Restock.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Restock.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Restock.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Restock.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Restock.ForeColor = Color.White;
+            btn_Restock.Location = new Point(1039, 280);
+            btn_Restock.Name = "btn_Restock";
+            btn_Restock.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_Restock.Size = new Size(377, 65);
+            btn_Restock.TabIndex = 42;
+            btn_Restock.Text = "Restock";
+            btn_Restock.Click += btn_Restock_Click;
             // 
             // openFileDialog1
             // 
@@ -329,7 +309,7 @@
             txb_FileName.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txb_FileName.BorderColor = Color.Gray;
             txb_FileName.BorderRadius = 25;
-            txb_FileName.CustomizableEdges = customizableEdges13;
+            txb_FileName.CustomizableEdges = customizableEdges11;
             txb_FileName.DefaultText = "";
             txb_FileName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txb_FileName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -344,7 +324,7 @@
             txb_FileName.PasswordChar = '\0';
             txb_FileName.PlaceholderText = "";
             txb_FileName.SelectedText = "";
-            txb_FileName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txb_FileName.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txb_FileName.Size = new Size(521, 48);
             txb_FileName.TabIndex = 43;
             // 
@@ -352,7 +332,7 @@
             // 
             btn_Browse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_Browse.BorderRadius = 25;
-            btn_Browse.CustomizableEdges = customizableEdges15;
+            btn_Browse.CustomizableEdges = customizableEdges13;
             btn_Browse.DisabledState.BorderColor = Color.DarkGray;
             btn_Browse.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Browse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -362,31 +342,51 @@
             btn_Browse.ForeColor = Color.White;
             btn_Browse.Location = new Point(1144, 73);
             btn_Browse.Name = "btn_Browse";
-            btn_Browse.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btn_Browse.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Browse.Size = new Size(133, 48);
             btn_Browse.TabIndex = 42;
             btn_Browse.Text = "Browse";
             btn_Browse.Click += btn_Browse_Click;
             // 
-            // guna2Button6
+            // btn_Save
             // 
-            guna2Button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button6.BorderRadius = 25;
-            guna2Button6.CustomizableEdges = customizableEdges17;
-            guna2Button6.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button6.FillColor = Color.FromArgb(89, 104, 105);
-            guna2Button6.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button6.ForeColor = Color.White;
-            guna2Button6.Location = new Point(1283, 73);
-            guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button6.Size = new Size(133, 48);
-            guna2Button6.TabIndex = 42;
-            guna2Button6.Text = "Save";
-            guna2Button6.Click += guna2Button6_Click;
+            btn_Save.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Save.BorderRadius = 25;
+            btn_Save.CustomizableEdges = customizableEdges15;
+            btn_Save.DisabledState.BorderColor = Color.DarkGray;
+            btn_Save.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Save.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Save.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Save.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Save.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Save.ForeColor = Color.White;
+            btn_Save.Location = new Point(1283, 73);
+            btn_Save.Name = "btn_Save";
+            btn_Save.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btn_Save.Size = new Size(133, 48);
+            btn_Save.TabIndex = 42;
+            btn_Save.Text = "Save";
+            btn_Save.Click += btn_Save_Click;
+            // 
+            // btn_Report
+            // 
+            btn_Report.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Report.BorderRadius = 25;
+            btn_Report.CustomizableEdges = customizableEdges17;
+            btn_Report.DisabledState.BorderColor = Color.DarkGray;
+            btn_Report.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Report.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Report.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Report.FillColor = Color.FromArgb(89, 104, 105);
+            btn_Report.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Report.ForeColor = Color.White;
+            btn_Report.Location = new Point(1039, 616);
+            btn_Report.Name = "btn_Report";
+            btn_Report.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btn_Report.Size = new Size(377, 65);
+            btn_Report.TabIndex = 9;
+            btn_Report.Text = "Export";
+            btn_Report.Click += btn_Report_Click;
             // 
             // Inventories
             // 
@@ -395,19 +395,19 @@
             BackColor = Color.FromArgb(230, 239, 230);
             ClientSize = new Size(1447, 858);
             Controls.Add(txb_FileName);
-            Controls.Add(guna2Button6);
+            Controls.Add(btn_Save);
             Controls.Add(btn_Browse);
-            Controls.Add(guna2Button5);
-            Controls.Add(guna2Button4);
+            Controls.Add(btn_Restock);
+            Controls.Add(btn_OutOfStock);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button1);
+            Controls.Add(btn_Product);
+            Controls.Add(btn_ExpireProduct);
+            Controls.Add(btn_Report);
             Controls.Add(lb_Categories);
             Controls.Add(guna2Panel2);
             FormBorderStyle = FormBorderStyle.None;
@@ -422,9 +422,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_Categories;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btn_Product;
+        private Guna.UI2.WinForms.Guna2Button btn_ExpireProduct;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -432,12 +431,13 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btn_OutOfStock;
+        private Guna.UI2.WinForms.Guna2Button btn_Restock;
         private OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2TextBox txb_FileName;
         private Guna.UI2.WinForms.Guna2Button btn_Browse;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btn_Save;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Inventories;
+        private Guna.UI2.WinForms.Guna2Button btn_Report;
     }
 }

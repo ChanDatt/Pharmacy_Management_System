@@ -24,3 +24,16 @@ D:\CS_LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.dll
 D:\CS_LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\TL\obj\Debug\net8.0\refint\TL.dll
 D:\CS_LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.pdb
 D:\CS_LTCSDL\LTCSDL_QLNT\LTCSDL_QLNT\TL\obj\Debug\net8.0\ref\TL.dll
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\bin\Debug\net8.0\TL.deps.json
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\bin\Debug\net8.0\TL.dll
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\bin\Debug\net8.0\TL.pdb
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.csproj.AssemblyReference.cache
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.AssemblyInfoInputs.cache
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.AssemblyInfo.cs
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.csproj.CoreCompileInputs.cache
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.sourcelink.json
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.dll
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\refint\TL.dll
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\TL.pdb
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\TL\obj\Debug\net8.0\ref\TL.dll

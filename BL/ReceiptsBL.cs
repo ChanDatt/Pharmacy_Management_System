@@ -33,5 +33,11 @@ namespace BL
 				throw ex;
 			}
         }
+
+        public void CreateReceipt(int customerId, int staffId, decimal totalAmount, string paymentMethod, string result, List<(int MID, int Quantity)> items)
+        {
+            int newReceiptId = new DL.ReceiptsDL().InsertReceipt(customerId, staffId, totalAmount, paymentMethod, result);
+            new DL.ReceiptsDL().InsertReceiptInfo(newReceiptId, items);
+        }
     }
 }
