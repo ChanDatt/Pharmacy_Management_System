@@ -3,60 +3,24 @@
   "WorkspaceRootPath": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\medicineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\medicineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\medicineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\exportfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\exportfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\bl\\inventoriesbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D76935D-4DAD-485A-9F2A-81256D0D6F86}|BL\\BL.csproj|solutionrelative:bl\\inventoriesbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\inventories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14E8DE4-BA6B-49C5-89F4-D6CEF0DBAACB}|TL\\TL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\tl\\medinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14E8DE4-BA6B-49C5-89F4-D6CEF0DBAACB}|TL\\TL.csproj|solutionrelative:tl\\medinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\employeeofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\employeeofthemonthform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\dl\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\cashverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\cashverify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\qlnt\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\qlnt\\exportfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35553EA1-0A36-40B8-B8A7-4EB49F4EEFFC}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\exportfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|solutionrelative:dl\\receiptsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D51FD147-A6D0-46F9-BB1F-8922012311ED}|DL\\DL.csproj|d:\\cs_ltcsdl\\main\\ltcsdl_qlnt\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,21 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 221,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExportFile.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\ExportFile.cs",
-              "RelativeDocumentMoniker": "QLNT\\ExportFile.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\ExportFile.cs",
-              "RelativeToolTip": "QLNT\\ExportFile.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T08:31:33.308Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -119,7 +70,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "ExportFile.cs",
+              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\ExportFile.cs",
+              "RelativeDocumentMoniker": "QLNT\\ExportFile.cs",
+              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\ExportFile.cs",
+              "RelativeToolTip": "QLNT\\ExportFile.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:31:33.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MedicineItem.cs [Design]",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\MedicineItem.cs",
               "RelativeDocumentMoniker": "QLNT\\MedicineItem.cs",
@@ -131,19 +94,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Reports.cs [Design]",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Reports.cs",
               "RelativeDocumentMoniker": "QLNT\\Reports.cs",
               "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Reports.cs [Design]",
               "RelativeToolTip": "QLNT\\Reports.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T08:04:22.221Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-14T08:04:22.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ReceiptsDL.cs",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\ReceiptsDL.cs",
               "RelativeDocumentMoniker": "DL\\ReceiptsDL.cs",
@@ -151,111 +113,11 @@
               "RelativeToolTip": "DL\\ReceiptsDL.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAgwD4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T07:29:47.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T07:29:47.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "POS.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\POS.cs",
-              "RelativeDocumentMoniker": "QLNT\\POS.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\POS.cs",
-              "RelativeToolTip": "QLNT\\POS.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T05:22:48.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Inventories.cs [Design]",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Inventories.cs",
-              "RelativeDocumentMoniker": "QLNT\\Inventories.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Inventories.cs [Design]",
-              "RelativeToolTip": "QLNT\\Inventories.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T08:05:03.486Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventoriesBL.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\InventoriesBL.cs",
-              "RelativeDocumentMoniker": "BL\\InventoriesBL.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\InventoriesBL.cs",
-              "RelativeToolTip": "BL\\InventoriesBL.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAMwF4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T07:38:54.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MedInventory.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\TL\\MedInventory.cs",
-              "RelativeDocumentMoniker": "TL\\MedInventory.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\TL\\MedInventory.cs",
-              "RelativeToolTip": "TL\\MedInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T07:24:01.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmployeeOfTheMonthForm.cs [Design]",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\EmployeeOfTheMonthForm.cs",
-              "RelativeDocumentMoniker": "QLNT\\EmployeeOfTheMonthForm.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\EmployeeOfTheMonthForm.cs [Design]",
-              "RelativeToolTip": "QLNT\\EmployeeOfTheMonthForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T05:16:32.61Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Customers.cs [Design]",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Customers.cs",
-              "RelativeDocumentMoniker": "QLNT\\Customers.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Customers.cs [Design]",
-              "RelativeToolTip": "QLNT\\Customers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T05:16:24.913Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CashVerify.cs [Design]",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\CashVerify.cs",
-              "RelativeDocumentMoniker": "QLNT\\CashVerify.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\CashVerify.cs [Design]",
-              "RelativeToolTip": "QLNT\\CashVerify.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T05:16:23.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DataProvider.cs",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\DataProvider.cs",
-              "RelativeDocumentMoniker": "DL\\DataProvider.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\DataProvider.cs",
-              "RelativeToolTip": "DL\\DataProvider.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAewCgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T04:30:45.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Dashboard.cs",
               "RelativeDocumentMoniker": "QLNT\\Dashboard.cs",
@@ -266,18 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Cash.cs [Design]",
-              "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Cash.cs",
-              "RelativeDocumentMoniker": "QLNT\\Cash.cs",
-              "ToolTip": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\QLNT\\Cash.cs [Design]",
-              "RelativeToolTip": "QLNT\\Cash.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T05:16:22.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "ReceiptsBL.cs",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\BL\\ReceiptsBL.cs",
               "RelativeDocumentMoniker": "BL\\ReceiptsBL.cs",
@@ -289,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "UserDL.cs",
               "DocumentMoniker": "D:\\CS_LTCSDL\\MAIN\\LTCSDL_QLNT\\DL\\UserDL.cs",
               "RelativeDocumentMoniker": "DL\\UserDL.cs",
