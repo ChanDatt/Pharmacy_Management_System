@@ -10,13 +10,11 @@ namespace QLNT
     {
         private System.Windows.Forms.ComboBox cmbEmployee;
         private int id;
-        private SQLConnectionClass sqlConnection;
         private int newId;
         private string note;
         private string phone;
         private string status;
         private decimal salary;
-        private string address;
 
         public Staffs()
         {
@@ -40,7 +38,6 @@ namespace QLNT
         {
             txb_Name.Text = string.Empty;
             txb_Phone.Text = string.Empty;
-            txb_Address.Text = string.Empty;
             txb_Salary.Text = string.Empty;
         }
 
@@ -150,7 +147,6 @@ namespace QLNT
                 string phone = txb_Phone.Text;
                 string note = cb_Note.Text;
                 string status = cb_Status.Text;
-                string address = txb_Address.Text;
                 decimal salary = decimal.Parse(txb_Salary.Text);
                 AddEmployee(name, phone, note, status, salary, address);
                 LoadEmployeeData();

@@ -1,5 +1,3 @@
-﻿using System.Data;
-using System.Data.SqlClient;
 using System.Drawing.Drawing2D;
 
 
@@ -8,13 +6,9 @@ namespace QLNT
 {
     public partial class LoginForm : Form
     {
-        private SQLConnectionClass sqlConnection;
         private string currentName;
         //string placeholder_txb_User = "Username";
         //string placeholder_txb_Pass = "Password";
-
-        string placeholder_txb_User = "oanh.admin";
-        string placeholder_txb_Pass = "123";
 
         public string UserRole { get; private set; }
         public string CurrentName { get => currentName; set => currentName = value; }
@@ -22,18 +16,9 @@ namespace QLNT
         public LoginForm()
         {
             InitializeComponent();
-            sqlConnection = new SQLConnectionClass();
         }
         private void Login_Load(object sender, EventArgs e)
         {
-            // Đổi màu chữ mặc định
-            this.ForeColor = ColorTranslator.FromHtml("#596869");
-
-            // Đổi màu 2 thanh textbox
-            txb_User.BackColor = ColorTranslator.FromHtml("#6C8976");
-            txb_Pass.BackColor = ColorTranslator.FromHtml("#6C8976");
-
-
             // Độ bo góc cho hai đầu của form giống pill
             int radius = this.Size.Height / 2;
 
@@ -56,10 +41,6 @@ namespace QLNT
             txb_User.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
             txb_Pass.Text = placeholder_txb_Pass;
             txb_Pass.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
-
-            // Đỏi màu cho btn_login
-            btn_Login.BackColor = ColorTranslator.FromHtml("#596869");
-            btn_Login.ForeColor = ColorTranslator.FromHtml("#E6EFE6");
         }
         private void txb_User_Enter(object sender, EventArgs e)
         {

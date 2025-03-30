@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TL;
-using System.Security.Cryptography.X509Certificates;
-using System.Globalization;
-using System.Security.Cryptography;
 
 namespace DL
 {

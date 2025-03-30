@@ -8,13 +8,11 @@ namespace QLNT
 {
     public partial class Inventories : Form
     {
-        private SQLConnectionClass sqlConnection;
         private int currentOffset = 0;
         private const int pageSize = 200;
         public Inventories()
         {
             InitializeComponent();
-            sqlConnection = new SQLConnectionClass();
             OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             LoadMedicines(); // Load medicines when the form loads
             UpdateMedicineCountAndStock();

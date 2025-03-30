@@ -34,7 +34,6 @@
             lb_ShortChau = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            txb_User = new TextBox();
             txb_Pass = new TextBox();
             txb_Blind = new TextBox();
             btn_Login = new Button();
@@ -92,17 +91,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // txb_User
-            // 
-            txb_User.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
-            txb_User.Location = new Point(520, 434);
-            txb_User.Multiline = true;
-            txb_User.Name = "txb_User";
-            txb_User.Size = new Size(322, 37);
-            txb_User.TabIndex = 2;
-            txb_User.Enter += txb_User_Enter;
-            txb_User.Leave += txb_User_Leave;
-            // 
             // txb_Pass
             // 
             txb_Pass.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
@@ -159,7 +147,6 @@
             Controls.Add(pB_logo);
             Controls.Add(btn_Login);
             Controls.Add(txb_Pass);
-            Controls.Add(txb_User);
             Controls.Add(lb_ShortChau);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
@@ -186,7 +173,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Panel pnl_Password;
-        private TextBox txb_User;
         private TextBox txb_Pass;
         private Button btn_Blind;
         private TextBox txb_Blind;
