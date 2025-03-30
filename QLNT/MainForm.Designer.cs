@@ -318,7 +318,7 @@ namespace QLNT
             lb_Name.ForeColor = Color.FromArgb(89, 104, 105);
             lb_Name.Location = new Point(22, 14);
             lb_Name.Name = "lb_Name";
-            lb_Name.Size = new Size(283, 69);
+            lb_Name.Size = new Size(362, 69);
             lb_Name.TabIndex = 1;
             lb_Name.TextAlign = ContentAlignment.MiddleLeft;
             // 

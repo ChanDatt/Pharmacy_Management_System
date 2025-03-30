@@ -1,4 +1,4 @@
-using System.Drawing.Drawing2D;
+﻿using System.Drawing.Drawing2D;
 
 
 
@@ -7,8 +7,8 @@ namespace QLNT
     public partial class LoginForm : Form
     {
         private string currentName;
-        //string placeholder_txb_User = "Username";
-        //string placeholder_txb_Pass = "Password";
+        string placeholder_txb_User = "Username";
+        string placeholder_txb_Pass = "Password";
 
         public string UserRole { get; private set; }
         public string CurrentName { get => currentName; set => currentName = value; }
@@ -22,7 +22,7 @@ namespace QLNT
             // Độ bo góc cho hai đầu của form giống pill
             int radius = this.Size.Height / 2;
 
-            // Khởi tạo GraphicsPath để tạo đường cong liền mạch
+            // GraphicsPath tạo đường cong 
             GraphicsPath path = new GraphicsPath();
 
             // Tạo đầu tròn bên trái

@@ -36,11 +36,11 @@ namespace BL
             }
         }
 
-        public int AddStaff(StaffsTL staff)
+        public int AddStaff(StaffsTL staff, UserTL user)
         {
             try
             {
-                return new StaffsDL().AddStaff(staff);
+                return new StaffsDL().AddStaff(staff, user);
             }
             catch (SqlException ex)
             {
@@ -48,11 +48,11 @@ namespace BL
             }
         }
 
-        public int UpdStaff(StaffsTL staff)
+        public int UpdStaff(StaffsTL staff, UserTL user)
         {
             try
             {
-                return new StaffsDL().UpdStaff(staff);
+                return new StaffsDL().UpdStaff(staff, user);
             }
             catch (SqlException ex)
             {

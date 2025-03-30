@@ -17,6 +17,16 @@ namespace TL
             this.id = id;
             this.name = name;
         }
+        public StaffsTL(int id, string name, string note, string phone, string status, decimal salary)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Note = note;
+            this.Phone = phone;
+            this.Status = status;
+            this.Salary = salary;
+        }
+
         public StaffsTL(int id, string name, string note, string phone, string status, decimal salary, string address) {
             this.Id = id;
             this.Name = name;

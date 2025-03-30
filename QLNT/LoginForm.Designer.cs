@@ -38,6 +38,7 @@
             txb_Blind = new TextBox();
             btn_Login = new Button();
             pictureBox3 = new PictureBox();
+            txb_User = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pB_logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -93,6 +94,7 @@
             // 
             // txb_Pass
             // 
+            txb_Pass.BackColor = Color.FromArgb(108, 137, 118);
             txb_Pass.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
             txb_Pass.Location = new Point(520, 519);
             txb_Pass.Multiline = true;
@@ -111,14 +113,15 @@
             // 
             // btn_Login
             // 
+            btn_Login.BackColor = Color.FromArgb(89, 104, 105);
             btn_Login.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Login.ForeColor = Color.Black;
+            btn_Login.ForeColor = Color.FromArgb(230, 239, 230);
             btn_Login.Location = new Point(541, 614);
             btn_Login.Name = "btn_Login";
             btn_Login.Size = new Size(219, 48);
             btn_Login.TabIndex = 4;
             btn_Login.Text = "Login";
-            btn_Login.UseVisualStyleBackColor = true;
+            btn_Login.UseVisualStyleBackColor = false;
             btn_Login.Click += btn_Login_Click;
             // 
             // pictureBox3
@@ -134,6 +137,18 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
+            // txb_User
+            // 
+            txb_User.BackColor = Color.FromArgb(108, 137, 118);
+            txb_User.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
+            txb_User.Location = new Point(520, 434);
+            txb_User.Multiline = true;
+            txb_User.Name = "txb_User";
+            txb_User.Size = new Size(322, 37);
+            txb_User.TabIndex = 3;
+            txb_User.Enter += txb_User_Enter;
+            txb_User.Leave += txb_User_Leave;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -146,13 +161,14 @@
             Controls.Add(pictureBox3);
             Controls.Add(pB_logo);
             Controls.Add(btn_Login);
+            Controls.Add(txb_User);
             Controls.Add(txb_Pass);
             Controls.Add(lb_ShortChau);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
             Controls.Add(txb_Blind);
             DoubleBuffered = true;
-            ForeColor = SystemColors.ActiveCaptionText;
+            ForeColor = Color.FromArgb(89, 104, 105);
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -178,5 +194,6 @@
         private TextBox txb_Blind;
         private Button btn_Login;
         private PictureBox pictureBox3;
+        private TextBox txb_User;
     }
 }

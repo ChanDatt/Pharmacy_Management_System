@@ -1,4 +1,4 @@
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
 using TL;
 
@@ -13,11 +13,11 @@ namespace DL
 
             if (search != null)
             {
-                query = "SELECT * FROM Customer WHERE CustomerName LIKE '%" + search + "%'";
+                query = "SELECT CID as 'Id', CustomerName as 'Name', Age, Gender, Phone, LastDateVisted as 'Last Date Visited' FROM Customer WHERE CustomerName LIKE '%" + search + "%'";
             }
             else
             {
-                query = "SELECT * FROM customer";
+                query = "SELECT CID as 'Id', CustomerName as 'Name', Age, Gender, Phone, LastDateVisted as 'Last Date Visited' FROM customer";
             }
 
             connection();

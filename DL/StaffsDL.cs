@@ -39,7 +39,8 @@ namespace DL
 
             if (search != null)
             {
-                sql = "SELECT * FROM Employee WHERE EmployeeName LIKE '%" + search + "%'";
+                sql = "SELECT EID, EmployeeName, note, phone, status, salary, username, password " +
+                    "FROM Employee, Users where userid = EID and EmployeeName LIKE '%" + search + "%'";
                 commandType = CommandType.Text;
             }
             else
@@ -67,14 +68,21 @@ namespace DL
             }
         }
 
-        public int AddStaff(StaffsTL staff)
+        public int AddStaff(StaffsTL staff, UserTL user)
         {
-            string query = "INSERT INTO Employee (EID, EmployeeName, Note, Phone, Status, Salary, Address) " +
-                "Values ('" + staff.Id + "','" + staff.Name + "','" + staff.Note + "','" + staff.Phone + "','" 
-                            + staff.Status + "','" + staff.Salary + "','" + staff.Address + "')";
+            string sp = "sp_AddStaff";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@EID", staff.Id));
+            parameters.Add(new SqlParameter("@EmployeeName", staff.Name));
+            parameters.Add(new SqlParameter("@note", staff.Note));
+            parameters.Add(new SqlParameter("@phone", staff.Phone));
+            parameters.Add(new SqlParameter("@status", staff.Status));
+            parameters.Add(new SqlParameter("@salary", staff.Salary));
+            parameters.Add(new SqlParameter("@username", user.UserName));
+            parameters.Add(new SqlParameter("@password", user.Password));
             try
             {
-                return MyExecuteNonQuery(query, System.Data.CommandType.Text);
+                return MyExecuteNonQuery(sp, System.Data.CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {
@@ -82,19 +90,21 @@ namespace DL
             }
         }
 
-        public int UpdStaff(StaffsTL staff)
+        public int UpdStaff(StaffsTL staff, UserTL user)
         {
-            string query = "UPDATE Employee SET EmployeeName = '" + staff.Name
-                + "', Phone = '" + staff.Phone
-                + "', Note = '" + staff.Note
-                + "', Status = '" + staff.Status
-                + "', Salary = '" + staff.Salary
-                + "', Address = '" + staff.Address
-                + "' WHERE EID = '" + staff.Id + "'";
-
+            string sp = "sp_UpStaff";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@EID", staff.Id));
+            parameters.Add(new SqlParameter("@EmployeeName", staff.Name));
+            parameters.Add(new SqlParameter("@note", staff.Note));
+            parameters.Add(new SqlParameter("@phone", staff.Phone));
+            parameters.Add(new SqlParameter("@status", staff.Status));
+            parameters.Add(new SqlParameter("@salary", staff.Salary));
+            parameters.Add(new SqlParameter("@username", user.UserName));
+            parameters.Add(new SqlParameter("@password", user.Password));
             try
             {
-                return MyExecuteNonQuery(query, System.Data.CommandType.Text);
+                return MyExecuteNonQuery(sp, System.Data.CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {
@@ -104,10 +114,12 @@ namespace DL
 
         public int DelStaff(int id)
         {
-            string sql = "DELETE FROM Employee WHERE " + "EID = '" + id + "'";
+            string sp = "sp_DelStaff";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@EID", id));
             try
             {
-                return MyExecuteNonQuery(sql, System.Data.CommandType.Text);
+                return MyExecuteNonQuery(sp, System.Data.CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {

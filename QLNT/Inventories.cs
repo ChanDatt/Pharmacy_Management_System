@@ -14,7 +14,7 @@ namespace QLNT
         {
             InitializeComponent();
             OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-            LoadMedicines(); // Load medicines when the form loads
+            LoadMedicines(); 
             UpdateMedicineCountAndStock();
         }
         private void LoadExpiredOrNearExpiredProducts()

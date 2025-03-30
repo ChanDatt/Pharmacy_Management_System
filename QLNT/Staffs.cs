@@ -39,6 +39,8 @@ namespace QLNT
             txb_Name.Text = string.Empty;
             txb_Phone.Text = string.Empty;
             txb_Salary.Text = string.Empty;
+            txb_Username.Text = string.Empty;
+            txb_Password.Text = string.Empty;
         }
 
         private void LoadEmployeeData()
@@ -63,7 +65,8 @@ namespace QLNT
                 txb_Phone.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cb_Status.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txb_Salary.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txb_Address.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txb_Username.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txb_Password.Text = dtgv_Staffs.Rows[e.RowIndex].Cells[7].Value.ToString();
             }
         }
 
@@ -89,7 +92,7 @@ namespace QLNT
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowser.SelectedPath))
                 {
-                    string exportPath = Path.Combine(folderBrowser.SelectedPath, "Export_Staffs.xlsx"); 
+                    string exportPath = Path.Combine(folderBrowser.SelectedPath, "Export_Staffs.xlsx");
 
                     try
                     {
@@ -110,7 +113,7 @@ namespace QLNT
         // Add
         //
         //
-        private void AddEmployee(string name, string phone, string note, string status, decimal salary, string address)
+        private void AddEmployee(string name, string phone, string note, string status, decimal salary, string username, string password)
         {
             int maxId = 0;
 
@@ -129,8 +132,9 @@ namespace QLNT
 
             try
             {
-                TL.StaffsTL staff = new TL.StaffsTL(newId, name, note, phone, status, salary, address);
-                new StaffsBL().AddStaff(staff);
+                TL.StaffsTL staff = new TL.StaffsTL(newId, name, note, phone, status, salary);
+                TL.UserTL user = new TL.UserTL(username, password);
+                new StaffsBL().AddStaff(staff, user);
                 MessageBox.Show("Add successful");
             }
             catch (SqlException ex)
@@ -141,14 +145,17 @@ namespace QLNT
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (txb_Name.Text != "" && txb_Phone.Text != "" && txb_Address.Text != "" && txb_Salary.Text != "")
+            if (txb_Name.Text != "" && txb_Phone.Text != "" && txb_Password.Text != "" && txb_Salary.Text != "")
             {
                 string name = txb_Name.Text;
                 string phone = txb_Phone.Text;
                 string note = cb_Note.Text;
                 string status = cb_Status.Text;
                 decimal salary = decimal.Parse(txb_Salary.Text);
-                AddEmployee(name, phone, note, status, salary, address);
+                string username = txb_Username.Text;
+                string password = txb_Password.Text;
+
+                AddEmployee(name, phone, note, status, salary, username, password);
                 LoadEmployeeData();
                 clear();
             }
@@ -163,14 +170,16 @@ namespace QLNT
         // Update
         //
         //
-        private void UpdateEmployeeInDatabase(int employeeId, string name, string phone, string note, string status, decimal salary, string address)
+        private void UpdateEmployeeInDatabase(int employeeId, string name, string phone, string note, string status, decimal salary, string username, string password)
         {
             try
             {
-                StaffsTL staffs = new StaffsTL(employeeId, name, note, phone, status, salary, address);
-                new StaffsBL().UpdStaff(staffs);
+                StaffsTL staffs = new StaffsTL(employeeId, name, note, phone, status, salary);
+                UserTL users = new UserTL(username, password);
+                new StaffsBL().UpdStaff(staffs, users);
                 MessageBox.Show("Record updated successfully.");
                 LoadEmployeeData();
+                clear();
             }
             catch (Exception ex)
             {
@@ -183,7 +192,7 @@ namespace QLNT
             {
                 try
                 {
-                    UpdateEmployeeInDatabase(id, txb_Name.Text, txb_Phone.Text, cb_Note.Text, cb_Status.Text, decimal.Parse(txb_Salary.Text), txb_Address.Text);
+                    UpdateEmployeeInDatabase(id, txb_Name.Text, txb_Phone.Text, cb_Note.Text, cb_Status.Text, decimal.Parse(txb_Salary.Text), txb_Username.Text, txb_Password.Text);
                 }
                 catch (Exception)
                 {
@@ -209,6 +218,7 @@ namespace QLNT
                 new StaffsBL().DelStaff(id);
                 MessageBox.Show("Delete successful");
                 LoadEmployeeData();
+                clear();
             }
             catch (SqlException ex)
             {
