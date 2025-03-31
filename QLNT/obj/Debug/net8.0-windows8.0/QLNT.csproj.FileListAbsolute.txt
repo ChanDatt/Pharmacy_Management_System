@@ -578,3 +578,4 @@ D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\refint\QLNT.dll
 D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.pdb
 D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.genruntimeconfig.cache
 D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\ref\QLNT.dll
+D:\CS_LTCSDL\MAIN\LTCSDL_QLNT\QLNT\obj\Debug\net8.0-windows8.0\QLNT.LoadingBar.resources

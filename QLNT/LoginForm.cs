@@ -1,7 +1,5 @@
 ﻿using System.Drawing.Drawing2D;
 
-
-
 namespace QLNT
 {
     public partial class LoginForm : Form

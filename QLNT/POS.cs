@@ -1,7 +1,10 @@
 ﻿using BL;
 using Guna.UI2.WinForms;
+using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing.Printing;
 using TL;
 
@@ -19,29 +22,72 @@ namespace QLNT
         private decimal grandTotal = 0;
         private int rowIndex = 0;
 
+        private LoadingBar loading;
+        private BackgroundWorker worker;
         public POS(string currentName)
         {
             InitializeComponent();
+            InitializeBackgroundWorker();
         }
 
         private void POS_Load(object sender, EventArgs e)
         {
-            LoadMedicines();
+            loading = new LoadingBar();
+            loading.Show();
+            worker.RunWorkerAsync();
             SelectStaff();
 
             dtgv_items.CellValueChanged += dtgv_items_CellValueChanged;
             lb_AmountPaid.TextAlignment = ContentAlignment.MiddleRight;
             lb_GrandTotal.TextAlignment = ContentAlignment.MiddleRight;
         }
+
+        private void InitializeBackgroundWorker()
+        {
+            worker = new BackgroundWorker();
+            worker.WorkerReportsProgress = true;
+            worker.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
+            worker.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            LoadMedicines(); 
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            loading.UpdateProgress(e.ProgressPercentage);
+        }
+
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            loading.Close();
+        }
+
         private void LoadMedicines(string searchText = "")
         {
             try
             {
-                DataTable medicines = string.IsNullOrEmpty(searchText)
-                ? new BL.InventoriesBL().getMedicines(currentOffset, pageSize)
-                : new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
+                DataTable medicines;
+
+                int totalRecords;
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    medicines = new BL.InventoriesBL().getMedicines(currentOffset, pageSize);
+                    totalRecords = medicines.Rows.Count; 
+                }
+                else
+                {
+                    medicines = new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
+                    totalRecords = medicines.Rows.Count; 
+                }
 
                 flop_Items.Controls.Clear();
+
+                int progress = 0, recordsFetched = 0;
 
                 foreach (DataRow row in medicines.Rows)
                 {
@@ -49,12 +95,16 @@ namespace QLNT
                     string medicineName = row["MedicineName"].ToString();
                     decimal price = Convert.ToDecimal(row["UnitPrice"]);
                     price += price * (decimal)0.08;
-                    int stockQuantity = Convert.ToInt32(row["StockQuantity"]); // Get stock quantity
+                    int stockQuantity = Convert.ToInt32(row["StockQuantity"]);
 
                     MedicineItem medicineItem = new MedicineItem(mid, medicineName, price, stockQuantity);
                     medicineItem.ItemClicked += MedicineItem_ItemClicked;
 
-                    flop_Items.Controls.Add(medicineItem);
+                    flop_Items.Invoke((MethodInvoker)delegate { flop_Items.Controls.Add(medicineItem); });
+
+                    recordsFetched++;
+                    progress = (recordsFetched * 100) / totalRecords;
+                    worker.ReportProgress(progress);
                 }
             }
             catch (SqlException ex)
@@ -62,6 +112,7 @@ namespace QLNT
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void MedicineItem_ItemClicked(object sender, ItemClickedEventArgs e)
         {
             bool itemExists = false;
@@ -481,18 +532,18 @@ namespace QLNT
                         var selectedItem = cb_Customer.SelectedItem as CustomersTL;
                         if (selectedItem != null)
                         {
-                            cb_Customer.Text = selectedItem.Name; 
-                            cb_Customer.SelectedIndex = 0; 
+                            cb_Customer.Text = selectedItem.Name;
+                            cb_Customer.SelectedIndex = 0;
                         }
                     }
                 }
                 else
                 {
                     string searchText = cb_Customer.Text;
-                    LoadCustomerData(searchText); 
+                    LoadCustomerData(searchText);
                 }
 
-                e.SuppressKeyPress = true; 
+                e.SuppressKeyPress = true;
             }
         }
         private void cb_Customer_SelectedIndexChanged(object sender, EventArgs e)
@@ -500,7 +551,7 @@ namespace QLNT
             if (cb_Customer.SelectedItem != null)
             {
                 var selectedCustomer = (dynamic)cb_Customer.SelectedItem;
-                int selectedCustomerId = selectedCustomer.Value; 
+                int selectedCustomerId = selectedCustomer.Value;
                 string selectedCustomerName = selectedCustomer.Text;
 
                 customer = new CustomersTL(selectedCustomerId, selectedCustomerName);
@@ -541,9 +592,9 @@ namespace QLNT
         {
             if (cb_Staff.SelectedItem != null)
             {
-                var selectedStaff = (dynamic)cb_Staff.SelectedItem; 
-                int selectedStaffId = selectedStaff.Id; 
-                string selectedStaffName = selectedStaff.Name; 
+                var selectedStaff = (dynamic)cb_Staff.SelectedItem;
+                int selectedStaffId = selectedStaff.Id;
+                string selectedStaffName = selectedStaff.Name;
                 staff = new StaffsTL(selectedStaffId, selectedStaffName);
             }
         }
@@ -574,14 +625,14 @@ namespace QLNT
             }
         }
         //////////////////////////////////////////////////////////
-     
+
 
         private void flop_Items_Scroll(object sender, EventArgs e)
         {
-            if (flop_Items.VerticalScroll.Value + flop_Items.ClientSize.Height >= flop_Items.VerticalScroll.Maximum - 10) 
+            if (flop_Items.VerticalScroll.Value + flop_Items.ClientSize.Height >= flop_Items.VerticalScroll.Maximum - 10)
             {
-                currentOffset += pageSize; 
-                LoadMedicines(); 
+                currentOffset += pageSize;
+                LoadMedicines();
             }
         }
         private void SetPaymentMethod(string method, Guna2Button selectedButton)

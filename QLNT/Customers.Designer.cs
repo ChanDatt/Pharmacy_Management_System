@@ -115,7 +115,7 @@
             btn_AddStaff.Name = "btn_AddStaff";
             btn_AddStaff.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_AddStaff.Size = new Size(252, 52);
-            btn_AddStaff.TabIndex = 49;
+            btn_AddStaff.TabIndex = 0;
             btn_AddStaff.Text = "Add";
             btn_AddStaff.Click += btn_AddStaff_Click;
             // 
@@ -142,7 +142,7 @@
             txb_Name.SelectedText = "";
             txb_Name.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txb_Name.Size = new Size(252, 34);
-            txb_Name.TabIndex = 45;
+            txb_Name.TabIndex = 0;
             // 
             // guna2HtmlLabel1
             // 
@@ -191,7 +191,7 @@
             txb_Age.SelectedText = "";
             txb_Age.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txb_Age.Size = new Size(252, 34);
-            txb_Age.TabIndex = 46;
+            txb_Age.TabIndex = 1;
             // 
             // guna2Panel1
             // 
@@ -233,7 +233,7 @@
             cb_Gender.Name = "cb_Gender";
             cb_Gender.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cb_Gender.Size = new Size(252, 36);
-            cb_Gender.TabIndex = 62;
+            cb_Gender.TabIndex = 2;
             // 
             // guna2HtmlLabel3
             // 
@@ -282,7 +282,7 @@
             txb_Phone.SelectedText = "";
             txb_Phone.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txb_Phone.Size = new Size(252, 34);
-            txb_Phone.TabIndex = 48;
+            txb_Phone.TabIndex = 3;
             // 
             // guna2Panel3
             // 
@@ -318,7 +318,7 @@
             btn_DeleteCustomer.Name = "btn_DeleteCustomer";
             btn_DeleteCustomer.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_DeleteCustomer.Size = new Size(252, 52);
-            btn_DeleteCustomer.TabIndex = 52;
+            btn_DeleteCustomer.TabIndex = 2;
             btn_DeleteCustomer.Text = "Delete";
             btn_DeleteCustomer.Click += btn_DeleteCustomer_Click;
             // 
@@ -338,7 +338,7 @@
             txb_Update.Name = "txb_Update";
             txb_Update.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txb_Update.Size = new Size(252, 52);
-            txb_Update.TabIndex = 49;
+            txb_Update.TabIndex = 1;
             txb_Update.Text = "Update";
             txb_Update.Click += txb_Update_Click;
             // 

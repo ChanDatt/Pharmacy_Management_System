@@ -1,21 +1,12 @@
 ﻿using BL;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using TL;
-using DataTable = System.Data.DataTable;
 
 namespace QLNT
 {
     public partial class Staffs : Form
     {
-        private System.Windows.Forms.ComboBox cmbEmployee;
         private int id;
-        private int newId;
-        private string note;
-        private string phone;
-        private string status;
-        private decimal salary;
-
         public Staffs()
         {
             InitializeComponent();
@@ -226,6 +217,28 @@ namespace QLNT
 
             }
             LoadEmployeeData();
+        }
+
+        private void UpdateUsername()
+        {
+            if (!string.IsNullOrWhiteSpace(txb_Name.Text) && !string.IsNullOrWhiteSpace(cb_Note.Text))
+            {
+                txb_Username.Text = txb_Name.Text.ToLower().Trim() + "." + cb_Note.Text.ToLower().Trim();
+            }
+            else
+            {
+                txb_Username.Text = txb_Name.Text.ToLower().Trim(); 
+            }
+        }
+
+        private void cb_Note_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateUsername();
+        }
+
+        private void txb_Name_TextChanged(object sender, EventArgs e)
+        {
+            UpdateUsername();
         }
     }
 }

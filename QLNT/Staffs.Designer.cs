@@ -123,7 +123,8 @@
             txb_Name.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txb_Name.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txb_Name.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Name.Font = new Font("Segoe UI", 9F);
+            txb_Name.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txb_Name.ForeColor = Color.Black;
             txb_Name.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txb_Name.Location = new Point(163, 28);
             txb_Name.Margin = new Padding(3, 4, 3, 4);
@@ -132,8 +133,9 @@
             txb_Name.PlaceholderText = "";
             txb_Name.SelectedText = "";
             txb_Name.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txb_Name.Size = new Size(283, 39);
-            txb_Name.TabIndex = 10;
+            txb_Name.Size = new Size(283, 37);
+            txb_Name.TabIndex = 0;
+            txb_Name.TextChanged += txb_Name_TextChanged;
             // 
             // guna2HtmlLabel2
             // 
@@ -159,9 +161,10 @@
             txb_Phone.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txb_Phone.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txb_Phone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Phone.Font = new Font("Segoe UI", 9F);
+            txb_Phone.Font = new Font("Times New Roman", 10.2F);
+            txb_Phone.ForeColor = Color.Black;
             txb_Phone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Phone.Location = new Point(163, 133);
+            txb_Phone.Location = new Point(163, 132);
             txb_Phone.Margin = new Padding(3, 4, 3, 4);
             txb_Phone.Name = "txb_Phone";
             txb_Phone.PasswordChar = '\0';
@@ -169,7 +172,7 @@
             txb_Phone.SelectedText = "";
             txb_Phone.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txb_Phone.Size = new Size(283, 39);
-            txb_Phone.TabIndex = 10;
+            txb_Phone.TabIndex = 2;
             // 
             // guna2HtmlLabel6
             // 
@@ -252,18 +255,19 @@
             cb_Note.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_Note.FocusedColor = Color.FromArgb(94, 148, 255);
             cb_Note.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cb_Note.Font = new Font("Segoe UI", 10F);
-            cb_Note.ForeColor = Color.FromArgb(68, 88, 112);
+            cb_Note.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_Note.ForeColor = Color.Black;
             cb_Note.ItemHeight = 30;
             cb_Note.Location = new Point(162, 82);
             cb_Note.Name = "cb_Note";
             cb_Note.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cb_Note.Size = new Size(284, 36);
-            cb_Note.TabIndex = 61;
+            cb_Note.TabIndex = 1;
+            cb_Note.SelectedIndexChanged += cb_Note_SelectedIndexChanged;
             // 
             // cb_Status
             // 
-            cb_Status.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            cb_Status.Anchor = AnchorStyles.Bottom;
             cb_Status.BackColor = Color.Transparent;
             cb_Status.BorderColor = Color.DarkGray;
             cb_Status.BorderRadius = 20;
@@ -272,18 +276,18 @@
             cb_Status.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_Status.FocusedColor = Color.FromArgb(94, 148, 255);
             cb_Status.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cb_Status.Font = new Font("Segoe UI", 10F);
-            cb_Status.ForeColor = Color.FromArgb(68, 88, 112);
+            cb_Status.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb_Status.ForeColor = Color.Black;
             cb_Status.ItemHeight = 30;
-            cb_Status.Location = new Point(162, 187);
+            cb_Status.Location = new Point(668, 31);
             cb_Status.Name = "cb_Status";
             cb_Status.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cb_Status.Size = new Size(284, 36);
-            cb_Status.TabIndex = 61;
+            cb_Status.TabIndex = 4;
             // 
             // txb_Salary
             // 
-            txb_Salary.Anchor = AnchorStyles.Bottom;
+            txb_Salary.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             txb_Salary.BorderColor = SystemColors.ButtonShadow;
             txb_Salary.BorderRadius = 20;
             txb_Salary.CustomizableEdges = customizableEdges11;
@@ -293,17 +297,18 @@
             txb_Salary.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txb_Salary.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txb_Salary.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Salary.Font = new Font("Segoe UI", 9F);
+            txb_Salary.Font = new Font("Times New Roman", 10.2F);
+            txb_Salary.ForeColor = Color.Black;
             txb_Salary.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Salary.Location = new Point(668, 28);
+            txb_Salary.Location = new Point(162, 184);
             txb_Salary.Margin = new Padding(3, 4, 3, 4);
             txb_Salary.Name = "txb_Salary";
             txb_Salary.PasswordChar = '\0';
             txb_Salary.PlaceholderText = "";
             txb_Salary.SelectedText = "";
             txb_Salary.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txb_Salary.Size = new Size(283, 39);
-            txb_Salary.TabIndex = 60;
+            txb_Salary.Size = new Size(284, 41);
+            txb_Salary.TabIndex = 3;
             // 
             // guna2HtmlLabel7
             // 
@@ -319,11 +324,11 @@
             // 
             // guna2HtmlLabel5
             // 
-            guna2HtmlLabel5.Anchor = AnchorStyles.Bottom;
+            guna2HtmlLabel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(89, 104, 105);
-            guna2HtmlLabel5.Location = new Point(560, 28);
+            guna2HtmlLabel5.Location = new Point(51, 184);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(93, 39);
             guna2HtmlLabel5.TabIndex = 59;
@@ -331,11 +336,11 @@
             // 
             // guna2HtmlLabel4
             // 
-            guna2HtmlLabel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            guna2HtmlLabel4.Anchor = AnchorStyles.Bottom;
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(89, 104, 105);
-            guna2HtmlLabel4.Location = new Point(54, 184);
+            guna2HtmlLabel4.Location = new Point(563, 28);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(90, 39);
             guna2HtmlLabel4.TabIndex = 57;
@@ -357,7 +362,7 @@
             btn_Delete.Name = "btn_Delete";
             btn_Delete.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Delete.Size = new Size(138, 57);
-            btn_Delete.TabIndex = 55;
+            btn_Delete.TabIndex = 9;
             btn_Delete.Text = "Delete";
             btn_Delete.Click += btn_Delete_Click;
             // 
@@ -377,7 +382,7 @@
             btn_Export.Name = "btn_Export";
             btn_Export.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_Export.Size = new Size(138, 57);
-            btn_Export.TabIndex = 56;
+            btn_Export.TabIndex = 10;
             btn_Export.Text = "Export";
             btn_Export.Click += btn_Export_Click;
             // 
@@ -397,7 +402,7 @@
             btn_Update.Name = "btn_Update";
             btn_Update.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btn_Update.Size = new Size(282, 57);
-            btn_Update.TabIndex = 53;
+            btn_Update.TabIndex = 8;
             btn_Update.Text = "Update";
             btn_Update.Click += btn_Update_Click;
             // 
@@ -417,7 +422,7 @@
             btn_Add.Name = "btn_Add";
             btn_Add.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btn_Add.Size = new Size(282, 57);
-            btn_Add.TabIndex = 53;
+            btn_Add.TabIndex = 7;
             btn_Add.Text = "Add";
             btn_Add.Click += btn_Add_Click;
             // 
@@ -433,7 +438,8 @@
             txb_Password.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txb_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txb_Password.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Password.Font = new Font("Segoe UI", 9F);
+            txb_Password.Font = new Font("Times New Roman", 10.2F);
+            txb_Password.ForeColor = Color.Black;
             txb_Password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txb_Password.Location = new Point(668, 134);
             txb_Password.Margin = new Padding(3, 4, 3, 4);
@@ -442,13 +448,13 @@
             txb_Password.PlaceholderText = "";
             txb_Password.SelectedText = "";
             txb_Password.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txb_Password.Size = new Size(283, 39);
-            txb_Password.TabIndex = 10;
+            txb_Password.Size = new Size(284, 37);
+            txb_Password.TabIndex = 6;
             // 
             // txb_Username
             // 
             txb_Username.Anchor = AnchorStyles.Bottom;
-            txb_Username.BorderColor = SystemColors.ButtonShadow;
+            txb_Username.BorderColor = Color.DarkGray;
             txb_Username.BorderRadius = 20;
             txb_Username.CustomizableEdges = customizableEdges23;
             txb_Username.DefaultText = "";
@@ -456,18 +462,21 @@
             txb_Username.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txb_Username.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txb_Username.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txb_Username.Enabled = false;
             txb_Username.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txb_Username.Font = new Font("Segoe UI", 9F);
+            txb_Username.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txb_Username.ForeColor = Color.FromArgb(192, 0, 0);
             txb_Username.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txb_Username.Location = new Point(668, 82);
-            txb_Username.Margin = new Padding(3, 4, 3, 4);
+            txb_Username.Margin = new Padding(4, 5, 4, 5);
             txb_Username.Name = "txb_Username";
             txb_Username.PasswordChar = '\0';
             txb_Username.PlaceholderText = "";
+            txb_Username.ReadOnly = true;
             txb_Username.SelectedText = "";
             txb_Username.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txb_Username.Size = new Size(283, 39);
-            txb_Username.TabIndex = 10;
+            txb_Username.Size = new Size(284, 37);
+            txb_Username.TabIndex = 5;
             // 
             // guna2HtmlLabel9
             // 

@@ -98,7 +98,7 @@
             btn_Product.Name = "btn_Product";
             btn_Product.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_Product.Size = new Size(377, 65);
-            btn_Product.TabIndex = 9;
+            btn_Product.TabIndex = 0;
             btn_Product.Text = "Product";
             btn_Product.Click += btn_Product_Click;
             // 
@@ -118,7 +118,7 @@
             btn_ExpireProduct.Name = "btn_ExpireProduct";
             btn_ExpireProduct.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_ExpireProduct.Size = new Size(377, 65);
-            btn_ExpireProduct.TabIndex = 9;
+            btn_ExpireProduct.TabIndex = 1;
             btn_ExpireProduct.Text = "ExpireProduct";
             btn_ExpireProduct.Click += btn_ExpireProduct_Click;
             // 
@@ -276,7 +276,7 @@
             btn_OutOfStock.Name = "btn_OutOfStock";
             btn_OutOfStock.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_OutOfStock.Size = new Size(377, 65);
-            btn_OutOfStock.TabIndex = 41;
+            btn_OutOfStock.TabIndex = 2;
             btn_OutOfStock.Text = "OutOfStock";
             btn_OutOfStock.Click += btn_OutOfStock_Click;
             // 
@@ -296,7 +296,7 @@
             btn_Restock.Name = "btn_Restock";
             btn_Restock.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btn_Restock.Size = new Size(377, 65);
-            btn_Restock.TabIndex = 42;
+            btn_Restock.TabIndex = 6;
             btn_Restock.Text = "Restock";
             btn_Restock.Click += btn_Restock_Click;
             // 
@@ -326,7 +326,7 @@
             txb_FileName.SelectedText = "";
             txb_FileName.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txb_FileName.Size = new Size(521, 48);
-            txb_FileName.TabIndex = 43;
+            txb_FileName.TabIndex = 4;
             // 
             // btn_Browse
             // 
@@ -344,7 +344,7 @@
             btn_Browse.Name = "btn_Browse";
             btn_Browse.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Browse.Size = new Size(133, 48);
-            btn_Browse.TabIndex = 42;
+            btn_Browse.TabIndex = 5;
             btn_Browse.Text = "Browse";
             btn_Browse.Click += btn_Browse_Click;
             // 
@@ -364,7 +364,7 @@
             btn_Save.Name = "btn_Save";
             btn_Save.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_Save.Size = new Size(133, 48);
-            btn_Save.TabIndex = 42;
+            btn_Save.TabIndex = 7;
             btn_Save.Text = "Save";
             btn_Save.Click += btn_Save_Click;
             // 
@@ -384,7 +384,7 @@
             btn_Report.Name = "btn_Report";
             btn_Report.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btn_Report.Size = new Size(377, 65);
-            btn_Report.TabIndex = 9;
+            btn_Report.TabIndex = 3;
             btn_Report.Text = "Export";
             btn_Report.Click += btn_Report_Click;
             // 

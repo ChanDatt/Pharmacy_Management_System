@@ -65,6 +65,7 @@
             flop_Items = new FlowLayoutPanel();
             txb_Search = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            cb_Customer = new ComboBox();
             cb_Staff = new ComboBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btn_Pay_POS = new Guna.UI2.WinForms.Guna2Button();
@@ -98,7 +99,7 @@
             btn_Add = new Guna.UI2.WinForms.Guna2Button();
             btn_Del = new Guna.UI2.WinForms.Guna2Button();
             pic_Recycle_Bin = new PictureBox();
-            cb_Customer = new ComboBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             guna2Panel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_items).BeginInit();
@@ -217,6 +218,19 @@
             guna2Panel1.Size = new Size(937, 800);
             guna2Panel1.TabIndex = 19;
             // 
+            // cb_Customer
+            // 
+            cb_Customer.BackColor = Color.FromArgb(210, 219, 210);
+            cb_Customer.Font = new Font("Times New Roman", 13.8F);
+            cb_Customer.ForeColor = Color.FromArgb(68, 88, 112);
+            cb_Customer.FormattingEnabled = true;
+            cb_Customer.Location = new Point(218, 94);
+            cb_Customer.Name = "cb_Customer";
+            cb_Customer.Size = new Size(217, 34);
+            cb_Customer.TabIndex = 0;
+            cb_Customer.SelectedIndexChanged += cb_Customer_SelectedIndexChanged;
+            cb_Customer.KeyDown += cb_Customer_KeyDown;
+            // 
             // cb_Staff
             // 
             cb_Staff.BackColor = Color.FromArgb(210, 219, 210);
@@ -226,7 +240,7 @@
             cb_Staff.Location = new Point(218, 158);
             cb_Staff.Name = "cb_Staff";
             cb_Staff.Size = new Size(217, 34);
-            cb_Staff.TabIndex = 33;
+            cb_Staff.TabIndex = 1;
             cb_Staff.SelectedIndexChanged += cb_Staff_SelectedIndexChanged;
             cb_Staff.KeyDown += cb_Staff_KeyDown;
             // 
@@ -257,7 +271,7 @@
             btn_Pay_POS.Name = "btn_Pay_POS";
             btn_Pay_POS.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_Pay_POS.Size = new Size(306, 56);
-            btn_Pay_POS.TabIndex = 26;
+            btn_Pay_POS.TabIndex = 7;
             btn_Pay_POS.Text = "Pay";
             btn_Pay_POS.Click += btn_Pay_POS_Click;
             // 
@@ -286,7 +300,7 @@
             btn_Zalo.Name = "btn_Zalo";
             btn_Zalo.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btn_Zalo.Size = new Size(190, 190);
-            btn_Zalo.TabIndex = 23;
+            btn_Zalo.TabIndex = 6;
             btn_Zalo.Click += btn_Zalo_Click;
             // 
             // btn_Momo
@@ -307,7 +321,7 @@
             btn_Momo.Name = "btn_Momo";
             btn_Momo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_Momo.Size = new Size(190, 190);
-            btn_Momo.TabIndex = 23;
+            btn_Momo.TabIndex = 5;
             btn_Momo.Click += btn_Momo_Click;
             // 
             // btn_Card
@@ -328,7 +342,7 @@
             btn_Card.Name = "btn_Card";
             btn_Card.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_Card.Size = new Size(190, 190);
-            btn_Card.TabIndex = 23;
+            btn_Card.TabIndex = 4;
             btn_Card.Click += btn_Card_Click;
             // 
             // btn_Cash
@@ -349,7 +363,7 @@
             btn_Cash.Name = "btn_Cash";
             btn_Cash.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_Cash.Size = new Size(190, 190);
-            btn_Cash.TabIndex = 23;
+            btn_Cash.TabIndex = 3;
             btn_Cash.Click += btn_Cash_Click;
             // 
             // txb_Note
@@ -379,7 +393,7 @@
             txb_Note.SelectedText = "";
             txb_Note.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txb_Note.Size = new Size(400, 178);
-            txb_Note.TabIndex = 21;
+            txb_Note.TabIndex = 2;
             txb_Note.TextChanged += txb_Note_TextChanged;
             // 
             // guna2Separator1
@@ -687,18 +701,11 @@
             pic_Recycle_Bin.MouseEnter += pic_Recycle_Bin_MouseEnter;
             pic_Recycle_Bin.MouseLeave += pic_Recycle_Bin_MouseLeave;
             // 
-            // cb_Customer
+            // backgroundWorker1
             // 
-            cb_Customer.BackColor = Color.FromArgb(210, 219, 210);
-            cb_Customer.Font = new Font("Times New Roman", 13.8F);
-            cb_Customer.ForeColor = Color.FromArgb(68, 88, 112);
-            cb_Customer.FormattingEnabled = true;
-            cb_Customer.Location = new Point(218, 94);
-            cb_Customer.Name = "cb_Customer";
-            cb_Customer.Size = new Size(217, 34);
-            cb_Customer.TabIndex = 33;
-            cb_Customer.SelectedIndexChanged += cb_Customer_SelectedIndexChanged;
-            cb_Customer.KeyDown += cb_Customer_KeyDown;
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
+            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
             // 
             // POS
             // 
@@ -769,5 +776,6 @@
         private PictureBox pic_Recycle_Bin;
         private ComboBox cb_Staff;
         private ComboBox cb_Customer;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
