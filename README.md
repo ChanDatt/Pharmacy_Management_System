@@ -15,71 +15,75 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 ## Product Features and Screen Shots
 <table>
   <tr>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Login.png" alt="Login" width="300">
-        <figcaption><em>Login Form</em></figcaption>
-      </figure>
-    </td>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/staffForm.png" alt="Staff Form" width="300">
-        <figcaption><em>Staffs</em></figcaption>
-      </figure>
-    </td>
+    <td>Login Form</td> 
   </tr>
   <tr>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Dashboard.png" alt="Dashboard" width="300">
-        <figcaption><em>Dashboard</em></figcaption>
-      </figure>
-    </td>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/POS.png" alt="POS" width="300">
-        <figcaption><em>POS</em></figcaption>
-      </figure>
-    </td>
+    <td><img src="./ScreenShots_Readme/Login.png"></td>
   </tr>
-  <tr>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Receipts.png" alt="Receipts" width="300">
-        <figcaption><em>Receipts</em></figcaption>
-      </figure>
-    </td>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Customers.png" alt="Customers" width="300">
-        <figcaption><em>Customers</em></figcaption>
-      </figure>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Staffs.png" alt="Staffs" width="300">
-        <figcaption><em>Staffs</em></figcaption>
-      </figure>
-    </td>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Inventories.png" alt="Inventories" width="300">
-        <figcaption><em>Inventories</em></figcaption>
-      </figure>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <figure>
-        <img src="./ScreenShots_Readme/Reports.png" alt="Reports" width="300">
-        <figcaption><em>Reports</em></figcaption>
-      </figure>
-    </td>
-  </tr>
-</table>
+ </table>
 
+<table>
+  <tr>
+    <td>Dashboard</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Dashboard.png"></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>POS</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/POS.png"></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Receipts/td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Receipts.png"></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Customers</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Customers.png"></td>
+  </tr>
+ </table>
+
+<table>
+  <tr>
+    <td>Staffs</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Staffs.png"></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Inventories</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Inventories.png"></td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+    <td>Reports</td> 
+  </tr>
+  <tr>
+    <td><img src="./ScreenShots_Readme/Reports.png"></td>
+  </tr>
+ </table>
 
 
 
