@@ -15,7 +15,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 ## Product Features and Screen Shots
 <table>
   <tr>
-    <td>Login Form</td> 
+    <td><em>Login Form</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Login.png"></td>
@@ -24,7 +24,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
 <table>
   <tr>
-    <td>Dashboard</td> 
+    <td><em>Dashboard</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Dashboard.png"></td>
@@ -33,7 +33,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
  <table>
   <tr>
-    <td>POS</td> 
+    <td><em>POS</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/POS.png"></td>
@@ -42,7 +42,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
  <table>
   <tr>
-    <td>Receipts/td> 
+    <td><em>Receipts</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Receipts.png"></td>
@@ -51,7 +51,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
  <table>
   <tr>
-    <td>Customers</td> 
+    <td><em>Customers</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Customers.png"></td>
@@ -60,7 +60,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
 <table>
   <tr>
-    <td>Staffs</td> 
+    <td><em>Staffs</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Staffs.png"></td>
@@ -69,7 +69,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
  <table>
   <tr>
-    <td>Inventories</td> 
+    <td><em>Inventories</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Inventories.png"></td>
@@ -78,7 +78,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 
  <table>
   <tr>
-    <td>Reports</td> 
+    <td><em>Reports</em></td> 
   </tr>
   <tr>
     <td><img src="./ScreenShots_Readme/Reports.png"></td>
