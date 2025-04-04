@@ -10,7 +10,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 1. **Clone the repository**
    Open your terminal or Git Bash and run: *`git clone https://github.com/ChanDatt/Pharmacy_Management_System.git`*
 2. **Deploy Database from** *`ShortChauDB.dacpac`*
-3. **Open Solution File** and **Run The Project** *`[QLNT.sln](./QLNT.sln)`*
+3. **Open Solution File** and **Run The Project** *[QLNT.sln](./QLNT.sln)*
 
 ## Product Features and Screen Shots
 <table>
