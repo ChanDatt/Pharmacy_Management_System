@@ -12,6 +12,7 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 2. **Deploy Database from** *`ShortChauDB.dacpac`*
 3. **Open Solution File** and **Run The Project** *[QLNT.sln](./QLNT.sln)*
 
+## Video demo project - [https://youtu.be/](https://youtu.be/QD2IIm_1Y4s?si=73kGd7Fax6sSlUDH)
 ## Product Features and Screen Shots
 <table>
   <tr>
