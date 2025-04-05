@@ -15,10 +15,10 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 ## Product Features and Screen Shots
 <table>
   <tr>
-    <td>**Video demo project**</td> 
+    <td>Video demo project</td> 
   </tr>
   <tr>
-    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/QD2IIm_1Y4s?si=SnqXiXAQpRD1j2Im" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+    [![Video demo project](https://img.youtube.com/vi/QD2IIm_1Y4s/maxresdefault.jpg)](https://www.youtube.com/watch?v=QD2IIm_1Y4s)
   </tr>
  </table>
 
