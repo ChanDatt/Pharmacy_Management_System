@@ -1,10 +1,8 @@
-﻿using BL;
+using BL;
 using Guna.UI2.WinForms;
-using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing.Printing;
 using TL;
 
@@ -67,23 +65,15 @@ namespace QLNT
             loading.Close();
         }
 
-        private void LoadMedicines(string searchText = "")
+        private void LoadMedicines()
         {
             try
             {
                 DataTable medicines;
 
                 int totalRecords;
-                if (string.IsNullOrEmpty(searchText))
-                {
-                    medicines = new BL.InventoriesBL().getMedicines(currentOffset, pageSize);
-                    totalRecords = medicines.Rows.Count; 
-                }
-                else
-                {
-                    medicines = new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
-                    totalRecords = medicines.Rows.Count; 
-                }
+                medicines = new BL.InventoriesBL().getMedicines(currentOffset, pageSize);
+                totalRecords = medicines.Rows.Count;
 
                 flop_Items.Controls.Clear();
 
@@ -110,6 +100,31 @@ namespace QLNT
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void searchMedicines(string searchText = "")
+        {
+            DataTable medicines = new BL.InventoriesBL().getMedicinesFromDataBase(searchText);
+
+            flop_Items.Controls.Clear();
+
+            foreach (DataRow row in medicines.Rows)
+            {
+                int mid = Convert.ToInt32(row["MID"]);
+                string medicineName = row["MedicineName"].ToString();
+                decimal price = Convert.ToDecimal(row["UnitPrice"]);
+                price += price * (decimal)0.08;
+                int stockQuantity = Convert.ToInt32(row["StockQuantity"]); // Get stock quantity
+
+                // Create an instance of MedicineItem
+                MedicineItem medicineItem = new MedicineItem(mid, medicineName, price, stockQuantity);
+
+                // Subscribe to the ItemClicked event
+                medicineItem.ItemClicked += MedicineItem_ItemClicked;
+
+                // Add the user control to the flow layout panel
+                flop_Items.Controls.Add(medicineItem);
             }
         }
 
@@ -150,7 +165,7 @@ namespace QLNT
         private void txb_Search_TextChanged(object sender, EventArgs e)
         {
             string searchText = txb_Search.Text;
-            LoadMedicines(searchText);
+            searchMedicines(searchText);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
