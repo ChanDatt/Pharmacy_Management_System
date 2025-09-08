@@ -2,9 +2,14 @@
 A Windows Forms-based Pharmacy Management System designed to simplify the management of a retail pharmacy. This system helps pharmacists handle tasks such as managing medicine inventory, processing sales, generating reports, and assisting with prescription handling.
 
 ## Technologies Used
-- **C#** – Windows Forms  
-- **ADO.NET Framework** – Three-Tier Architecture  
-- **SQL Server** – Database Management
+- Programming Language: C# (.NET Framework)
+- **UI Framework** – Windows Forms + Guna.UI2 Framework 
+- **Database Management** – SQL Server
+The system is built using a 4-layer architecture:
+- Presentation Layer (PL): User interface with Windows Forms
+- Business Logic Layer (BL): Business logic processing
+- Data Access Layer (DL): Database interactions
+- Data Transfer Objects (DTO): Defines data exchange structures
 
 ## Installation
 1. **Clone the repository**
