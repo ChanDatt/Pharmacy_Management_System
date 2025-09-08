@@ -5,6 +5,8 @@ A Windows Forms-based Pharmacy Management System designed to simplify the manage
 - Programming Language: C# (.NET Framework)
 - **UI Framework** – Windows Forms + Guna.UI2 Framework 
 - **Database Management** – SQL Server
+
+
 The system is built using a 4-layer architecture:
 - Presentation Layer (PL): User interface with Windows Forms
 - Business Logic Layer (BL): Business logic processing
